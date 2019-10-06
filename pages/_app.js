@@ -41,8 +41,8 @@ export default class MyApp extends App {
         }
         const LightTheme = {
             title: 'Light Theme',
-            toneOne: '#f1f1f1',
-            toneTwo: '#fff',
+            toneOne: '#fff',
+            toneTwo: '#fafafa',
             textColor: '#121212',
             highlight: '#fa923f'
         }

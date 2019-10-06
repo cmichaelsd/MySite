@@ -16,7 +16,7 @@ export default function Experience() {
                         <h2>
                             <a href="https://vshred.com/" target="_blank" rel="noopener noreferrer">V Shred</a>
                         </h2>
-                        <p>The V Shred website is the main site for the company V Shred and deals in promotions, user interactive methods for finding the appropriate fitness plan based on body type, and downloadable content.</p>
+                        <p>The V Shred website is the main site for the company V Shred and deals in promotions, user interactive methods for finding fitness plans, and downloadable content.</p>
                     </div>
                 </li>
                 <li className="project">

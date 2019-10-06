@@ -1,11 +1,14 @@
 import { useContext } from 'react';
+import Link from 'next/link';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
+import BannerImage from '../components/banner-image';
 
 export default function Index() {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="About">
+            <BannerImage href="https://github.com/cmichaelsd" src="/static/ColeMichaels.png" alt="Cole Michaels" />
             <div className="margin">
                 <p>I'm Cole Michaels.</p>
                 <p>
@@ -22,28 +25,28 @@ export default function Index() {
                 <ul>
                     <li>
                         Gödel, Escher, Bach: an Eternal Golden Braid
-                        </li>
+                    </li>
                     <li>
                         Tesla: Inventor of the Electrical Age
-                        </li>
+                    </li>
                     <li>
                         The Dune series
-                        </li>
+                    </li>
                     <li>
                         Psychoanalytic Psychology: The Development of Freud's Thought
-                        </li>
+                    </li>
                     <li>
                         Man and His Symbols
-                        </li>
+                    </li>
                     <li>
                         How Music Works
-                        </li>
+                    </li>
                     <li>
                         The Art of War
-                        </li>
+                    </li>
                 </ul>
                 <p>
-                    Please contact me if you are interested in my experience, or just want to chat.
+                    Please <Link href="/contact"><a className="contact-me">contact me</a></Link> if you are interested in my experience, or just want to chat.
                 </p>
                 <style jsx>{`
                     .margin {
@@ -55,6 +58,10 @@ export default function Index() {
                         list-style: none;
                         text-align: left;
                         margin: 10px;
+                    }
+                    .contact-me {
+                        color: ${theme.highlight};
+                        text-decoration-color: ${theme.highlight};
                     }
                 `}</style>
             </div>
