@@ -29,7 +29,7 @@ export default function Skills() {
         <PageTemplate title="Skills">
             <div className="skill-container">
                 {skillsArray.map((skill) => (
-                    <Skill src={skill[2]} alt={skill[3]} stars={skill[0]}>{skill[1]}</Skill>
+                    <Skill key={skill[1]} src={skill[2]} alt={skill[3]} stars={skill[0]}>{skill[1]}</Skill>
                 ))}
             </div>
             <style jsx>{`

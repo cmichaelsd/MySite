@@ -12,7 +12,7 @@ export default function Meta() {
             <link rel="shortcut icon" href="/static/head/favicon-32x32.png" sizes="32x32" type="image/png" />
             <link rel="apple-touch-icon" href="/static/head/apple-touch-icon.png" />
             <link rel="me" href="mailto:cmichaelsd@gmail.com"></link>
-            <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet"></link>
             <title>Cole Michaels</title>
         </Head>
     );

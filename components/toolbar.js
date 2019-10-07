@@ -67,9 +67,10 @@ export default function Nav() {
                 html, 
                 body {
                     background: ${theme.toneTwo};
-                    font-family: 'Roboto', sans-serif;
+                    font-family: 'Karla', sans-serif;
                     margin: 0;
                     color: ${theme.textColor};
+                    overscroll-behavior: none;
                 }
             `}</style>
             <style jsx>{`
