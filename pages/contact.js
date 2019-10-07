@@ -13,15 +13,9 @@ export default function Contact() {
                 </p>
             </div>
             <div className="links-container">
-                <a className="links-container__flex-start first" href="https://github.com/cmichaelsd" target="_blank" rel="noopener noreferrer">
-                    <SquareImage src="/static/Github-Web.png" alt="Github Logo" />
-                </a>
-                <a className="links-container__middle" href="https://linkedin.com/in/cole-daniel-michaels/" target="_blank" rel="noopener noreferrer">
-                    <SquareImage src="/static/LinkedIn-Web.png" alt="LinkedIn Logo" />
-                </a>
-                <a className="links-container__flex-start" href="https://glitch.com/@cmichaelsd" target="_blank" rel="noopener noreferrer">
-                    <SquareImage src="/static/Glitch-Web.png" alt="Glitch Logo" />
-                </a>
+                <SquareImage href="https://github.com/cmichaelsd" src="/static/Github-Web.png" alt="Github Logo" />
+                <SquareImage href="https://linkedin.com/in/cole-daniel-michaels/" src="/static/LinkedIn-Web.png" alt="LinkedIn Logo" />
+                <SquareImage href="https://glitch.com/@cmichaelsd" src="/static/Glitch-Web.png" alt="Glitch Logo" />
             </div>
             <style jsx>{`
                 .contact-container {
@@ -49,12 +43,6 @@ export default function Contact() {
                         align-items: center;
                         padding-top: 0;
                         margin-bottom: 4rem;
-                    }
-                    .links-container__flex-start {
-                        align-self: flex-start;
-                    }
-                    .links-container__middle {
-                        align-self: flex-end;
                     }
                 } 
             `}</style>

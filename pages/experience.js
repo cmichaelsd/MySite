@@ -9,9 +9,7 @@ export default function Experience() {
         <PageTemplate title="Experience">
             <ul className="projects">
                 <li className="project">
-                    <a href="https://vshred.com/" target="_blank" rel="noopener noreferrer">
-                        <SquareImage src="/static/VShred-Web.png" alt="V Shred Logo" />
-                    </a>
+                    <SquareImage href="https://vshred.com/" src="/static/VShred-Web.png" alt="V Shred Logo" />
                     <div className="project__content">
                         <h2>
                             <a href="https://vshred.com/" target="_blank" rel="noopener noreferrer">V Shred</a>
@@ -20,9 +18,7 @@ export default function Experience() {
                     </div>
                 </li>
                 <li className="project">
-                    <a href="https://sculptnation.com/" target="_blank" rel="noopener noreferrer">
-                        <SquareImage src="/static/SculptNation-Web.png" alt="Sculpt Nation Logo" />
-                    </a>
+                    <SquareImage href="https://sculptnation.com/" src="/static/SculptNation-Web.png" alt="Sculpt Nation Logo" />
                     <div className="project__content">
                         <h2>
                             <a href="https://sculptnation.com/" target="_blank" rel="noopener noreferrer">SculptNation</a>
@@ -31,9 +27,7 @@ export default function Experience() {
                     </div>
                 </li>
                 <li className="project">
-                    <a href="https://www.jijengeacademy.com/" target="_blank" rel="noopener noreferrer">
-                        <SquareImage background="#f16870" src="/static/Jijenge-Web.png" alt="Jijenge Logo" />
-                    </a>
+                    <SquareImage background="#f16870" href="https://www.jijengeacademy.com/" src="/static/Jijenge-Web.png" alt="Jijenge Logo" />
                     <div className="project__content">
                         <h2>
                             <a href="https://www.jijengeacademy.com/" target="_blank" rel="noopener noreferrer">Jijenge Academy</a>

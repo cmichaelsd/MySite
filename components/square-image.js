@@ -5,9 +5,11 @@ export default function Contact(props) {
     const { theme } = useContext(UserContext);
     let background = props.background || "#fff"
     return (
-        <div className="square-image__container">
-            <div className="square-image__container--corners">
-                <img className="square-image" src={props.src} alt={props.alt}></img>
+        <a href={props.href} target="_blank" rel="noopener noreferrer">
+            <div className="square-image__container">
+                <div className="square-image__container--corners">
+                    <img className="square-image" src={props.src} alt={props.alt}></img>
+                </div>
             </div>
             <style jsx>{`
                 .square-image__container {
@@ -39,6 +41,6 @@ export default function Contact(props) {
                     width: 75%;
                 }
             `}</style>
-        </div>
+        </a>
     );
 }
