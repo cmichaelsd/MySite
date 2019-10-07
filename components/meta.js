@@ -7,6 +7,7 @@ export default function Meta() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="theme-color" content="#000000" />
             <meta name="description" content="Cole Michaels' Personal Website" />
+            <meta name="google-site-verification" content="YRxyXLqTUYrXLcqB0512DoyIKT8vtDamWOf6Kv4Z8go" />
             <link rel="shortcut icon" href="/static/head/favicon.ico" />
             <link rel="shortcut icon" href="/static/head/favicon-16x16.png" sizes="16x16" type="image/png" />
             <link rel="shortcut icon" href="/static/head/favicon-32x32.png" sizes="32x32" type="image/png" />
