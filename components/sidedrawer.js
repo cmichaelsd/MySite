@@ -29,15 +29,15 @@ export default function SideDrawer() {
                     </Link>
                 </li>
                 <li>
+                    <Link activeClassName="active" href="/skills">
+                        <a>Skills</a>
+                    </Link>
+                </li>
+                <li>
                     <Link activeClassName="active" href="/contact">
                         <a>Contact</a>
                     </Link>
                 </li>
-                {/* <li>
-                    <Link activeClassName="active" href="/skills">
-                        <a>Skills</a>
-                    </Link>
-                </li> */}
                 <li>
                     <PaintRoller />
                 </li>

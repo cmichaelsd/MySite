@@ -8,20 +8,20 @@ export default function Index() {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="About">
-            <BannerImage href="https://github.com/cmichaelsd" src="/static/ColeMichaels.png" alt="Cole Michaels" />
+            <BannerImage href="https://github.com/cmichaelsd/MySite" src="/static/ColeMichaels.png" alt="Cole Michaels" />
             <div className="margin">
                 <p>I'm Cole Michaels.</p>
                 <p>
                     I'm a fulltime Fullstack Engineer for V Shred and oncall as a Fullstack Engineer for Jijenge Academy.
                     I was formerly a Software Engineer Tutor with Trilogy Education Services on campus at UCLA and remote supporting a minimum of 10 students a week in specific technologies within Fullstack Web Development.
-                    </p>
+                </p>
                 <p>
                     In March of 2018 I was accepted into Hack Reactor, Los Angeles' 21st cohort. While at Hack Reactor I studied Web Development and gained the skills I use today in my career and met most of my peers within the Los Angeles WebDev community.
-                    </p>
+                </p>
                 <p>
-                    Outside of Web Development I have been praticing Jiu-Jitsu since July of 2019, I also enjoy spending my freetime practicing classical guitar and improving sight reading.
+                    Outside of Web Development I have been praticing Jiu-Jitsu since July of 2019, I also enjoy spending my freetime practicing classical guitar and improving my sight reading.
                     Also I spend a lot of time reading, my most recent reads are:
-                    </p>
+                </p>
                 <ul>
                     <li>
                         Gödel, Escher, Bach: an Eternal Golden Braid
@@ -30,7 +30,7 @@ export default function Index() {
                         Tesla: Inventor of the Electrical Age
                     </li>
                     <li>
-                        The Dune series
+                        The Dune Series
                     </li>
                     <li>
                         Psychoanalytic Psychology: The Development of Freud's Thought
