@@ -12,7 +12,7 @@ export default function Index() {
             <Head>
                 <title>Coles Michaels - About</title>
             </Head>
-            <BannerImage href="https://github.com/cmichaelsd/MySite" src="/static/ColeMichaels.png" alt="Cole Michaels" />
+            <BannerImage href="https://github.com/cmichaelsd/MySite" src="/static/ColeMichaels.webp" alt="Cole Michaels" />
             <div className="margin">
                 <p>I'm Cole Michaels.</p>
                 <p>

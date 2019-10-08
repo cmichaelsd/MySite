@@ -11,9 +11,9 @@ export default class MyDocument extends Document {
                     <meta name="description" content="Cole Michaels' Personal Website" />
                     <meta name="google-site-verification" content="YRxyXLqTUYrXLcqB0512DoyIKT8vtDamWOf6Kv4Z8go" />
                     <link rel="shortcut icon" href="/static/head/favicon.ico" />
-                    <link rel="shortcut icon" href="/static/head/favicon-16x16.png" sizes="16x16" type="image/png" />
-                    <link rel="shortcut icon" href="/static/head/favicon-32x32.png" sizes="32x32" type="image/png" />
-                    <link rel="apple-touch-icon" href="/static/head/apple-touch-icon.png" />
+                    <link rel="shortcut icon" href="/static/head/favicon-16x16.webp" sizes="16x16" type="image/webp" />
+                    <link rel="shortcut icon" href="/static/head/favicon-32x32.webp" sizes="32x32" type="image/webp" />
+                    <link rel="apple-touch-icon" href="/static/head/apple-touch-icon.webp" />
                     <link rel="me" href="mailto:cmichaelsd@gmail.com"></link>
                     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet"></link>
                     <script
