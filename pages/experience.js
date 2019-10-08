@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Head from 'next/head';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import SquareImage from '../components/square-image';
@@ -7,6 +8,9 @@ export default function Experience() {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="Experience">
+            <Head>
+                <title>Coles Michaels - Experience</title>
+            </Head>
             <ul className="projects">
                 <li className="project">
                     <SquareImage href="https://vshred.com/" src="/static/VShred-Web.png" alt="V Shred Logo" />
@@ -57,9 +61,7 @@ export default function Experience() {
                     @media (max-width: 768px) {
                         .project {
                             flex-direction: column;
-                        }
-                        .project > a {
-                            margin-left: 4em;
+                            align-items: center;
                         }
                         .project__content {
                             margin-left: auto;

@@ -14,27 +14,27 @@ export default function SideDrawer() {
         <nav className={drawerClasses}>
             <ul>
                 <li>
-                    <Link activeClassName="active" href="/">
+                    <Link activeClassName='active' href="/" as="/">
                         <a>About</a>
                     </Link>
                 </li>
                 <li>
-                    <Link activeClassName="active" href="/experience">
+                    <Link activeClassName='active' href="/experience" as="/experience">
                         <a>Experience</a>
                     </Link>
                 </li>
                 <li>
-                    <Link activeClassName="active" href="/education">
+                    <Link activeClassName='active' href="/education" as="/education">
                         <a>Education</a>
                     </Link>
                 </li>
                 <li>
-                    <Link activeClassName="active" href="/skills">
+                    <Link activeClassName='active' href="/skills" as="/skills">
                         <a>Skills</a>
                     </Link>
                 </li>
                 <li>
-                    <Link activeClassName="active" href="/contact">
+                    <Link activeClassName='active' href="/contact" as="/contact">
                         <a>Contact</a>
                     </Link>
                 </li>

@@ -1,11 +1,16 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
-import Meta from '../components/meta';
+import Router from 'next/router';
+import * as gtag from '../lib/gtag'
 import Toolbar from '../components/toolbar';
 import SideDrawer from '../components/sidedrawer';
 import Backdrop from '../components/backdrop';
 import Footer from '../components/footer';
 import UserContext from '../components/usercontext';
+
+Router.events.on('routeChangeComplete', (url) => {
+    gtag.pageview(url)
+});
 
 export default class MyApp extends App {
     state = {
@@ -92,14 +97,8 @@ export default class MyApp extends App {
 
     render() {
         const { Component, pageProps } = this.props;
-
-        let backdrop;
-        if (this.state.sideDrawerOpen) {
-            backdrop = <Backdrop />;
-        }
         return (
             <Fragment>
-                <Meta />
                 <UserContext.Provider value={{
                     theme: this.state.theme,
                     themeChange: this.themeChangeHandler,
@@ -110,7 +109,7 @@ export default class MyApp extends App {
                 }}>
                     <Toolbar />
                     <SideDrawer />
-                    {backdrop}
+                    {this.state.sideDrawerOpen && <Backdrop />}
                     <main>
                         <Component {...pageProps} />
                     </main>

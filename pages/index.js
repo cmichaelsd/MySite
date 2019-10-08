@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import BannerImage from '../components/banner-image';
@@ -8,6 +9,9 @@ export default function Index() {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="About">
+            <Head>
+                <title>Coles Michaels - About</title>
+            </Head>
             <BannerImage href="https://github.com/cmichaelsd/MySite" src="/static/ColeMichaels.png" alt="Cole Michaels" />
             <div className="margin">
                 <p>I'm Cole Michaels.</p>
@@ -20,7 +24,7 @@ export default function Index() {
                 </p>
                 <p>
                     Outside of Web Development I have been praticing Jiu-Jitsu since July of 2019, I also enjoy spending my freetime practicing classical guitar and improving my sight reading.
-                    Also I spend a lot of time reading, my most recent reads are:
+                    I spend a lot of time reading, my most recent reads are:
                 </p>
                 <ul>
                     <li>

@@ -3,7 +3,7 @@ import UserContext from '../components/usercontext';
 
 export default function Contact(props) {
     const { theme } = useContext(UserContext);
-    let background = props.background || "#fff"
+    let background = props.background || "#fff";
     return (
         <a href={props.href} target="_blank" rel="noopener noreferrer">
             <div className="square-image__container">

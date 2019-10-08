@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Head from 'next/head';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import SquareImage from '../components/square-image';
@@ -7,6 +8,9 @@ export default function Contact() {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="Contact">
+            <Head>
+                <title>Coles Michaels - Contact</title>
+            </Head>
             <div className="contact-container">
                 <p>
                     Feel free to send me an email at <a className="contact-container__email-me" href="mailto:cmichaelsd@gmail.com">cmichaelsd@gmail.com</a>

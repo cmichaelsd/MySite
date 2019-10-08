@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Head from 'next/head';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import BannerImage from '../components/banner-image';
@@ -7,6 +8,9 @@ export default function Education() {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="Education">
+            <Head>
+                <title>Coles Michaels - Education</title>
+            </Head>
             <div className="education-container">
                 <BannerImage href="https://www.hackreactor.com/" src="/static/HackReactor.png" alt="Hack Reactor Logo" />
                 <p className="margin">Hack Reactor is a Fullstrack Wed Development bootcamp covering topics such as Data Structures and Memory, Databases, Microservice Architecture, Frontend Design and CSS, and Program Efficiency.</p>
