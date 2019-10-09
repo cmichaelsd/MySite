@@ -1,4 +1,12 @@
-export default function BannerImage(props) {
+import { NextPage } from 'next';
+
+interface BannerImageProps {
+    href: string,
+    src: string,
+    alt: string
+}
+
+const BannerImage: NextPage<BannerImageProps> = (props) => {
     return (
         <div className="banner-image-container">
             <a href={props.href} target="_blank" rel="noopener noreferrer">
@@ -22,3 +30,5 @@ export default function BannerImage(props) {
         </div>
     );
 }
+
+export default BannerImage;
