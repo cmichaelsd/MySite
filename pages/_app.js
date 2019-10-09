@@ -21,9 +21,7 @@ export default class MyApp extends App {
             toneTwo: '#121212',
             textColor: '#fff',
             highlight: '#fa923f'
-        },
-        intervalID: 0,
-        starMan: null
+        }
     };
 
     drawerToggleClickHandler = () => {
@@ -57,42 +55,7 @@ export default class MyApp extends App {
         });
     };
 
-    starClickHandler = () => {
-        this.state.starMan.volume = 1;
-        if (this.state.intervalID) {
-            clearInterval(this.state.intervalID);
-            this.state.intervalID = 0;
-            this.state.starMan.pause();
-            this.state.starMan.currentTime = 0;
-        } else {
-            this.state.starMan.addEventListener(
-                "ended",
-                function () {
-                    this.currentTime = 0;
-                    this.play();
-                },
-                false
-            );
-            this.state.starMan.play();
-            this.state.intervalID = setInterval(() => {
-                let temp = {
-                    title: 'Star Theme',
-                    toneOne: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-                    toneTwo: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-                    textColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`
-                }
-                this.setState({
-                    theme: temp
-                });
-            }, 200);
-        }
-    };
-
     componentDidMount() {
-        let starMan = new Audio('/static/Starman.mp3');
-        this.setState({
-            starMan: starMan
-        });
         console.log(`
             ⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⣠⣤⣶⣶ \n
             ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⢰⣿⣿⣿⣿ \n
@@ -118,7 +81,6 @@ export default class MyApp extends App {
                 <UserContext.Provider value={{
                     theme: this.state.theme,
                     themeChange: this.themeChangeHandler,
-                    starHandler: this.starClickHandler,
                     sideDrawerToggle: this.drawerToggleClickHandler,
                     backdropClick: this.backdropClickHandler,
                     show: this.state.sideDrawerOpen

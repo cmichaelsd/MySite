@@ -4,6 +4,8 @@
 
 ### Technologies Used
 - Next.js
+- Node
+- Express
 - Netlify
 
 ### Domain Name

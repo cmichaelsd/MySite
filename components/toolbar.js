@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import UserContext from './usercontext';
 import Hamburger from './hamburger';
 import PaintRoller from './paint-roller';
-import Star from './star';
 import Link from './link';
 
 export default function Nav() {
@@ -50,9 +49,6 @@ export default function Nav() {
                         <li>
                             <PaintRoller />
                         </li>
-                        <li>
-                            <Star />
-                        </li>
                     </ul>
                 </div>
                 <div className="spacer-middle"></div>
@@ -60,8 +56,6 @@ export default function Nav() {
             </nav>
             <style jsx global>{`
                 * {
-                    // box-sizing: border-box
-                    // margin: 0;
                     padding: 0;
                 }
                 html, 

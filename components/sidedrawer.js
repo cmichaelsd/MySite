@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import Link from './link';
 import UserContext from './usercontext';
 import PaintRoller from './paint-roller';
-import Star from './star';
 
 export default function SideDrawer() {
     const { theme, show } = useContext(UserContext);
@@ -40,9 +39,6 @@ export default function SideDrawer() {
                 </li>
                 <li>
                     <PaintRoller />
-                </li>
-                <li>
-                    <Star />
                 </li>
             </ul>
             <style jsx>{`
