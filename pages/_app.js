@@ -56,7 +56,10 @@ export default class MyApp extends App {
     };
 
     componentDidMount() {
-        console.log(process);
+        let fur = '#f0c048';
+        let cheeks = '#f62d14';
+        let eyes = 'gray';
+        let fontSize = '20px';
         console.log(`
             %c
             ⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⣠⣤⣶⣶ \n
@@ -67,13 +70,31 @@ export default class MyApp extends App {
             ⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿ \n
             ⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿ \n
             ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿ \n
-            ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿ \n
-            ⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿ \n
-            ⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿ \n
-            ⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿ \n
+            ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀%c⢰⣹⡆%c⠀⠀⠀⠀⠀⠀%c⣭⣷%c⠀⠀⠀⠸⣿⣿⣿⣿ \n
+            ⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀%c⠈⠉%c⠀⠀⠤⠄⠀⠀⠀%c⠉⠁%c⠀⠀⠀⠀⢿⣿⣿⣿ \n
+            ⣿⣿⣿⣿⣿⣿⣿⣿%c⢾⣿⣷%c⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀%c⠠⣿⣿⣷%c⠀⢸⣿⣿⣿ \n
+            ⣿⣿⣿⣿⣿⣿⣿⣿⡀%c⠉%c⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀%c⠉⠉⠁%c⠀⠀⣿⣿⣿ \n
             ⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿ \n
             ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
-        `, 'color: #f0c048');
+        `,
+            `color: ${fur};font-size: ${fontSize};`,
+            `color: ${eyes};font-size: ${fontSize};`,
+            `color: ${fur};font-size: ${fontSize};`,
+            `color: ${eyes};font-size: ${fontSize};`,
+            `color: ${fur};font-size: ${fontSize};`,
+            `color: ${eyes};font-size: ${fontSize};`,
+            `color: ${fur};font-size: ${fontSize};`,
+            `color: ${eyes};font-size: ${fontSize};`,
+            `color: ${fur};font-size: ${fontSize};`,
+            `color: ${cheeks};font-size: ${fontSize};`,
+            `color: ${fur};font-size: ${fontSize};`,
+            `color: ${cheeks};font-size: ${fontSize};`,
+            `color: ${fur};font-size: ${fontSize};`,
+            `color: ${cheeks};font-size: ${fontSize};`,
+            `color: ${fur};font-size: ${fontSize};`,
+            `color: ${cheeks};font-size: ${fontSize};`,
+            `color: ${fur};font-size: ${fontSize};`,
+        );
     };
 
     render() {
