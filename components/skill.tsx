@@ -1,9 +1,18 @@
 import { Fragment, useContext } from 'react';
-import UserContext from '../components/usercontext';
+import { NextPage } from 'next';
+import UserContext from './usercontext';
 
-export default function Skill(props) {
+interface SkillProps {
+    key: any
+    src: any,
+    alt: any,
+    stars: any,
+    children: any
+}
+
+const Skills: NextPage<SkillProps> = (props) => {
     const { theme } = useContext(UserContext);
-    function getStars(stars) {
+    function getStars(stars: string | number): string {
         const emptyStar = '☆';
         const filledStar = '★';
         let build = '';
@@ -47,3 +56,5 @@ export default function Skill(props) {
         </li>
     );
 }
+
+export default Skills;

@@ -7,7 +7,7 @@ import PageTemplate from '../layouts/page-template';
 
 const Skills: NextPage = () => {
     const { theme } = useContext(UserContext);
-    const skillsArray = [
+    const skillsArray: (string | number)[][] = [
         [5, "JavaScript", "/static/tech-icons/JavaScript-Icon.webp", "JavaScript Icon"],
         [5, "HTML5", "/static/tech-icons/HTML5-Icon.webp", "HTML5 Icon"],
         [5, "CSS3", "/static/tech-icons/CSS3-Icon.webp", "CSS3 Icon"],
@@ -27,7 +27,7 @@ const Skills: NextPage = () => {
         [3, "Postgres", "/static/tech-icons/Postgres-Icon.webp", "Postgres Icon"]
     ];
     if (skillsArray.length % 2 !== 0) {
-        skillsArray.push(['', ""]);
+        skillsArray.push(["", "", "", ""]);
     }
     return (
         <PageTemplate title="Skills">

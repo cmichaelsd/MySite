@@ -1,10 +1,11 @@
 import { useContext } from 'react';
+import { NextPage } from 'next';
 import UserContext from './usercontext';
 import Hamburger from './hamburger';
 import PaintRoller from './paint-roller';
 import Link from './link';
 
-export default function Nav() {
+const Toolbar: NextPage = () => {
     const { theme } = useContext(UserContext);
     return (
         <header className="toolbar">
@@ -14,7 +15,7 @@ export default function Nav() {
                 </div>
                 <div className="spacer"></div>
                 <div className="toolbar__logo">
-                    <Link href="/">
+                    <Link activeClassName='active' href="/">
                         <a>Cole Michaels</a>
                     </Link>
                 </div>
@@ -133,3 +134,5 @@ export default function Nav() {
         </header>
     )
 }
+
+export default Toolbar;
