@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import Head from 'next/head';
+import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import Skill from '../components/skill';
 import PageTemplate from '../layouts/page-template';
 
-export default function Skills() {
+const Skills: NextPage = () => {
     const { theme } = useContext(UserContext);
     const skillsArray = [
         [5, "JavaScript", "/static/tech-icons/JavaScript-Icon.webp", "JavaScript Icon"],
@@ -26,7 +27,7 @@ export default function Skills() {
         [3, "Postgres", "/static/tech-icons/Postgres-Icon.webp", "Postgres Icon"]
     ];
     if (skillsArray.length % 2 !== 0) {
-        skillsArray.push([null, ""]);
+        skillsArray.push(['', ""]);
     }
     return (
         <PageTemplate title="Skills">
@@ -49,3 +50,5 @@ export default function Skills() {
         </PageTemplate >
     );
 };
+
+export default Skills;

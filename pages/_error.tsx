@@ -1,7 +1,8 @@
 import Head from 'next/head';
+import { NextPage } from 'next';
 import PageTemplate from "../layouts/page-template";
 
-export default function Error(props) {
+const ErrorPage: NextPage = () => {
     return (
         <PageTemplate title="404">
             <Head>
@@ -16,3 +17,5 @@ export default function Error(props) {
         </PageTemplate>
     );
 }
+
+export default ErrorPage;

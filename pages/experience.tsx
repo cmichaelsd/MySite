@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import Head from 'next/head';
+import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import SquareImage from '../components/square-image';
 
-export default function Experience() {
+const Experience: NextPage = () => {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="Experience">
@@ -72,3 +73,5 @@ export default function Experience() {
         </PageTemplate>
     );
 };
+
+export default Experience;

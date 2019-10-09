@@ -58,6 +58,9 @@ export default function Nav() {
                 * {
                     padding: 0;
                 }
+                *::selection {
+                    background: ${theme.highlight};
+                }
                 html, 
                 body {
                     background: ${theme.toneTwo};

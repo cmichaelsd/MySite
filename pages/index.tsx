@@ -1,11 +1,12 @@
 import { useContext } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import BannerImage from '../components/banner-image';
 
-export default function Index() {
+const Index: NextPage = () => {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="About">
@@ -72,3 +73,5 @@ export default function Index() {
         </PageTemplate>
     );
 };
+
+export default Index;
