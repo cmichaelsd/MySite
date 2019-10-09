@@ -9,7 +9,7 @@ import Footer from '../components/footer';
 import UserContext from '../components/usercontext';
 
 Router.events.on('routeChangeComplete', (url) => {
-    gtag.pageview(url)
+    gtag.pageview(url);
 });
 
 interface DrawerState {
