@@ -18,6 +18,7 @@ const Skills: NextPage = () => {
         [5, "ASW EC2", "/static/tech-icons/AWS-EC2-Icon.webp", "AWS EC2 Icon"],
         [5, "Node", "/static/tech-icons/Node-Icon.webp", "Node Icon"],
         [5, "jQuery", "/static/tech-icons/jQuery-Icon.webp", "jQuery Icon"],
+        [4, "TypeScript", "/static/tech-icons/TypeScript-Icon.webp", "TypeScript Icon"],
         [4, "Next", "/static/tech-icons/Next-Icon.webp", "Next Icon"],
         [4, "Docker", "/static/tech-icons/Docker-Icon.webp", "Docker Icon"],
         [4, "MongoDB", "/static/tech-icons/MongoDB-Icon.webp", "MongoDB Icon"],
