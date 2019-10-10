@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import Head from 'next/head';
+import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import SquareImage from '../components/square-image';
 
-export default function Contact() {
+const Contact: NextPage = () => {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="Contact">
@@ -53,3 +54,5 @@ export default function Contact() {
         </PageTemplate>
     );
 };
+
+export default Contact;

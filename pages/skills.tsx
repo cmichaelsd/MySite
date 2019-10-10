@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import Head from 'next/head';
+import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import Skill from '../components/skill';
 import PageTemplate from '../layouts/page-template';
 
-export default function Skills() {
+const Skills: NextPage = () => {
     const { theme } = useContext(UserContext);
-    const skillsArray = [
+    const skillsArray: (string | number)[][] = [
         [5, "JavaScript", "/static/tech-icons/JavaScript-Icon.webp", "JavaScript Icon"],
         [5, "HTML5", "/static/tech-icons/HTML5-Icon.webp", "HTML5 Icon"],
         [5, "CSS3", "/static/tech-icons/CSS3-Icon.webp", "CSS3 Icon"],
@@ -17,6 +18,7 @@ export default function Skills() {
         [5, "ASW EC2", "/static/tech-icons/AWS-EC2-Icon.webp", "AWS EC2 Icon"],
         [5, "Node", "/static/tech-icons/Node-Icon.webp", "Node Icon"],
         [5, "jQuery", "/static/tech-icons/jQuery-Icon.webp", "jQuery Icon"],
+        [4, "TypeScript", "/static/tech-icons/TypeScript-Icon.webp", "TypeScript Icon"],
         [4, "Next", "/static/tech-icons/Next-Icon.webp", "Next Icon"],
         [4, "Docker", "/static/tech-icons/Docker-Icon.webp", "Docker Icon"],
         [4, "MongoDB", "/static/tech-icons/MongoDB-Icon.webp", "MongoDB Icon"],
@@ -26,7 +28,7 @@ export default function Skills() {
         [3, "Postgres", "/static/tech-icons/Postgres-Icon.webp", "Postgres Icon"]
     ];
     if (skillsArray.length % 2 !== 0) {
-        skillsArray.push([null, ""]);
+        skillsArray.push(["", "", "", ""]);
     }
     return (
         <PageTemplate title="Skills">
@@ -49,3 +51,5 @@ export default function Skills() {
         </PageTemplate >
     );
 };
+
+export default Skills;

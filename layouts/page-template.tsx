@@ -1,7 +1,13 @@
 import { useContext } from 'react';
+import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 
-export default function PageTemplate(props) {
+interface PageTemplateProps {
+    title: string,
+    children: any
+}
+
+const PageTemplate: NextPage<PageTemplateProps> = (props) => {
     const { theme } = useContext(UserContext);
     return (
         <div className="page-template">
@@ -37,3 +43,5 @@ export default function PageTemplate(props) {
         </div>
     );
 }
+
+export default PageTemplate;

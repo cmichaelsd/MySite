@@ -1,7 +1,8 @@
 import { useContext } from 'react';
+import { NextPage } from 'next';
 import UserContext from './usercontext';
 
-export default function Footer() {
+const Footer: NextPage = () => {
     const { theme } = useContext(UserContext);
     return (
         <footer>
@@ -24,3 +25,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer;

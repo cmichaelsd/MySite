@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import Head from 'next/head';
+import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import BannerImage from '../components/banner-image';
 
-export default function Education() {
+const Education: NextPage = () => {
     const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="Education">
@@ -35,3 +36,5 @@ export default function Education() {
         </PageTemplate>
     );
 };
+
+export default Education;

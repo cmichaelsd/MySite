@@ -1,11 +1,12 @@
 import { useContext } from 'react';
 import Link from './link';
+import { NextPage } from 'next';
 import UserContext from './usercontext';
 import PaintRoller from './paint-roller';
 
-export default function SideDrawer() {
+const SideDrawer: NextPage = () => {
     const { theme, show } = useContext(UserContext);
-    let drawerClasses = 'side-drawer';
+    let drawerClasses: string = 'side-drawer';
     if (show) {
         drawerClasses = 'side-drawer open';
     }
@@ -87,3 +88,5 @@ export default function SideDrawer() {
         </nav>
     );
 }
+
+export default SideDrawer;

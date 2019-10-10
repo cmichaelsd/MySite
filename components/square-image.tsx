@@ -1,9 +1,17 @@
 import { useContext } from 'react';
+import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 
-export default function Contact(props) {
+interface SquareImageProps {
+    background?: string,
+    src: string,
+    alt: string,
+    href: string
+}
+
+const SquareImage: NextPage<SquareImageProps> = (props) => {
     const { theme } = useContext(UserContext);
-    let background = props.background || "#fff";
+    let background: string = props.background || "#fff";
     return (
         <a href={props.href} target="_blank" rel="noopener noreferrer">
             <div className="square-image__container">
@@ -44,3 +52,5 @@ export default function Contact(props) {
         </a>
     );
 }
+
+export default SquareImage;

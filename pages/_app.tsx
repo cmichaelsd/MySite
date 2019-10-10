@@ -9,11 +9,28 @@ import Footer from '../components/footer';
 import UserContext from '../components/usercontext';
 
 Router.events.on('routeChangeComplete', (url) => {
-    gtag.pageview(url)
+    gtag.pageview(url);
 });
 
+interface DrawerState {
+    sideDrawerOpen: boolean
+}
+
+interface ThemeContent {
+    title: string,
+    toneOne: string,
+    toneTwo: string,
+    textColor: string,
+    highlight: string
+}
+
+interface StateContent {
+    sideDrawerOpen: boolean,
+    theme: ThemeContent
+}
+
 export default class MyApp extends App {
-    state = {
+    state: StateContent = {
         sideDrawerOpen: false,
         theme: {
             title: 'Dark Theme',
@@ -24,42 +41,42 @@ export default class MyApp extends App {
         }
     };
 
-    drawerToggleClickHandler = () => {
-        this.setState((prevState) => {
+    drawerToggleClickHandler = (): void => {
+        this.setState((prevState: DrawerState) => {
             return { sideDrawerOpen: !prevState.sideDrawerOpen };
         });
     };
 
-    backdropClickHandler = () => {
+    backdropClickHandler = (): void => {
         this.setState({ sideDrawerOpen: false });
     };
 
-    themeChangeHandler = () => {
-        const DarkTheme = {
+    themeChangeHandler = (): void => {
+        const DarkTheme: ThemeContent = {
             title: 'Dark Theme',
             toneOne: '#272727',
             toneTwo: '#121212',
             textColor: '#fff',
             highlight: '#fa923f'
         }
-        const LightTheme = {
+        const LightTheme: ThemeContent = {
             title: 'Light Theme',
             toneOne: '#fff',
             toneTwo: '#fafafa',
             textColor: '#121212',
             highlight: '#fa923f'
         }
-        let temp = this.state.theme.title === 'Dark Theme' ? LightTheme : DarkTheme;
+        let temp: ThemeContent = this.state.theme.title === 'Dark Theme' ? LightTheme : DarkTheme;
         this.setState({
             theme: temp
         });
     };
 
     componentDidMount() {
-        let fur = '#f0c048';
-        let cheeks = '#f62d14';
-        let eyes = 'gray';
-        let fontSize = '20px';
+        let fur: string = '#f0c048';
+        let cheeks: string = '#f62d14';
+        let eyes: string = 'gray';
+        let fontSize: string = '20px';
         console.log(`
             %c
             ⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⣠⣤⣶⣶ \n

@@ -1,7 +1,8 @@
 import { useContext } from 'react';
+import { NextPage } from 'next';
 import UserContext from './usercontext';
 
-export default function Backdrop() {
+const Backdrop: NextPage = () => {
     const { backdropClick } = useContext(UserContext);
     return (
         <div onClick={backdropClick}>
@@ -19,3 +20,5 @@ export default function Backdrop() {
         </div>
     );
 }
+
+export default Backdrop;
