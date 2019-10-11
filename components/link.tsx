@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { NextPage } from 'next';
 import React, { Children } from 'react';
-import { ActiveLinkProps } from '../Types';
+import { ActiveLinkProps } from '../types';
 
 const ActiveLink: NextPage<ActiveLinkProps> = ({ children, activeClassName, ...props }) => {
     const { pathname }: { pathname: string } = useRouter();

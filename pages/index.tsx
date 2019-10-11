@@ -5,7 +5,7 @@ import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import BannerImage from '../components/banner-image';
-import { ThemeContent } from '../Types';
+import { ThemeContent } from '../types';
 
 const Index: NextPage = () => {
     const { theme }: { theme: ThemeContent } = useContext(UserContext);

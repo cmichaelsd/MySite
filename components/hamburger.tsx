@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
-import { ThemeContent } from '../Types';
+import { ThemeContent } from '../types';
 
 const Hamburger: NextPage = () => {
     const { theme, sideDrawerToggle }: { theme: ThemeContent, sideDrawerToggle: any } = useContext(UserContext);

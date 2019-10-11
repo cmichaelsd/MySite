@@ -1,7 +1,7 @@
 import { Fragment, useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
-import { SkillProps, ThemeContent } from '../Types';
+import { SkillProps, ThemeContent } from '../types';
 
 const Skills: NextPage<SkillProps> = (props) => {
     const { theme }: { theme: ThemeContent } = useContext(UserContext);

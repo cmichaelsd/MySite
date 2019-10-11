@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
-import { ThemeContent } from '../Types';
+import { ThemeContent } from '../types';
 
 const PaintRoller: NextPage = () => {
     const { theme, themeChange }: { theme: ThemeContent, themeChange: any } = useContext(UserContext);

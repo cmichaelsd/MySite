@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
-import { SquareImageProps, ThemeContent } from '../Types';
+import { SquareImageProps, ThemeContent } from '../types';
 
 const SquareImage: NextPage<SquareImageProps> = (props) => {
     const { theme }: { theme: ThemeContent } = useContext(UserContext);
