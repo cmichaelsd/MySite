@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { BannerImageProps } from '../types';
+import { BannerImageProps } from '../types-dir';
 
 const BannerImage: NextPage<BannerImageProps> = (props) => {
     return (
