@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
+import { ThemeContent } from '../Types';
 
 const PaintRoller: NextPage = () => {
-    const { theme, themeChange } = useContext(UserContext);
+    const { theme, themeChange }: { theme: ThemeContent, themeChange: any } = useContext(UserContext);
     return (
         <button onClick={themeChange}>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">

@@ -4,9 +4,10 @@ import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import SquareImage from '../components/square-image';
+import { ThemeContent } from '../Types';
 
 const Experience: NextPage = () => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     return (
         <PageTemplate title="Experience">
             <Head>

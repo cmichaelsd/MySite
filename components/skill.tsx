@@ -1,21 +1,14 @@
 import { Fragment, useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
-
-interface SkillProps {
-    key: any
-    src: any,
-    alt: any,
-    stars: any,
-    children: any
-}
+import { SkillProps, ThemeContent } from '../Types';
 
 const Skills: NextPage<SkillProps> = (props) => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     function getStars(stars: string | number): string {
-        const emptyStar = '☆';
-        const filledStar = '★';
-        let build = '';
+        const emptyStar: string = '☆';
+        const filledStar: string = '★';
+        let build: string = '';
 
         while (stars > build.length) build += filledStar;
         while (build.length < 5) build += emptyStar;

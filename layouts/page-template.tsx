@@ -1,14 +1,10 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
-
-interface PageTemplateProps {
-    title: string,
-    children: any
-}
+import { PageTemplateProps, ThemeContent } from '../Types';
 
 const PageTemplate: NextPage<PageTemplateProps> = (props) => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     return (
         <div className="page-template">
             <h2 className="center">{props.title}</h2>

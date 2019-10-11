@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
+import { ThemeContent } from '../Types';
 
 const Footer: NextPage = () => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     return (
         <footer>
             <p>

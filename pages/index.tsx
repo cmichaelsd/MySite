@@ -5,9 +5,10 @@ import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import BannerImage from '../components/banner-image';
+import { ThemeContent } from '../Types';
 
 const Index: NextPage = () => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     return (
         <PageTemplate title="About">
             <Head>
