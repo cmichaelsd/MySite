@@ -6,9 +6,9 @@ import { ActiveLinkProps } from '../Types';
 
 const ActiveLink: NextPage<ActiveLinkProps> = ({ children, activeClassName, ...props }) => {
     const { pathname }: { pathname: string } = useRouter();
-    const child = Children.only(children);
+    const child: any = Children.only(children);
 
-    const className =
+    const className: string =
         pathname === props.href
             ? `${child.props.className} ${activeClassName}`
             : child.props.className;
