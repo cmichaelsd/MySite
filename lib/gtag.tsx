@@ -1,4 +1,4 @@
-import { EventProps } from '../types';
+import { EventProps } from '../types-dir';
 
 export const GA_TRACKING_ID = 'UA-149499406-1';
 

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
-import { PageTemplateProps, ThemeContent } from '../types';
+import { PageTemplateProps, ThemeContent } from '../types-dir';
 
 const PageTemplate: NextPage<PageTemplateProps> = (props) => {
     const { theme }: { theme: ThemeContent } = useContext(UserContext);

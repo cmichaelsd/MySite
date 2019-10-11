@@ -4,7 +4,7 @@ import UserContext from './usercontext';
 import Hamburger from './hamburger';
 import PaintRoller from './paint-roller';
 import Link from './link';
-import { ThemeContent } from '../types';
+import { ThemeContent } from '../types-dir';
 
 const Toolbar: NextPage = () => {
     const { theme }: { theme: ThemeContent } = useContext(UserContext);

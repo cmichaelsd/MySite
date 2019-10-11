@@ -7,7 +7,7 @@ import SideDrawer from '../components/sidedrawer';
 import Backdrop from '../components/backdrop';
 import Footer from '../components/footer';
 import UserContext from '../components/usercontext';
-import { ThemeContent, DrawerState, StateContent, AppPropsReceived } from '../types';
+import { ThemeContent, DrawerState, StateContent, AppPropsReceived } from '../types-dir';
 
 Router.events.on('routeChangeComplete', (url: string): void => {
     gtag.pageview(url);

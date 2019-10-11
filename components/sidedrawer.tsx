@@ -3,7 +3,7 @@ import Link from './link';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
 import PaintRoller from './paint-roller';
-import { ThemeContent } from '../types';
+import { ThemeContent } from '../types-dir';
 
 const SideDrawer: NextPage = () => {
     const { theme, show }: { theme: ThemeContent, show: boolean } = useContext(UserContext);
