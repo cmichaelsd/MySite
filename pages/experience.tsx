@@ -48,7 +48,6 @@ const Experience: NextPage = () => {
                     .project {
                         display: flex;
                         align-content: center;
-                        padding-bottom: 3em;
                     }
                     .project__content {
                         margin-left: 4em;

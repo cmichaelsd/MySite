@@ -48,7 +48,6 @@ const Contact: NextPage = () => {
                         flex-direction: column;
                         align-items: center;
                         padding-top: 0;
-                        margin-bottom: 4rem;
                     }
                 } 
             `}</style>

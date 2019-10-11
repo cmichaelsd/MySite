@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import App from 'next/app';
 import Router from 'next/router';
-import * as gtag from '../lib/gtag'
+import * as gtag from '../lib/gtag';
 import Toolbar from '../components/toolbar';
 import SideDrawer from '../components/sidedrawer';
 import Backdrop from '../components/backdrop';

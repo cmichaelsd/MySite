@@ -23,12 +23,6 @@ const Education: NextPage = () => {
                 .margin {
                     margin: 1rem;
                 }
-                
-                @media (max-width: 768px) {
-                    .education-container:last-of-type {
-                        padding-bottom: 2em;
-                    }
-                }
             `}</style>
         </PageTemplate>
     );
