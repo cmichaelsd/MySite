@@ -4,9 +4,10 @@ import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import SquareImage from '../components/square-image';
+import { ThemeContent } from '../types';
 
 const Contact: NextPage = () => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     return (
         <PageTemplate title="Contact">
             <Head>
@@ -47,7 +48,6 @@ const Contact: NextPage = () => {
                         flex-direction: column;
                         align-items: center;
                         padding-top: 0;
-                        margin-bottom: 4rem;
                     }
                 } 
             `}</style>

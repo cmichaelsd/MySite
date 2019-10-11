@@ -4,9 +4,10 @@ import UserContext from './usercontext';
 import Hamburger from './hamburger';
 import PaintRoller from './paint-roller';
 import Link from './link';
+import { ThemeContent } from '../types';
 
 const Toolbar: NextPage = () => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     return (
         <header className="toolbar">
             <nav className="toolbar__navigation">

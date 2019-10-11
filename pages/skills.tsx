@@ -1,12 +1,9 @@
-import { useContext } from 'react';
 import Head from 'next/head';
 import { NextPage } from 'next';
-import UserContext from '../components/usercontext';
 import Skill from '../components/skill';
 import PageTemplate from '../layouts/page-template';
 
 const Skills: NextPage = () => {
-    const { theme } = useContext(UserContext);
     const skillsArray: (string | number)[][] = [
         [5, "JavaScript", "/static/tech-icons/JavaScript-Icon.webp", "JavaScript Icon"],
         [5, "HTML5", "/static/tech-icons/HTML5-Icon.webp", "HTML5 Icon"],
@@ -36,7 +33,7 @@ const Skills: NextPage = () => {
                 <title>Coles Michaels - Skills</title>
             </Head>
             <div className="skill-container">
-                {skillsArray.map((skill) => (
+                {skillsArray.map((skill: (string | number)[]) => (
                     <Skill key={skill[1]} src={skill[2]} alt={skill[3]} stars={skill[0]}>{skill[1]}</Skill>
                 ))}
             </div>

@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import UserContext from './usercontext';
 
 const Backdrop: NextPage = () => {
-    const { backdropClick } = useContext(UserContext);
+    const { backdropClick }: { backdropClick: any } = useContext(UserContext);
     return (
         <div onClick={backdropClick}>
             <style jsx>{`

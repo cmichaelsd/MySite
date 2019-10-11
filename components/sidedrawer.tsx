@@ -3,9 +3,10 @@ import Link from './link';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
 import PaintRoller from './paint-roller';
+import { ThemeContent } from '../types';
 
 const SideDrawer: NextPage = () => {
-    const { theme, show } = useContext(UserContext);
+    const { theme, show }: { theme: ThemeContent, show: boolean } = useContext(UserContext);
     let drawerClasses: string = 'side-drawer';
     if (show) {
         drawerClasses = 'side-drawer open';

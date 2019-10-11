@@ -1,12 +1,9 @@
-import { useContext } from 'react';
 import Head from 'next/head';
 import { NextPage } from 'next';
-import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import BannerImage from '../components/banner-image';
 
 const Education: NextPage = () => {
-    const { theme } = useContext(UserContext);
     return (
         <PageTemplate title="Education">
             <Head>
@@ -25,12 +22,6 @@ const Education: NextPage = () => {
             <style jsx>{`
                 .margin {
                     margin: 1rem;
-                }
-                
-                @media (max-width: 768px) {
-                    .education-container:last-of-type {
-                        padding-bottom: 2em;
-                    }
                 }
             `}</style>
         </PageTemplate>

@@ -4,9 +4,10 @@ import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
 import PageTemplate from '../layouts/page-template';
 import SquareImage from '../components/square-image';
+import { ThemeContent } from '../types';
 
 const Experience: NextPage = () => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     return (
         <PageTemplate title="Experience">
             <Head>
@@ -47,7 +48,6 @@ const Experience: NextPage = () => {
                     .project {
                         display: flex;
                         align-content: center;
-                        padding-bottom: 3em;
                     }
                     .project__content {
                         margin-left: 4em;

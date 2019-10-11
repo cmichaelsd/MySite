@@ -1,16 +1,10 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from '../components/usercontext';
-
-interface SquareImageProps {
-    background?: string,
-    src: string,
-    alt: string,
-    href: string
-}
+import { SquareImageProps, ThemeContent } from '../types';
 
 const SquareImage: NextPage<SquareImageProps> = (props) => {
-    const { theme } = useContext(UserContext);
+    const { theme }: { theme: ThemeContent } = useContext(UserContext);
     let background: string = props.background || "#fff";
     return (
         <a href={props.href} target="_blank" rel="noopener noreferrer">

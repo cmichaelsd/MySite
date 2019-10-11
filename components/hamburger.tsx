@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
+import { ThemeContent } from '../types';
 
 const Hamburger: NextPage = () => {
-    const { theme, sideDrawerToggle } = useContext(UserContext);
+    const { theme, sideDrawerToggle }: { theme: ThemeContent, sideDrawerToggle: any } = useContext(UserContext);
     return (
         <button onClick={sideDrawerToggle}>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">

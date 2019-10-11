@@ -1,33 +1,17 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import App from 'next/app';
 import Router from 'next/router';
-import * as gtag from '../lib/gtag'
+import * as gtag from '../lib/gtag';
 import Toolbar from '../components/toolbar';
 import SideDrawer from '../components/sidedrawer';
 import Backdrop from '../components/backdrop';
 import Footer from '../components/footer';
 import UserContext from '../components/usercontext';
+import { ThemeContent, DrawerState, StateContent, AppPropsReceived } from '../types';
 
-Router.events.on('routeChangeComplete', (url) => {
+Router.events.on('routeChangeComplete', (url: string): void => {
     gtag.pageview(url);
 });
-
-interface DrawerState {
-    sideDrawerOpen: boolean
-}
-
-interface ThemeContent {
-    title: string,
-    toneOne: string,
-    toneTwo: string,
-    textColor: string,
-    highlight: string
-}
-
-interface StateContent {
-    sideDrawerOpen: boolean,
-    theme: ThemeContent
-}
 
 export default class MyApp extends App {
     state: StateContent = {
@@ -72,7 +56,7 @@ export default class MyApp extends App {
         });
     };
 
-    componentDidMount() {
+    componentDidMount = (): void => {
         let fur: string = '#f0c048';
         let cheeks: string = '#f62d14';
         let eyes: string = 'gray';
@@ -115,7 +99,7 @@ export default class MyApp extends App {
     };
 
     render() {
-        const { Component, pageProps } = this.props;
+        const { Component, pageProps }: AppPropsReceived = this.props;
         return (
             <Fragment>
                 <UserContext.Provider value={{
