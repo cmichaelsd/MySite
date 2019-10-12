@@ -217,7 +217,6 @@ export default class CanvasMobile extends Component {
         }
         this.init(canvas, c);
         animate();
-        console.clear();
     };
 
     componentWillUnmount = () => {

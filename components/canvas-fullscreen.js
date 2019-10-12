@@ -1,13 +1,39 @@
 import { Component } from 'react';
 
+const strokeColor = {
+    h: 200,
+    s: 50,
+    l: 50
+};
+
+const offsetYOverflow = -60;
+
 export default class Home extends Component {
+
+    handleResize = (canvas) => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight + offsetYOverflow;
+    };
+
+    handleMouseDown = (wave) => {
+        if (wave.frequency <= 1) {
+            wave.frequency += 0.03;
+        }
+    };
+
+    handleMouseUp = (wave) => {
+        if (wave.frequency > 0.01) {
+            wave.frequency -= 0.03;
+        }
+    }
+
     componentDidMount = () => {
         const canvas = this.refs.canvas;
         const c = canvas.getContext('2d');
-        const offsetYOverflow = -60;
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight + offsetYOverflow;
+
         const wave = {
             y: canvas.height / 2,
             length: 0.005,
@@ -15,34 +41,14 @@ export default class Home extends Component {
             frequency: 0.02
         };
 
-        const strokeColor = {
-            h: 200,
-            s: 50,
-            l: 50
-        };
-
-        window.addEventListener('resize', function () {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight + offsetYOverflow;
-        });
-
-        window.addEventListener('mousedown', function () {
-            if (wave.frequency <= 1) {
-                wave.frequency += 0.03;
-            }
-        });
-
-        window.addEventListener('mouseup', function () {
-            if (wave.frequency > 0.01) {
-                wave.frequency -= 0.03;
-            }
-        });
-
-
         let increment = wave.frequency;
 
-        function animate() {
-            requestAnimationFrame(animate)
+        canvas.addEventListener('resize', () => this.handleResize(canvas));
+        window.addEventListener('mousedown', () => this.handleMouseDown(wave));
+        window.addEventListener('mouseup', () => this.handleMouseUp(wave));
+
+        const animate = () => {
+            requestAnimationFrame(animate);
             // if (theme.title === "Dark Theme") {
             c.fillStyle = "rgba(39, 39, 39, 0.01)";
             // } else {
@@ -59,6 +65,15 @@ export default class Home extends Component {
             increment += wave.frequency;
         }
         animate();
+    }
+
+    componentWillUnmount = () => {
+        const canvas = this.refs.canvas;
+        const c = canvas.getContext('2d');
+
+        canvas.removeEventListener('resize', () => this.handleResize(canvas));
+        window.removeEventListener('mousedown', () => this.handleMouseDown(wave));
+        window.removeEventListener('mouseup', () => this.handleMouseUp(wave));
     }
 
     render() {
