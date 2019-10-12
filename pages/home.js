@@ -25,9 +25,9 @@ export default class Home extends Component {
         });
     }
 
-    componentWillUnmount = () => {
-        window.removeEventListener('resize');
-    }
+    // componentWillUnmount = () => {
+    //     window.removeEventListener('resize');
+    // }
 
     render() {
         { this.context }

@@ -1,10 +1,24 @@
 import { Component } from 'react';
 
+let particles = undefined;
+
+const mouse = {
+    x: undefined,
+    y: undefined
+};
+
+const prevMouse = {
+    x: undefined,
+    y: undefined
+};
+
+const offsetYOverflow = -60;
+
 export default class CanvasMobile extends Component {
 
     randomIntFromRange = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1) + min);
-    }
+    };
 
     randomColor = () => {
         const colors = [
@@ -16,14 +30,14 @@ export default class CanvasMobile extends Component {
         ];
 
         return colors[Math.floor(Math.random() * colors.length)];
-    }
+    };
 
     distance = (x1, y1, x2, y2) => {
         const xDist = x2 - x1;
         const yDist = y2 - y1;
 
         return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
-    }
+    };
 
     rotate = (velocity, angle) => {
         const rotatedVelocities = {
@@ -32,7 +46,7 @@ export default class CanvasMobile extends Component {
         };
 
         return rotatedVelocities;
-    }
+    };
 
     resolveCollision = (particle, otherParticle) => {
         const xVelocityDiff = particle.velocity.x - otherParticle.velocity.x;
@@ -70,9 +84,9 @@ export default class CanvasMobile extends Component {
             otherParticle.velocity.x = vFinal2.x;
             otherParticle.velocity.y = vFinal2.y;
         }
-    }
+    };
 
-    Particle = (c, mouse, prevMouse, x, y, radius, color) => {
+    Particle = (c, x, y, radius, color) => {
         let particle = {
             friction: 0.5,
             x: x,
@@ -136,32 +150,50 @@ export default class CanvasMobile extends Component {
             }
         }
         return particle;
-    }
+    };
 
-    handleMouseDown = (canvas, mouse) => {
+    init = (canvas, c) => {
+        particles = [];
+
+        for (let i = 0; i < 600; i++) {
+            const radius = 4;
+            let x = this.randomIntFromRange(radius, canvas.width - radius);
+            let y = this.randomIntFromRange(radius, canvas.height - radius);
+            const color = this.randomColor();
+
+            if (i !== 0) {
+                for (let j = 0; j < particles.length; j++) {
+                    if (this.distance(x, y, particles[j].x, particles[j].y) - radius * 2 < 0) {
+                        x = this.randomIntFromRange(radius, canvas.width - radius);
+                        y = this.randomIntFromRange(radius, canvas.height - radius);
+
+                        j = -1;
+                    }
+                }
+            }
+            particles.push(this.Particle(c, x, y, radius, color));
+        }
+    };
+
+    handleMouseDown = (canvas) => {
         canvas.addEventListener('mousedown', event => {
             mouse.x = event.clientX;
             mouse.y = event.clientY;
         });
-    }
+    };
+
+    handleResize = (canvas, c) => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight + offsetYOverflow;
+        this.init(canvas, c);
+    };
 
     componentDidMount = () => {
         const canvas = this.refs.canvas;
         const c = canvas.getContext('2d');
-        const offsetYOverflow = -60;
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight + offsetYOverflow;
-
-        const mouse = {
-            x: undefined,
-            y: undefined
-        }
-
-        const prevMouse = {
-            x: undefined,
-            y: undefined
-        }
 
         setInterval(() => {
             prevMouse.x = mouse.x
@@ -169,55 +201,31 @@ export default class CanvasMobile extends Component {
         }, 200);
 
         // Event Listeners
-        this.handleMouseDown(canvas, mouse);
-
-        addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight + offsetYOverflow;
-            init();
-        });
+        canvas.addEventListener('mousedown', this.handleMouseDown(canvas));
+        window.addEventListener('resize', this.handleResize(canvas, c));
 
         // Implementation
-        let particles;
-        const init = () => {
-            particles = [];
-
-            for (let i = 0; i < 600; i++) {
-                const radius = 4;
-                let x = this.randomIntFromRange(radius, canvas.width - radius);
-                let y = this.randomIntFromRange(radius, canvas.height - radius);
-                const color = this.randomColor();
-
-                if (i !== 0) {
-                    for (let j = 0; j < particles.length; j++) {
-                        if (this.distance(x, y, particles[j].x, particles[j].y) - radius * 2 < 0) {
-                            x = this.randomIntFromRange(radius, canvas.width - radius);
-                            y = this.randomIntFromRange(radius, canvas.height - radius);
-
-                            j = -1;
-                        }
-                    }
-                }
-                particles.push(this.Particle(c, mouse, prevMouse, x, y, radius, color));
-            }
-        }
+        this.init(canvas, c);
 
         // Animation Loop
-        function animate() {
+        const animate = () => {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach(particle => {
                 particle.update(particles);
             })
         }
-        init();
+        this.init(canvas, c);
         animate();
-    }
+    };
 
-    // componentWillUnmount = () => {
-    //     window.removeEventListener('mousedown');
-    //     widnow.removeEventListener('resize');
-    // }
+    componentWillUnmount = () => {
+        const canvas = this.refs.canvas;
+        const c = canvas.getContext('2d');
+
+        canvas.removeEventListener('mousedown', this.handleMouseDown(canvas));
+        window.removeEventListener('resize', this.handleResize(canvas, c));
+    }
 
     render() {
         return (
