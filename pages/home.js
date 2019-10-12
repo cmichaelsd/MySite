@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import CanvasFullscreen from '../components/canvas-fullscreen';
+import CanvasMobile from '../components/canvas-mobile';
 
 export default class Home extends Component {
     state = {
@@ -25,8 +26,9 @@ export default class Home extends Component {
         return (
             <div>
                 {
-                    this.state.innerWidth > 768 &&
-                    <CanvasFullscreen />
+                    this.state.innerWidth > 768 ?
+                        <CanvasFullscreen /> :
+                        <CanvasMobile />
                 }
             </div>
         );

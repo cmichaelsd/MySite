@@ -57,10 +57,6 @@ export default class Home extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <canvas ref="canvas"></canvas>
-            </div>
-        )
+        return <canvas ref="canvas"></canvas>;
     }
 }
