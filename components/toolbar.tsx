@@ -16,7 +16,7 @@ const Toolbar: NextPage = () => {
                 </div>
                 <div className="spacer"></div>
                 <div className="toolbar__logo">
-                    <Link activeClassName='active' href="/" as="/">
+                    <Link activeClassName='active' href="/home" as="/home">
                         <a>Cole Michaels</a>
                     </Link>
                 </div>
