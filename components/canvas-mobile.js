@@ -201,8 +201,8 @@ export default class CanvasMobile extends Component {
         }, 200);
 
         // Event Listeners
-        canvas.addEventListener('mousedown', this.handleMouseDown(canvas));
-        window.addEventListener('resize', this.handleResize(canvas, c));
+        canvas.addEventListener('mousedown', () => this.handleMouseDown(canvas));
+        window.addEventListener('resize', () => this.handleResize(canvas, c));
 
         // Implementation
         this.init(canvas, c);
@@ -217,14 +217,15 @@ export default class CanvasMobile extends Component {
         }
         this.init(canvas, c);
         animate();
+        console.clear();
     };
 
     componentWillUnmount = () => {
         const canvas = this.refs.canvas;
         const c = canvas.getContext('2d');
 
-        canvas.removeEventListener('mousedown', this.handleMouseDown(canvas));
-        window.removeEventListener('resize', this.handleResize(canvas, c));
+        canvas.removeEventListener('mousedown', () => this.handleMouseDown(canvas));
+        window.removeEventListener('resize', () => this.handleResize(canvas, c));
     }
 
     render() {
