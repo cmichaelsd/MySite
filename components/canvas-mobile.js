@@ -6,7 +6,15 @@ export default class CanvasMobile extends Component {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-    randomColor = (colors) => {
+    randomColor = () => {
+        const colors = [
+            '#7A481F',
+            '#FBBD8A',
+            '#FA923F',
+            '#7A5C43',
+            '#C77532',
+        ];
+
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
@@ -64,32 +72,96 @@ export default class CanvasMobile extends Component {
         }
     }
 
+    Particle = (c, mouse, prevMouse, x, y, radius, color) => {
+        let particle = {
+            friction: 0.5,
+            x: x,
+            y: y,
+            velocity: {
+                x: (Math.random() - 0.5) * 5,
+                y: (Math.random() - 0.5) * 5
+            },
+            radius: radius,
+            color: color,
+            mass: 1,
+            opacity: 0,
+            lastPoint: {
+                x: x,
+                y: y
+            },
+            draw: () => {
+                c.beginPath();
+                c.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2, false)
+                c.save();
+                c.globalAlpha = particle.opacity;
+                c.fillStyle = particle.color;
+                c.fill();
+                c.restore();
+                c.strokeStyle = particle.color;
+                c.stroke();
+                c.closePath();
+            },
+            update: (particles) => {
+                particle.draw();
+                for (let i = 0; i < particles.length; i++) {
+                    if (particle === particles[i]) continue;
+                    if (this.distance(particle.x, particle.y, particles[i].x, particles[i].y) - particle.radius * 2 < 0) {
+                        this.resolveCollision(particle, particles[i]);
+                    }
+                }
+
+                if (particle.x - particle.radius <= 0 || particle.x + particle.radius >= innerWidth) {
+                    particle.velocity.x = -particle.velocity.x * particle.friction;
+                }
+                if (particle.y - particle.radius <= 0 || particle.y + particle.radius >= innerHeight) {
+                    particle.velocity.y = -particle.velocity.y * particle.friction;
+                }
+
+                // mouse collision
+                if (this.distance(mouse.x, mouse.y, particle.x, particle.y) < 120 && particle.opacity < 0.2) {
+                    const displaceX = prevMouse.x - mouse.x;
+                    const displaceY = prevMouse.y - mouse.y;
+                    if (displaceX || displaceY) {
+                        particle.velocity.x -= displaceX < 0 ? -0.5 : 0.5;
+                        particle.velocity.y -= displaceY < 0 ? -0.5 : 0.5;
+                    }
+                    particle.opacity += 0.02;
+                } else if (particle.opacity > 0) {
+                    particle.opacity -= 0.02;
+                    particle.opacity = Math.max(0, particle.opacity);
+                }
+
+                particle.x += particle.velocity.x;
+                particle.y += particle.velocity.y;
+            }
+        }
+        return particle;
+    }
+
+    handleMouseDown = (canvas, mouse) => {
+        canvas.addEventListener('mousedown', event => {
+            mouse.x = event.clientX;
+            mouse.y = event.clientY;
+        });
+    }
+
     componentDidMount = () => {
         const canvas = this.refs.canvas;
         const c = canvas.getContext('2d');
+        const offsetYOverflow = -60;
 
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight - 60;
+        canvas.height = window.innerHeight + offsetYOverflow;
 
         const mouse = {
             x: undefined,
             y: undefined
         }
 
-        const colors = [
-            '#7A481F',
-            '#FBBD8A',
-            '#FA923F',
-            '#7A5C43',
-            '#C77532',
-        ];
-
         const prevMouse = {
             x: undefined,
             y: undefined
         }
-
-        const friction = 0.5
 
         setInterval(() => {
             prevMouse.x = mouse.x
@@ -97,92 +169,13 @@ export default class CanvasMobile extends Component {
         }, 200);
 
         // Event Listeners
-        addEventListener('mousemove', event => {
-            mouse.x = event.clientX
-            mouse.y = event.clientY
-        });
+        this.handleMouseDown(canvas, mouse);
 
         addEventListener('resize', () => {
-            canvas.width = innerWidth
-            canvas.height = innerHeight
-
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight + offsetYOverflow;
             init();
         });
-
-        // Objects
-        const that = this;
-        function Particle(x, y, radius, color) {
-            this.x = x;
-            this.y = y;
-            this.velocity = {
-                x: (Math.random() - 0.5) * 5,
-                y: (Math.random() - 0.5) * 5
-            };
-            this.radius = radius;
-            this.color = color;
-            this.mass = 1;
-            this.opacity = 0;
-            this.lastPoint = {
-                x: x,
-                y: y
-            };
-            this.draw = function () {
-                c.beginPath();
-                c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
-                // c.strokeStyle = this.color;
-                // c.lineWidth = this.radius;
-                // c.moveTo(this.lastPoint.x, this.lastPoint.y);
-                // c.lineTo(this.x, this.y);
-                // c.stroke();
-                c.save();
-                c.globalAlpha = this.opacity;
-                c.fillStyle = this.color;
-                c.fill();
-                c.restore();
-                c.strokeStyle = this.color;
-                c.stroke();
-                c.closePath();
-            };
-            this.update = function (particles) {
-
-                this.draw();
-
-                for (let i = 0; i < particles.length; i++) {
-                    if (this === particles[i]) continue;
-
-                    if (that.distance(this.x, this.y, particles[i].x, particles[i].y) - this.radius * 2 < 0) {
-                        that.resolveCollision(this, particles[i]);
-                    }
-                }
-
-                if (this.x - this.radius <= 0 || this.x + this.radius >= innerWidth) {
-                    this.velocity.x = -this.velocity.x * friction;
-                }
-                if (this.y - this.radius <= 0 || this.y + this.radius >= innerHeight) {
-                    this.velocity.y = -this.velocity.y * friction;
-                }
-
-                // mouse collision
-                if (that.distance(mouse.x, mouse.y, this.x, this.y) < 120 && this.opacity < 0.2) {
-                    const displaceX = prevMouse.x - mouse.x;
-                    const displaceY = prevMouse.y - mouse.y;
-                    if (displaceX || displaceY) {
-                        this.velocity.x -= displaceX < 0 ? -0.5 : 0.5;
-                        this.velocity.y -= displaceY < 0 ? -0.5 : 0.5;
-                    }
-                    this.opacity += 0.02;
-                } else if (this.opacity > 0) {
-                    this.opacity -= 0.02;
-
-                    this.opacity = Math.max(0, this.opacity);
-                }
-
-                this.x += this.velocity.x;
-                this.y += this.velocity.y;
-            };
-        }
-
-
 
         // Implementation
         let particles;
@@ -193,7 +186,7 @@ export default class CanvasMobile extends Component {
                 const radius = 4;
                 let x = this.randomIntFromRange(radius, canvas.width - radius);
                 let y = this.randomIntFromRange(radius, canvas.height - radius);
-                const color = this.randomColor(colors);
+                const color = this.randomColor();
 
                 if (i !== 0) {
                     for (let j = 0; j < particles.length; j++) {
@@ -205,7 +198,7 @@ export default class CanvasMobile extends Component {
                         }
                     }
                 }
-                particles.push(new Particle(x, y, radius, color));
+                particles.push(this.Particle(c, mouse, prevMouse, x, y, radius, color));
             }
         }
 
@@ -213,21 +206,26 @@ export default class CanvasMobile extends Component {
         function animate() {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, canvas.width, canvas.height);
-
             particles.forEach(particle => {
                 particle.update(particles);
             })
         }
-
         init();
         animate();
     }
 
+    // componentWillUnmount = () => {
+    //     window.removeEventListener('mousedown');
+    //     widnow.removeEventListener('resize');
+    // }
+
     render() {
-        return (<canvas ref="canvas">
-            <style jsx>{`
-                margin-top: -1rem;
-            `}</style>
-        </canvas>);
+        return (
+            <canvas ref="canvas">
+                <style jsx>{`
+                    margin-top: -1rem;
+                `}</style>
+            </canvas>
+        );
     }
 }

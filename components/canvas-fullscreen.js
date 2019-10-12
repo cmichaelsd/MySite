@@ -4,9 +4,10 @@ export default class Home extends Component {
     componentDidMount = () => {
         const canvas = this.refs.canvas;
         const c = canvas.getContext('2d');
+        const offsetYOverflow = -60;
 
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight - 100;
+        canvas.height = window.innerHeight + offsetYOverflow;
         const wave = {
             y: canvas.height / 2,
             length: 0.005,
@@ -22,7 +23,7 @@ export default class Home extends Component {
 
         window.addEventListener('resize', function () {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight - 100;
+            canvas.height = window.innerHeight + offsetYOverflow;
         });
 
         window.addEventListener('mousedown', function () {
@@ -39,9 +40,14 @@ export default class Home extends Component {
 
 
         let increment = wave.frequency;
+
         function animate() {
             requestAnimationFrame(animate)
+            // if (theme.title === "Dark Theme") {
             c.fillStyle = "rgba(39, 39, 39, 0.01)";
+            // } else {
+            //     c.fillStyle = "rgba(255, 255, 255, 0.01)";
+            // }
             c.fillRect(0, 0, canvas.width, canvas.height);
             c.beginPath();
             c.moveTo(0, canvas.height / 2);
@@ -53,10 +59,15 @@ export default class Home extends Component {
             increment += wave.frequency;
         }
         animate();
-
     }
 
     render() {
-        return <canvas ref="canvas"></canvas>;
+        return (
+            <canvas ref="canvas">
+                <style jsx>{`
+                    margin-top: -1rem;
+                `}</style>
+            </canvas>
+        );
     }
 }
