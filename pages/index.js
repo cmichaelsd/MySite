@@ -28,9 +28,12 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-
-                <CanvasMobile />
-
+                {
+                    this.state.innerWidth >= 768 ?
+                        <CanvasFullscreen />
+                        :
+                        <CanvasMobile />
+                }
             </div>
         );
     }

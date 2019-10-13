@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, Fragment } from 'react';
 
 let particles = undefined;
 
@@ -207,7 +207,7 @@ export default class CanvasMobile extends Component {
         }, 200);
 
         // Event Listeners
-        canvas.addEventListener('mousedown', this.handleMouseDown);
+        window.addEventListener('mousedown', this.handleMouseDown);
         window.addEventListener('resize', this.handleResize);
 
         // Implementation
@@ -226,9 +226,7 @@ export default class CanvasMobile extends Component {
     };
 
     componentWillUnmount = () => {
-        const canvas = this.refs.canvas;
-
-        canvas.removeEventListener('mousedown', this.handleMouseDown);
+        window.removeEventListener('mousedown', this.handleMouseDown);
         window.removeEventListener('resize', this.handleResize);
 
         particles = [];
@@ -246,11 +244,29 @@ export default class CanvasMobile extends Component {
 
     render() {
         return (
-            <canvas ref="canvas">
+            <Fragment>
+                <div>
+                    <h1>Welcome</h1>
+                </div>
+                <canvas ref="canvas"></canvas>
                 <style jsx>{`
-                    margin-top: -1rem;
+                    div {
+                        position: fixed;
+                        height: 80%;
+                        width: 100%;
+                        z-index: 50;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: rgba(255, 255, 255, 0.7);
+                        pointer-events: none;
+                        font-size: 40px;
+                    }
+                    canvas {
+                        margin-top: -1rem;
+                    }
                 `}</style>
-            </canvas>
+            </Fragment>
         );
     }
 }
