@@ -16,32 +16,28 @@ export default class CanvasFullScreen extends Component {
 
     public offsetYOverflow: number = -60;
 
-    public canvas: any = this.refs.canvas;
+    public canvas: any = undefined;
 
-    public c: any = this.canvas.getContext('2d');
+    public c: any = undefined;
 
-    public wave: WaveProps = {
-        y: this.canvas.height / 2,
-        length: 0.005,
-        amplitude: 245,
-        frequency: 0.02
-    };
+    public wave: undefined | WaveProps = undefined;
 
     handleResize = (): void => {
-        const canvas: any = this.refs.canvas;
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight + this.offsetYOverflow;
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight + this.offsetYOverflow;
+        if (this.wave) {
+            this.wave.y = this.canvas.height / 2;
+        }
     };
 
     handleMouseDown = (): void => {
-        if (this.wave.frequency <= 1) {
+        if (this.wave && this.wave.frequency <= 1) {
             this.wave.frequency += 0.03;
         }
     };
 
     handleMouseUp = (): void => {
-        if (this.wave.frequency > 0.01) {
+        if (this.wave && this.wave.frequency > 0.01) {
             this.wave.frequency -= 0.03;
         }
     };
@@ -61,10 +57,16 @@ export default class CanvasFullScreen extends Component {
     };
 
     componentDidMount = (): void => {
-
+        this.canvas = this.refs.canvas;
+        this.c = this.canvas.getContext('2d');
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight + this.offsetYOverflow;
-
+        this.wave = {
+            y: this.canvas.height / 2,
+            length: 0.005,
+            amplitude: 245,
+            frequency: 0.02
+        };
         let increment: number = this.wave.frequency;
 
         window.addEventListener('resize', this.handleResize);
@@ -80,12 +82,16 @@ export default class CanvasFullScreen extends Component {
             this.c.fillRect(0, 0, this.canvas.width, this.canvas.height);
             this.c.beginPath();
             this.c.moveTo(0, this.canvas.height / 2);
-            for (let i: number = 0; i < this.canvas.width; i++) {
-                this.c.lineTo(i, this.wave.y + Math.sin(i * this.wave.length + increment) * (this.wave.amplitude * Math.sin(increment)));
+            if (this.wave) {
+                for (let i: number = 0; i < this.canvas.width; i++) {
+                    this.c.lineTo(i, this.wave.y + Math.sin(i * this.wave.length + increment) * (this.wave.amplitude * Math.sin(increment)));
+                }
             }
             this.c.strokeStyle = `hsl(${Math.abs(this.strokeColor.h * Math.sin(increment))}, ${this.strokeColor.s}%, ${this.strokeColor.l}%)`;
             this.c.stroke();
-            increment += this.wave.frequency;
+            if (this.wave) {
+                increment += this.wave.frequency;
+            }
         }
         animate();
     }
@@ -107,7 +113,7 @@ export default class CanvasFullScreen extends Component {
                 <style jsx>{`
                     div {
                         position: fixed;
-                        height: 80%;
+                        height: 83%;
                         width: 100%;
                         z-index: 50;
                         display: flex;
