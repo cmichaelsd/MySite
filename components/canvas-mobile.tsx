@@ -1,30 +1,31 @@
 import { Component, Fragment } from 'react';
 import UserContext from './usercontext';
+import { Coordinates, ParticleProps } from '../types-dir';
 
-let particles = undefined;
+let particles: undefined | ParticleProps[] = undefined;
 
-let mouse = {
+let mouse: Coordinates = {
     x: undefined,
     y: undefined
 };
 
-let prevMouse = {
+let prevMouse: Coordinates = {
     x: undefined,
     y: undefined
 };
 
-const offsetYOverflow = -60;
+const offsetYOverflow: number = -60;
 
 export default class CanvasMobile extends Component {
 
-    static contextType = UserContext;
+    static contextType: any = UserContext;
 
-    randomIntFromRange = (min, max) => {
+    randomIntFromRange = (min: number, max: number): number => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     };
 
-    randomColor = () => {
-        const colors = [
+    randomColor = (): string => {
+        const colors: string[] = [
             '#B8BCFF',
             '#A7BCE8',
             '#C5E7FF',
@@ -35,15 +36,15 @@ export default class CanvasMobile extends Component {
         return colors[Math.floor(Math.random() * colors.length)];
     };
 
-    distance = (x1, y1, x2, y2) => {
-        const xDist = x2 - x1;
-        const yDist = y2 - y1;
+    distance = (x1: number, y1: number, x2: number, y2: number): number => {
+        const xDist: number = x2 - x1;
+        const yDist: number = y2 - y1;
 
         return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
     };
 
-    rotate = (velocity, angle) => {
-        const rotatedVelocities = {
+    rotate = (velocity: any, angle: number): Coordinates => {
+        const rotatedVelocities: Coordinates = {
             x: velocity.x * Math.cos(angle) - velocity.y * Math.sin(angle),
             y: velocity.x * Math.sin(angle) + velocity.y * Math.cos(angle)
         };
@@ -51,34 +52,34 @@ export default class CanvasMobile extends Component {
         return rotatedVelocities;
     };
 
-    resolveCollision = (particle, otherParticle) => {
-        const xVelocityDiff = particle.velocity.x - otherParticle.velocity.x;
-        const yVelocityDiff = particle.velocity.y - otherParticle.velocity.y;
+    resolveCollision = (particle: any, otherParticle: any): void => {
+        const xVelocityDiff: number = particle.velocity.x - otherParticle.velocity.x;
+        const yVelocityDiff: number = particle.velocity.y - otherParticle.velocity.y;
 
-        const xDist = otherParticle.x - particle.x;
-        const yDist = otherParticle.y - particle.y;
+        const xDist: number = otherParticle.x - particle.x;
+        const yDist: number = otherParticle.y - particle.y;
 
         // Prevent accidental overlap of particles
         if (xVelocityDiff * xDist + yVelocityDiff * yDist >= 0) {
 
             // Grab angle between the two colliding particles
-            const angle = -Math.atan2(otherParticle.y - particle.y, otherParticle.x - particle.x);
+            const angle: number = -Math.atan2(otherParticle.y - particle.y, otherParticle.x - particle.x);
 
             // Store mass in var for better readability in collision equation
-            const m1 = particle.mass;
-            const m2 = otherParticle.mass;
+            const m1: number = particle.mass;
+            const m2: number = otherParticle.mass;
 
             // Velocity before equation
-            const u1 = this.rotate(particle.velocity, angle);
-            const u2 = this.rotate(otherParticle.velocity, angle);
+            const u1: any = this.rotate(particle.velocity, angle);
+            const u2: any = this.rotate(otherParticle.velocity, angle);
 
             // Velocity after 1d collision equation
-            const v1 = { x: u1.x * (m1 - m2) / (m1 + m2) + u2.x * 2 * m2 / (m1 + m2), y: u1.y };
-            const v2 = { x: u2.x * (m1 - m2) / (m1 + m2) + u1.x * 2 * m2 / (m1 + m2), y: u2.y };
+            const v1: Coordinates = { x: u1.x * (m1 - m2) / (m1 + m2) + u2.x * 2 * m2 / (m1 + m2), y: u1.y };
+            const v2: Coordinates = { x: u2.x * (m1 - m2) / (m1 + m2) + u1.x * 2 * m2 / (m1 + m2), y: u2.y };
 
             // Final velocity after rotating axis back to original location
-            const vFinal1 = this.rotate(v1, -angle);
-            const vFinal2 = this.rotate(v2, -angle);
+            const vFinal1: Coordinates = this.rotate(v1, -angle);
+            const vFinal2: Coordinates = this.rotate(v2, -angle);
 
             // Swap particle velocities for realistic bounce effect
             particle.velocity.x = vFinal1.x;
@@ -89,8 +90,11 @@ export default class CanvasMobile extends Component {
         }
     };
 
-    Particle = (c, x, y, radius, color) => {
-        let particle = {
+    Particle = (x: number, y: number, radius: number, color: string): ParticleProps => {
+        const canvas: any = this.refs.canvas;
+        const c: any = canvas.getContext('2d');
+
+        let particle: ParticleProps = {
             friction: 0.5,
             x: x,
             y: y,
@@ -106,7 +110,7 @@ export default class CanvasMobile extends Component {
                 x: x,
                 y: y
             },
-            draw: () => {
+            draw: (): void => {
                 c.beginPath();
                 c.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2, false)
                 c.save();
@@ -118,9 +122,9 @@ export default class CanvasMobile extends Component {
                 c.stroke();
                 c.closePath();
             },
-            update: (particles) => {
+            update: (particles: any): void => {
                 particle.draw();
-                for (let i = 0; i < particles.length; i++) {
+                for (let i: number = 0; i < particles.length; i++) {
                     if (particle === particles[i]) continue;
                     if (this.distance(particle.x, particle.y, particles[i].x, particles[i].y) - particle.radius * 2 < 0) {
                         this.resolveCollision(particle, particles[i]);
@@ -135,17 +139,22 @@ export default class CanvasMobile extends Component {
                 }
 
                 // mouse collision
-                if (this.distance(mouse.x, mouse.y, particle.x, particle.y) < 120 && particle.opacity < 0.2) {
-                    const displaceX = prevMouse.x - mouse.x;
-                    const displaceY = prevMouse.y - mouse.y;
-                    if (displaceX || displaceY) {
-                        particle.velocity.x -= displaceX < 0 ? -0.5 : 0.5;
-                        particle.velocity.y -= displaceY < 0 ? -0.5 : 0.5;
+                if (
+                    (mouse.x && mouse.y) &&
+                    (prevMouse.x && prevMouse.y)
+                ) {
+                    if (this.distance(mouse.x, mouse.y, particle.x, particle.y) < 120 && particle.opacity < 0.2) {
+                        const displaceX: number = prevMouse.x - mouse.x;
+                        const displaceY: number = prevMouse.y - mouse.y;
+                        if (displaceX || displaceY) {
+                            particle.velocity.x -= displaceX < 0 ? -0.5 : 0.5;
+                            particle.velocity.y -= displaceY < 0 ? -0.5 : 0.5;
+                        }
+                        particle.opacity += 0.02;
+                    } else if (particle.opacity > 0) {
+                        particle.opacity -= 0.02;
+                        particle.opacity = Math.max(0, particle.opacity);
                     }
-                    particle.opacity += 0.02;
-                } else if (particle.opacity > 0) {
-                    particle.opacity -= 0.02;
-                    particle.opacity = Math.max(0, particle.opacity);
                 }
 
                 particle.x += particle.velocity.x;
@@ -155,20 +164,19 @@ export default class CanvasMobile extends Component {
         return particle;
     };
 
-    init = () => {
-        const canvas = this.refs.canvas;
-        const c = canvas.getContext('2d');
+    init = (): void => {
+        const canvas: any = this.refs.canvas;
 
         particles = [];
 
-        for (let i = 0; i < 500; i++) {
-            const radius = 8;
-            let x = this.randomIntFromRange(radius, canvas.width - radius);
-            let y = this.randomIntFromRange(radius, canvas.height - radius);
-            const color = this.randomColor();
+        for (let i: number = 0; i < 500; i++) {
+            const radius: number = 8;
+            let x: number = this.randomIntFromRange(radius, canvas.width - radius);
+            let y: number = this.randomIntFromRange(radius, canvas.height - radius);
+            const color: string = this.randomColor();
 
             if (i !== 0) {
-                for (let j = 0; j < particles.length; j++) {
+                for (let j: number = 0; j < particles.length; j++) {
                     if (this.distance(x, y, particles[j].x, particles[j].y) - radius * 2 < 0) {
                         x = this.randomIntFromRange(radius, canvas.width - radius);
                         y = this.randomIntFromRange(radius, canvas.height - radius);
@@ -176,31 +184,31 @@ export default class CanvasMobile extends Component {
                     }
                 }
             }
-            particles.push(this.Particle(c, x, y, radius, color));
+            particles.push(this.Particle(x, y, radius, color));
         }
     };
 
-    handleMouseDown = (event) => {
+    handleMouseDown = (event: any): void => {
         event.preventDefault();
         mouse.x = event.touches[0].clientX;
         mouse.y = event.touches[0].clientY;
     };
 
-    handleResize = () => {
-        const canvas = this.refs.canvas;
+    handleResize = (): void => {
+        const canvas: any = this.refs.canvas;
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight + offsetYOverflow;
         this.init();
     };
 
-    hexToRgb = (hex) => {
-        var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hexToRgb = (hex: string): any => {
+        var shorthandRegex: any = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
         hex = hex.replace(shorthandRegex, function (m, r, g, b) {
             return r + r + g + g + b + b;
         });
 
-        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        var result: any = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
         return result ? {
             r: parseInt(result[1], 16),
             g: parseInt(result[2], 16),
@@ -208,14 +216,14 @@ export default class CanvasMobile extends Component {
         } : null;
     };
 
-    componentDidMount = () => {
-        const canvas = this.refs.canvas;
-        const c = canvas.getContext('2d');
+    componentDidMount = (): void => {
+        const canvas: any = this.refs.canvas;
+        const c: any = canvas.getContext('2d');
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight + offsetYOverflow;
 
-        setInterval(() => {
+        setInterval((): void => {
             prevMouse.x = mouse.x
             prevMouse.y = mouse.y
         }, 200);
@@ -224,23 +232,22 @@ export default class CanvasMobile extends Component {
         window.addEventListener('touchmove', this.handleMouseDown, { passive: false });
         window.addEventListener('resize', this.handleResize);
 
-        // Implementation
-        this.init();
-
         // Animation Loop
-        const animate = () => {
+        const animate = (): void => {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(particle => {
-                particle.update(particles);
-            })
+            if (particles) {
+                particles.forEach(particle => {
+                    particle.update(particles);
+                });
+            }
         }
         this.init();
         animate();
     };
 
-    componentWillUnmount = () => {
-        window.removeEventListener('touchmove', this.handleMouseDown, { passive: false });
+    componentWillUnmount = (): void => {
+        window.removeEventListener('touchmove', this.handleMouseDown);
         window.removeEventListener('resize', this.handleResize);
 
         particles = [];
@@ -257,7 +264,7 @@ export default class CanvasMobile extends Component {
     };
 
     render() {
-        let bg = this.hexToRgb(this.context.theme.textColor);
+        let bg: any = this.hexToRgb(this.context.theme.textColor);
         return (
             <Fragment>
                 <div>
