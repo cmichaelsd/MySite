@@ -16,6 +16,11 @@ const SideDrawer: NextPage = () => {
             <ul>
                 <li>
                     <Link activeClassName='active' href="/" as="/">
+                        <a>Home</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link activeClassName='active' href="/about" as="/about">
                         <a>About</a>
                     </Link>
                 </li>

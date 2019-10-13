@@ -24,7 +24,7 @@ const Toolbar: NextPage = () => {
                 <div className="toolbar__navigation-items">
                     <ul>
                         <li>
-                            <Link activeClassName='active' href="/" as="/">
+                            <Link activeClassName='active' href="/about" as="/about">
                                 <a>About</a>
                             </Link>
                         </li>

@@ -22,7 +22,7 @@ const PageTemplate: NextPage<PageTemplateProps> = (props) => {
                     color: ${theme.textColor};
                     height: 1px;
                     background: ${theme.toneTwo};
-                    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(${theme.textColor}), to(${theme.toneTwo}));
+                    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(${theme.highlight}), to(${theme.toneTwo}));
                 }
                 .story {
                     width: 640px;
