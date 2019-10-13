@@ -1,4 +1,5 @@
 import { Component, Fragment } from 'react';
+import UserContext from './usercontext';
 
 let particles = undefined;
 
@@ -15,6 +16,8 @@ let prevMouse = {
 const offsetYOverflow = -60;
 
 export default class CanvasMobile extends Component {
+
+    static contextType = UserContext;
 
     randomIntFromRange = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -159,7 +162,7 @@ export default class CanvasMobile extends Component {
         particles = [];
 
         for (let i = 0; i < 600; i++) {
-            const radius = 4;
+            const radius = 6;
             let x = this.randomIntFromRange(radius, canvas.width - radius);
             let y = this.randomIntFromRange(radius, canvas.height - radius);
             const color = this.randomColor();
@@ -192,6 +195,20 @@ export default class CanvasMobile extends Component {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight + offsetYOverflow;
         this.init();
+    };
+
+    hexToRgb = (hex) => {
+        var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+        hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+            return r + r + g + g + b + b;
+        });
+
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
     };
 
     componentDidMount = () => {
@@ -243,6 +260,7 @@ export default class CanvasMobile extends Component {
     }
 
     render() {
+        let bg = this.hexToRgb(this.context.theme.toneOne);
         return (
             <Fragment>
                 <div>
@@ -258,12 +276,23 @@ export default class CanvasMobile extends Component {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        color: rgba(255, 255, 255, 0.7);
+                        color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5);
+                        text-shadow: 0 0 5px ${this.context.theme.highlight};
                         pointer-events: none;
                         font-size: 40px;
+                        animation: glow 3s ease-in-out infinite alternate;
                     }
                     canvas {
                         margin-top: -1rem;
+                    }
+
+                    @keyframes glow {
+                        from {
+                            color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5);
+                        }
+                        to {
+                            color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.2);
+                        }
                     }
                 `}</style>
             </Fragment>
