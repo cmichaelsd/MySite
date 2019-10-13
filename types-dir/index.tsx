@@ -30,7 +30,8 @@ export interface ActiveLinkProps {
     children: any,
     activeClassName: string,
     href: string
-    as: string
+    as: string,
+    exact?: boolean
 }
 
 export interface SkillProps {

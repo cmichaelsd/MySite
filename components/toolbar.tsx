@@ -16,7 +16,7 @@ const Toolbar: NextPage = () => {
                 </div>
                 <div className="spacer"></div>
                 <div className="toolbar__logo">
-                    <Link activeClassName='active' href="/home" as="/home">
+                    <Link activeClassName='active' href="/" as="/">
                         <a>Cole Michaels</a>
                     </Link>
                 </div>
@@ -24,7 +24,7 @@ const Toolbar: NextPage = () => {
                 <div className="toolbar__navigation-items">
                     <ul>
                         <li>
-                            <Link activeClassName='active' href="/" as="/">
+                            <Link activeClassName='active' href="/about" as="/about">
                                 <a>About</a>
                             </Link>
                         </li>

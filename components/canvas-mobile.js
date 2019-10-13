@@ -2,12 +2,12 @@ import { Component } from 'react';
 
 let particles = undefined;
 
-const mouse = {
+let mouse = {
     x: undefined,
     y: undefined
 };
 
-const prevMouse = {
+let prevMouse = {
     x: undefined,
     y: undefined
 };
@@ -152,7 +152,10 @@ export default class CanvasMobile extends Component {
         return particle;
     };
 
-    init = (canvas, c) => {
+    init = () => {
+        const canvas = this.refs.canvas;
+        const c = canvas.getContext('2d');
+
         particles = [];
 
         for (let i = 0; i < 600; i++) {
@@ -166,7 +169,6 @@ export default class CanvasMobile extends Component {
                     if (this.distance(x, y, particles[j].x, particles[j].y) - radius * 2 < 0) {
                         x = this.randomIntFromRange(radius, canvas.width - radius);
                         y = this.randomIntFromRange(radius, canvas.height - radius);
-
                         j = -1;
                     }
                 }
@@ -175,17 +177,21 @@ export default class CanvasMobile extends Component {
         }
     };
 
-    handleMouseDown = (canvas) => {
-        canvas.addEventListener('mousedown', event => {
+    handleMouseDown = () => {
+        const canvas = this.refs.canvas;
+
+        canvas.addEventListener('mousedown', (event) => {
             mouse.x = event.clientX;
             mouse.y = event.clientY;
         });
     };
 
-    handleResize = (canvas, c) => {
+    handleResize = () => {
+        const canvas = this.refs.canvas;
+
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight + offsetYOverflow;
-        this.init(canvas, c);
+        this.init();
     };
 
     componentDidMount = () => {
@@ -201,11 +207,11 @@ export default class CanvasMobile extends Component {
         }, 200);
 
         // Event Listeners
-        canvas.addEventListener('mousedown', () => this.handleMouseDown(canvas));
-        window.addEventListener('resize', () => this.handleResize(canvas, c));
+        canvas.addEventListener('mousedown', this.handleMouseDown);
+        window.addEventListener('resize', this.handleResize);
 
         // Implementation
-        this.init(canvas, c);
+        this.init();
 
         // Animation Loop
         const animate = () => {
@@ -215,16 +221,27 @@ export default class CanvasMobile extends Component {
                 particle.update(particles);
             })
         }
-        this.init(canvas, c);
+        this.init();
         animate();
     };
 
     componentWillUnmount = () => {
         const canvas = this.refs.canvas;
-        const c = canvas.getContext('2d');
 
-        canvas.removeEventListener('mousedown', () => this.handleMouseDown(canvas));
-        window.removeEventListener('resize', () => this.handleResize(canvas, c));
+        canvas.removeEventListener('mousedown', this.handleMouseDown);
+        window.removeEventListener('resize', this.handleResize);
+
+        particles = [];
+
+        mouse = {
+            x: undefined,
+            y: undefined
+        };
+
+        prevMouse = {
+            x: undefined,
+            y: undefined
+        };
     }
 
     render() {
