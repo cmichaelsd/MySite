@@ -38,6 +38,11 @@ export default class Home extends Component {
                         :
                         <CanvasMobile />
                 }
+                <style jsx>{`
+                    * {
+                        overscroll-behavior-y: none;
+                    }
+                `}</style>
             </div>
         );
     }
