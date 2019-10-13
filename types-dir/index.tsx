@@ -83,3 +83,16 @@ export interface ParticleProps {
 export interface HomeState {
     innerWidth: number | undefined
 }
+
+export interface StrokeColorProps {
+    h: number,
+    s: number,
+    l: number
+}
+
+export interface WaveProps {
+    y: number,
+    length: number,
+    amplitude: number,
+    frequency: number
+}
