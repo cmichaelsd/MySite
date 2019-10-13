@@ -15,7 +15,7 @@ const Experience: NextPage = () => {
             </Head>
             <ul className="projects">
                 <li className="project">
-                    <SquareImage href="https://vshred.com/" src="/static/VShred-Web.webp" alt="V Shred Logo" />
+                    <SquareImage href="https://vshred.com/" src="/static/fallbacks/VShred-Web.png" alt="V Shred Logo" />
                     <div className="project__content">
                         <h2>
                             <a href="https://vshred.com/" target="_blank" rel="noopener noreferrer">V Shred</a>
@@ -24,7 +24,7 @@ const Experience: NextPage = () => {
                     </div>
                 </li>
                 <li className="project">
-                    <SquareImage href="https://sculptnation.com/" src="/static/SculptNation-Web.webp" alt="Sculpt Nation Logo" />
+                    <SquareImage href="https://sculptnation.com/" src="/static/fallbacks/SculptNation-Web.png" alt="Sculpt Nation Logo" />
                     <div className="project__content">
                         <h2>
                             <a href="https://sculptnation.com/" target="_blank" rel="noopener noreferrer">SculptNation</a>
@@ -33,7 +33,7 @@ const Experience: NextPage = () => {
                     </div>
                 </li>
                 <li className="project">
-                    <SquareImage background="#f16870" href="https://www.jijengeacademy.com/" src="/static/Jijenge-Web.webp" alt="Jijenge Logo" />
+                    <SquareImage background="#f16870" href="https://www.jijengeacademy.com/" src="/static/fallbacks/Jijenge-Web.png" alt="Jijenge Logo" />
                     <div className="project__content">
                         <h2>
                             <a href="https://www.jijengeacademy.com/" target="_blank" rel="noopener noreferrer">Jijenge Academy</a>

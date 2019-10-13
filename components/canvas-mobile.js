@@ -25,11 +25,11 @@ export default class CanvasMobile extends Component {
 
     randomColor = () => {
         const colors = [
-            '#7A481F',
-            '#FBBD8A',
-            '#FA923F',
-            '#7A5C43',
-            '#C77532',
+            '#B8BCFF',
+            '#A7BCE8',
+            '#C5E7FF',
+            '#A7DEE8',
+            '#B8FFF7',
         ];
 
         return colors[Math.floor(Math.random() * colors.length)];
@@ -161,8 +161,8 @@ export default class CanvasMobile extends Component {
 
         particles = [];
 
-        for (let i = 0; i < 600; i++) {
-            const radius = 6;
+        for (let i = 0; i < 500; i++) {
+            const radius = 8;
             let x = this.randomIntFromRange(radius, canvas.width - radius);
             let y = this.randomIntFromRange(radius, canvas.height - radius);
             const color = this.randomColor();
@@ -195,6 +195,20 @@ export default class CanvasMobile extends Component {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight + offsetYOverflow;
         this.init();
+    };
+
+    hexToRgb = (hex) => {
+        var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+        hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+            return r + r + g + g + b + b;
+        });
+
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
     };
 
     componentDidMount = () => {
@@ -243,17 +257,45 @@ export default class CanvasMobile extends Component {
             x: undefined,
             y: undefined
         };
-    }
+    };
 
     render() {
+        let bg = this.hexToRgb(this.context.theme.textColor);
         return (
-            <canvas ref="canvas">
+            <Fragment>
+                <div>
+                    <h1>Welcome</h1>
+                </div>
+                <canvas ref="canvas"></canvas>
                 <style jsx>{`
+                    * {
+                        overscroll-behavior-y: none;
+                    }
+                    div {
+                        position: fixed;
+                        height: 80%;
+                        width: 100%;
+                        z-index: 50;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        pointer-events: none;
+                        font-size: 40px;
+                        animation: glow 5s ease-out forwards;
+                    }
                     canvas {
                         margin-top: -1rem;
                     }
+                    @keyframes glow {
+                        from {
+                            color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 1);
+                        }
+                        to {
+                            color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0);
+                        }
+                    }
                 `}</style>
-            </canvas>
+            </Fragment>
         );
     }
 }

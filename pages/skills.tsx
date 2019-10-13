@@ -5,24 +5,24 @@ import PageTemplate from '../layouts/page-template';
 
 const Skills: NextPage = () => {
     const skillsArray: (string | number)[][] = [
-        [5, "JavaScript", "/static/tech-icons/JavaScript-Icon.webp", "JavaScript Icon"],
-        [5, "HTML5", "/static/tech-icons/HTML5-Icon.webp", "HTML5 Icon"],
-        [5, "CSS3", "/static/tech-icons/CSS3-Icon.webp", "CSS3 Icon"],
-        [5, "Sass", "/static/tech-icons/Sass-Icon.webp", "Sass Icon"],
-        [5, "React", "/static/tech-icons/React-Icon.webp", "React Icon"],
-        [5, "Vue", "/static/tech-icons/Vue-Icon.webp", "Vue Icon"],
-        [5, "AWS S3", "/static/tech-icons/AWS-S3-Icon.webp", "AWS S3 Icon"],
-        [5, "ASW EC2", "/static/tech-icons/AWS-EC2-Icon.webp", "AWS EC2 Icon"],
-        [5, "Node", "/static/tech-icons/Node-Icon.webp", "Node Icon"],
-        [5, "jQuery", "/static/tech-icons/jQuery-Icon.webp", "jQuery Icon"],
-        [4, "TypeScript", "/static/tech-icons/TypeScript-Icon.webp", "TypeScript Icon"],
-        [4, "Next", "/static/tech-icons/Next-Icon.webp", "Next Icon"],
-        [4, "Docker", "/static/tech-icons/Docker-Icon.webp", "Docker Icon"],
-        [4, "MongoDB", "/static/tech-icons/MongoDB-Icon.webp", "MongoDB Icon"],
-        [3, "Webpack", "/static/tech-icons/Webpack-Icon.webp", "Webpack Icon"],
-        [3, "Canvas", "/static/tech-icons/Canvas-Icon.webp", "Canvas Icon"],
-        [3, "Angular", "/static/tech-icons/Angular-Icon.webp", "Angular Icon"],
-        [3, "Postgres", "/static/tech-icons/Postgres-Icon.webp", "Postgres Icon"]
+        [5, "JavaScript", "/static/fallbacks/tech-icons/JavaScript-Icon.png", "JavaScript Icon"],
+        [5, "HTML5", "/static/fallbacks/tech-icons/HTML5-Icon.png", "HTML5 Icon"],
+        [5, "CSS3", "/static/fallbacks/tech-icons/CSS3-Icon.png", "CSS3 Icon"],
+        [5, "Sass", "/static/fallbacks/tech-icons/Sass-Icon.png", "Sass Icon"],
+        [5, "React", "/static/fallbacks/tech-icons/React-Icon.png", "React Icon"],
+        [5, "Vue", "/static/fallbacks/tech-icons/Vue-Icon.png", "Vue Icon"],
+        [5, "AWS S3", "/static/fallbacks/tech-icons/AWS-S3-Icon.png", "AWS S3 Icon"],
+        [5, "ASW EC2", "/static/fallbacks/tech-icons/AWS-EC2-Icon.png", "AWS EC2 Icon"],
+        [5, "Node", "/static/fallbacks/tech-icons/Node-Icon.png", "Node Icon"],
+        [5, "jQuery", "/static/fallbacks/tech-icons/jQuery-Icon.png", "jQuery Icon"],
+        [4, "TypeScript", "/static/fallbacks/tech-icons/TypeScript-Icon.png", "TypeScript Icon"],
+        [4, "Next", "/static/fallbacks/tech-icons/Next-Icon.png", "Next Icon"],
+        [4, "Docker", "/static/fallbacks/tech-icons/Docker-Icon.png", "Docker Icon"],
+        [4, "MongoDB", "/static/fallbacks/tech-icons/MongoDB-Icon.png", "MongoDB Icon"],
+        [3, "Webpack", "/static/fallbacks/tech-icons/Webpack-Icon.png", "Webpack Icon"],
+        [3, "Canvas", "/static/fallbacks/tech-icons/Canvas-Icon.png", "Canvas Icon"],
+        [3, "Angular", "/static/fallbacks/tech-icons/Angular-Icon.png", "Angular Icon"],
+        [3, "Postgres", "/static/fallbacks/tech-icons/Postgres-Icon.png", "Postgres Icon"]
     ];
     if (skillsArray.length % 2 !== 0) {
         skillsArray.push(["", "", "", ""]);

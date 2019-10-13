@@ -120,7 +120,7 @@ const Toolbar: NextPage = () => {
                         display: none;
                     }
                     .spacer {
-                        flex: 0.3;
+                        flex: 0.1;
                     }
                 }
                 @media (min-width: 769px) {
