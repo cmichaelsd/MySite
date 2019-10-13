@@ -277,21 +277,39 @@ export default class CanvasMobile extends Component {
                         justify-content: center;
                         align-items: center;
                         color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5);
-                        text-shadow: 0 0 5px ${this.context.theme.highlight};
+                        // text-shadow: 0 0 5px ${this.context.theme.highlight};
                         pointer-events: none;
                         font-size: 40px;
-                        animation: glow 3s ease-in-out infinite alternate;
+                        animation: glow 4s ease-in-out infinite alternate;
                     }
                     canvas {
                         margin-top: -1rem;
                     }
-
+                    // '#7A481F',
+                    // '#FBBD8A',
+                    // '#FA923F',
+                    // '#7A5C43',
+                    // '#C77532',
                     @keyframes glow {
                         from {
-                            color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5);
+                            text-shadow: 
+                                0 0 2px rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5), 
+                                0 0 7px rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5), 
+                                0 0 12px #C77532, 
+                                0 0 17px #C77532, 
+                                0 0 22px #C77532, 
+                                0 0 27px #C77532, 
+                                0 0 32px #C77532;
                         }
                         to {
-                            color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.2);
+                            text-shadow: 
+                                0 0 10px rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5), 
+                                0 0 20px ${this.context.theme.highlight}, 
+                                0 0 30px ${this.context.theme.highlight}, 
+                                0 0 40px ${this.context.theme.highlight}, 
+                                0 0 50px ${this.context.theme.highlight}, 
+                                0 0 60px ${this.context.theme.highlight}, 
+                                0 0 70px ${this.context.theme.highlight};
                         }
                     }
                 `}</style>
