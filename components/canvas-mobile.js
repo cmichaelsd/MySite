@@ -197,20 +197,6 @@ export default class CanvasMobile extends Component {
         this.init();
     };
 
-    hexToRgb = (hex) => {
-        var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-        hex = hex.replace(shorthandRegex, function (m, r, g, b) {
-            return r + r + g + g + b + b;
-        });
-
-        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-        return result ? {
-            r: parseInt(result[1], 16),
-            g: parseInt(result[2], 16),
-            b: parseInt(result[3], 16)
-        } : null;
-    };
-
     componentDidMount = () => {
         const canvas = this.refs.canvas;
         const c = canvas.getContext('2d');
@@ -260,60 +246,14 @@ export default class CanvasMobile extends Component {
     }
 
     render() {
-        let bg = this.hexToRgb(this.context.theme.toneOne);
         return (
-            <Fragment>
-                <div>
-                    <h1>Welcome</h1>
-                </div>
-                <canvas ref="canvas"></canvas>
+            <canvas ref="canvas">
                 <style jsx>{`
-                    div {
-                        position: fixed;
-                        height: 80%;
-                        width: 100%;
-                        z-index: 50;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5);
-                        // text-shadow: 0 0 5px ${this.context.theme.highlight};
-                        pointer-events: none;
-                        font-size: 40px;
-                        animation: glow 4s ease-in-out infinite alternate;
-                    }
                     canvas {
                         margin-top: -1rem;
                     }
-                    // '#7A481F',
-                    // '#FBBD8A',
-                    // '#FA923F',
-                    // '#7A5C43',
-                    // '#C77532',
-                    @keyframes glow {
-                        from {
-                            text-shadow: 
-                                0 0 2px rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5), 
-                                0 0 7px rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5), 
-                                0 0 12px #C77532, 
-                                0 0 17px #C77532, 
-                                0 0 22px #C77532, 
-                                0 0 27px #C77532, 
-                                0 0 32px #C77532;
-                        }
-                        to {
-                            text-shadow: 
-                                0 0 10px rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5), 
-                                0 0 20px ${this.context.theme.highlight}, 
-                                0 0 30px ${this.context.theme.highlight}, 
-                                0 0 40px ${this.context.theme.highlight}, 
-                                0 0 50px ${this.context.theme.highlight}, 
-                                0 0 60px ${this.context.theme.highlight}, 
-                                0 0 70px ${this.context.theme.highlight};
-                        }
-                    }
                 `}</style>
-            </Fragment>
+            </canvas>
         );
     }
 }
