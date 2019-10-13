@@ -60,3 +60,39 @@ export interface SquareImageProps {
     alt: string,
     href: string
 }
+
+export interface Coordinates {
+    x: number | undefined,
+    y: number | undefined
+}
+
+export interface ParticleProps {
+    friction: number,
+    x: number,
+    y: number,
+    velocity: any,
+    radius: number,
+    color: string,
+    mass: number,
+    opacity: number,
+    lastPoint: Coordinates,
+    draw: any,
+    update: any
+}
+
+export interface HomeState {
+    innerWidth: number | undefined
+}
+
+export interface StrokeColorProps {
+    h: number,
+    s: number,
+    l: number
+}
+
+export interface WaveProps {
+    y: number,
+    length: number,
+    amplitude: number,
+    frequency: number
+}

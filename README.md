@@ -6,6 +6,7 @@
 - Next.js
 - TypeScript
 - Netlify
+- SVGs by IcoMoon
 
 ### Domain Name
 [colemichaels.com](https://colemichaels.com)
