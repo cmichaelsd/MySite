@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Head from 'next/head';
 import CanvasFullscreen from '../components/canvas-fullscreen';
 import CanvasMobile from '../components/canvas-mobile';
 
@@ -28,6 +29,9 @@ export default class Home extends Component {
     render() {
         return (
             <div>
+                <Head>
+                    <title>Coles Michaels - Home</title>
+                </Head>
                 {
                     this.state.innerWidth >= 768 ?
                         <CanvasFullscreen />
