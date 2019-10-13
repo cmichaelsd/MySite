@@ -221,7 +221,7 @@ export default class CanvasMobile extends Component {
         }, 200);
 
         // Event Listeners
-        window.addEventListener('touchmove', this.handleMouseDown);
+        window.addEventListener('touchmove', this.handleMouseDown, { passive: false });
         window.addEventListener('resize', this.handleResize);
 
         // Implementation
