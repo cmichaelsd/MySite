@@ -2,23 +2,23 @@ import { Component, Fragment } from 'react';
 import UserContext from './usercontext';
 import { Coordinates, ParticleProps } from '../types-dir';
 
-let particles: undefined | ParticleProps[] = undefined;
-
-let mouse: Coordinates = {
-    x: undefined,
-    y: undefined
-};
-
-let prevMouse: Coordinates = {
-    x: undefined,
-    y: undefined
-};
-
-const offsetYOverflow: number = -60;
-
 export default class CanvasMobile extends Component {
 
     static contextType: any = UserContext;
+
+    public prevMouse: Coordinates = {
+        x: undefined,
+        y: undefined
+    };
+
+    public mouse: Coordinates = {
+        x: undefined,
+        y: undefined
+    };
+
+    public particles: undefined | ParticleProps[] = undefined;
+
+    public offsetYOverflow: number = -60;
 
     randomIntFromRange = (min: number, max: number): number => {
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -140,12 +140,12 @@ export default class CanvasMobile extends Component {
 
                 // mouse collision
                 if (
-                    (mouse.x && mouse.y) &&
-                    (prevMouse.x && prevMouse.y)
+                    (this.mouse.x && this.mouse.y) &&
+                    (this.prevMouse.x && this.prevMouse.y)
                 ) {
-                    if (this.distance(mouse.x, mouse.y, particle.x, particle.y) < 120 && particle.opacity < 0.2) {
-                        const displaceX: number = prevMouse.x - mouse.x;
-                        const displaceY: number = prevMouse.y - mouse.y;
+                    if (this.distance(this.mouse.x, this.mouse.y, particle.x, particle.y) < 120 && particle.opacity < 0.2) {
+                        const displaceX: number = this.prevMouse.x - this.mouse.x;
+                        const displaceY: number = this.prevMouse.y - this.mouse.y;
                         if (displaceX || displaceY) {
                             particle.velocity.x -= displaceX < 0 ? -0.5 : 0.5;
                             particle.velocity.y -= displaceY < 0 ? -0.5 : 0.5;
@@ -167,7 +167,7 @@ export default class CanvasMobile extends Component {
     init = (): void => {
         const canvas: any = this.refs.canvas;
 
-        particles = [];
+        this.particles = [];
 
         for (let i: number = 0; i < 500; i++) {
             const radius: number = 8;
@@ -176,29 +176,29 @@ export default class CanvasMobile extends Component {
             const color: string = this.randomColor();
 
             if (i !== 0) {
-                for (let j: number = 0; j < particles.length; j++) {
-                    if (this.distance(x, y, particles[j].x, particles[j].y) - radius * 2 < 0) {
+                for (let j: number = 0; j < this.particles.length; j++) {
+                    if (this.distance(x, y, this.particles[j].x, this.particles[j].y) - radius * 2 < 0) {
                         x = this.randomIntFromRange(radius, canvas.width - radius);
                         y = this.randomIntFromRange(radius, canvas.height - radius);
                         j = -1;
                     }
                 }
             }
-            particles.push(this.Particle(x, y, radius, color));
+            this.particles.push(this.Particle(x, y, radius, color));
         }
     };
 
     handleMouseDown = (event: any): void => {
         event.preventDefault();
-        mouse.x = event.touches[0].clientX;
-        mouse.y = event.touches[0].clientY;
+        this.mouse.x = event.touches[0].clientX;
+        this.mouse.y = event.touches[0].clientY;
     };
 
     handleResize = (): void => {
         const canvas: any = this.refs.canvas;
 
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight + offsetYOverflow;
+        canvas.height = window.innerHeight + this.offsetYOverflow;
         this.init();
     };
 
@@ -221,11 +221,11 @@ export default class CanvasMobile extends Component {
         const c: any = canvas.getContext('2d');
 
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight + offsetYOverflow;
+        canvas.height = window.innerHeight + this.offsetYOverflow;
 
         setInterval((): void => {
-            prevMouse.x = mouse.x
-            prevMouse.y = mouse.y
+            this.prevMouse.x = this.mouse.x
+            this.prevMouse.y = this.mouse.y
         }, 200);
 
         // Event Listeners
@@ -236,9 +236,9 @@ export default class CanvasMobile extends Component {
         const animate = (): void => {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, canvas.width, canvas.height);
-            if (particles) {
-                particles.forEach(particle => {
-                    particle.update(particles);
+            if (this.particles) {
+                this.particles.forEach(particle => {
+                    particle.update(this.particles);
                 });
             }
         }
@@ -250,14 +250,14 @@ export default class CanvasMobile extends Component {
         window.removeEventListener('touchmove', this.handleMouseDown);
         window.removeEventListener('resize', this.handleResize);
 
-        particles = [];
+        this.particles = [];
 
-        mouse = {
+        this.mouse = {
             x: undefined,
             y: undefined
         };
 
-        prevMouse = {
+        this.prevMouse = {
             x: undefined,
             y: undefined
         };
