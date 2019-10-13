@@ -181,7 +181,6 @@ export default class CanvasMobile extends Component {
     };
 
     handleMouseDown = (event) => {
-        event.preventDefault();
         mouse.x = event.touches[0].clientX;
         mouse.y = event.touches[0].clientY;
     };
@@ -240,7 +239,7 @@ export default class CanvasMobile extends Component {
     };
 
     componentWillUnmount = () => {
-        window.removeEventListener('mousedown', this.handleMouseDown);
+        window.removeEventListener('mousedown', this.handleMouseDown, { passive: false });
         window.removeEventListener('resize', this.handleResize);
 
         particles = [];
