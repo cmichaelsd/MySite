@@ -2,27 +2,26 @@ import { Component } from 'react';
 import Head from 'next/head';
 import CanvasFullscreen from '../components/canvas-fullscreen';
 import CanvasMobile from '../components/canvas-mobile';
+import { HomeState } from '../types-dir';
 
 export default class Home extends Component {
-    state = {
-        innerWidth: undefined,
-        innerHeight: undefined
+    state: HomeState = {
+        innerWidth: undefined
     };
 
-    handleWindowResize = () => {
-        const { innerWidth, innerHeight } = window;
-        this.setState({ innerWidth, innerHeight });
+    handleWindowResize = (): void => {
+        const { innerWidth }: { innerWidth: number } = window;
+        this.setState({ innerWidth });
     };
 
-    componentDidMount = () => {
+    componentDidMount = (): void => {
         window.addEventListener('resize', this.handleWindowResize);
         this.setState({
-            innerWidth: window.innerWidth,
-            innerHeight: window.innerHeight
+            innerWidth: window.innerWidth
         });
     };
 
-    componentWillUnmount = () => {
+    componentWillUnmount = (): void => {
         window.removeEventListener('resize', this.handleWindowResize);
     };
 
@@ -33,7 +32,7 @@ export default class Home extends Component {
                     <title>Coles Michaels - Home</title>
                 </Head>
                 {
-                    this.state.innerWidth >= 768 ?
+                    this.state.innerWidth && this.state.innerWidth >= 768 ?
                         <CanvasFullscreen />
                         :
                         <CanvasMobile />

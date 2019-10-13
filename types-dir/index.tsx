@@ -79,3 +79,7 @@ export interface ParticleProps {
     draw: any,
     update: any
 }
+
+export interface HomeState {
+    innerWidth: number | undefined
+}
