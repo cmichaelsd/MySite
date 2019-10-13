@@ -180,13 +180,10 @@ export default class CanvasMobile extends Component {
         }
     };
 
-    handleMouseDown = () => {
-        const canvas = this.refs.canvas;
-
-        canvas.addEventListener('mousedown', (event) => {
-            mouse.x = event.clientX;
-            mouse.y = event.clientY;
-        });
+    handleMouseDown = (event) => {
+        event.preventDefault();
+        mouse.x = event.touches[0].clientX;
+        mouse.y = event.touches[0].clientY;
     };
 
     handleResize = () => {
@@ -224,7 +221,7 @@ export default class CanvasMobile extends Component {
         }, 200);
 
         // Event Listeners
-        window.addEventListener('mousedown', this.handleMouseDown);
+        window.addEventListener('touchmove', this.handleMouseDown);
         window.addEventListener('resize', this.handleResize);
 
         // Implementation
@@ -268,9 +265,6 @@ export default class CanvasMobile extends Component {
                 </div>
                 <canvas ref="canvas"></canvas>
                 <style jsx>{`
-                    * {
-                        overscroll-behavior-y: none;
-                    }
                     div {
                         position: fixed;
                         height: 80%;
