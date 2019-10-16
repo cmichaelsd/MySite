@@ -63,8 +63,8 @@ export default class CanvasFullScreen extends Component {
         this.canvas.height = window.innerHeight + this.offsetYOverflow;
         this.wave = {
             y: this.canvas.height / 2,
-            length: 0.005,
-            amplitude: 245,
+            length: 0.010,
+            amplitude: 260,
             frequency: 0.02
         };
         let increment: number = this.wave.frequency;
@@ -113,7 +113,7 @@ export default class CanvasFullScreen extends Component {
                 <style jsx>{`
                     div {
                         position: fixed;
-                        height: 83%;
+                        height: 82%;
                         width: 100%;
                         z-index: 50;
                         display: flex;
@@ -121,7 +121,7 @@ export default class CanvasFullScreen extends Component {
                         align-items: center;
                         color: rgba(${bg.r}, ${bg.g}, ${bg.b}, 0.5);
                         pointer-events: none;
-                        font-size: 60px;
+                        font-size: 50px;
                     }
                     canvas {
                         margin-top: -1rem;
