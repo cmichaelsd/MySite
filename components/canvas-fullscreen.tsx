@@ -26,7 +26,18 @@ export default class CanvasFullScreen extends Component {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight + this.offsetYOverflow;
         if (this.wave) {
+            let length = 0.008;
+            let amplitude = 260;
+            if (this.canvas.width >= 1814) {
+                length = 0.010;
+                amplitude = 260;
+            } else if (this.canvas.width >= 968) {
+                length = 0.005;
+                amplitude = 360;
+            }
             this.wave.y = this.canvas.height / 2;
+            this.wave.length = length;
+            this.wave.amplitude = amplitude;
         }
     };
 
@@ -61,10 +72,23 @@ export default class CanvasFullScreen extends Component {
         this.c = this.canvas.getContext('2d');
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight + this.offsetYOverflow;
+        // wave length
+        // default: length: 0.008 amp: 260
+        // width 968: length: 0.005 amp: 360
+        // width 1814: length: 0.010 amp: 260
+        let length = 0.008;
+        let amplitude = 260;
+        if (this.canvas.width >= 1814) {
+            length = 0.010;
+            amplitude = 260;
+        } else if (this.canvas.width >= 968) {
+            length = 0.005;
+            amplitude = 360;
+        }
         this.wave = {
             y: this.canvas.height / 2,
-            length: 0.010,
-            amplitude: 260,
+            length: length,
+            amplitude: amplitude,
             frequency: 0.02
         };
         let increment: number = this.wave.frequency;
