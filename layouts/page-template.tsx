@@ -34,7 +34,6 @@ const PageTemplate: NextPage<PageTemplateProps> = (props) => {
                 @media (max-width: 768px) {
                     .story {
                         width: auto;
-                        margin-bottom: 4rem;
                     }
                 }
             `}</style>
