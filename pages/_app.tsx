@@ -77,7 +77,7 @@ export default class MyApp extends App {
             ⣿⣿⣿⣿⣿⣿⣿⣿⡀%c⠉%c⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀%c⠉⠉⠁%c⠀⠀⣿⣿⣿ \n
             ⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿ \n
             ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
-        `,
+            `,
             `color: ${fur};font-size: ${fontSize};`,
             `color: ${eyes};font-size: ${fontSize};`,
             `color: ${fur};font-size: ${fontSize};`,
