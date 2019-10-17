@@ -6,7 +6,7 @@ import PaintRoller from './paint-roller';
 import { ThemeContent } from '../types-dir';
 
 const SideDrawer: NextPage = () => {
-    const { theme, show }: { theme: ThemeContent, show: boolean } = useContext(UserContext);
+    const { theme, show, sideDrawerToggle }: { theme: ThemeContent, show: boolean, sideDrawerToggle: any } = useContext(UserContext);
     let drawerClasses: string = 'side-drawer';
     if (show) {
         drawerClasses = 'side-drawer open';
@@ -14,37 +14,37 @@ const SideDrawer: NextPage = () => {
     return (
         <nav className={drawerClasses}>
             <ul>
-                <li>
+                <li onClick={sideDrawerToggle}>
                     <Link activeClassName='active' href="/" as="/">
                         <a>Home</a>
                     </Link>
                 </li>
-                <li>
+                <li onClick={sideDrawerToggle}>
                     <Link activeClassName='active' href="/about" as="/about">
                         <a>About</a>
                     </Link>
                 </li>
-                <li>
+                <li onClick={sideDrawerToggle}>
                     <Link activeClassName='active' href="/experience" as="/experience">
                         <a>Experience</a>
                     </Link>
                 </li>
-                <li>
+                <li onClick={sideDrawerToggle}>
                     <Link activeClassName='active' href="/education" as="/education">
                         <a>Education</a>
                     </Link>
                 </li>
-                <li>
+                <li onClick={sideDrawerToggle}>
                     <Link activeClassName='active' href="/skills" as="/skills">
                         <a>Skills</a>
                     </Link>
                 </li>
-                <li>
+                <li onClick={sideDrawerToggle}>
                     <Link activeClassName='active' href="/contact" as="/contact">
                         <a>Contact</a>
                     </Link>
                 </li>
-                <li>
+                <li onClick={sideDrawerToggle}>
                     <PaintRoller />
                 </li>
             </ul>
