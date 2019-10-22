@@ -15,7 +15,6 @@ const PageTemplate: NextPage<PageTemplateProps> = (props) => {
             <style jsx>{`
                 .page-template {
                     max-width: 660px;
-                    // min-height: 850px;
                     margin-bottom: 4rem;
                 }
                 .smooth-line { 
