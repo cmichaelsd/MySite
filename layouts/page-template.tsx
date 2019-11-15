@@ -7,8 +7,10 @@ const PageTemplate: NextPage<PageTemplateProps> = (props) => {
     const { theme }: { theme: ThemeContent } = useContext(UserContext);
     return (
         <div className="page-template">
-            <h2 className="center">{props.title}</h2>
-            <div className="smooth-line"></div>
+            <div className="page-title">
+                <h2 className="center">{props.title}</h2>
+                <div className="smooth-line"></div>
+            </div>
             <div className="story">
                 {props.children}
             </div>
@@ -34,6 +36,11 @@ const PageTemplate: NextPage<PageTemplateProps> = (props) => {
                 @media (max-width: 768px) {
                     .story {
                         width: auto;
+                    }
+                }
+                @media (min-width: 769px) {
+                    .page-title {
+                        display: none;
                     }
                 }
             `}</style>
