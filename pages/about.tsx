@@ -14,7 +14,11 @@ const Index: NextPage = () => {
             <Head>
                 <title>Coles Michaels - About</title>
             </Head>
-            <BannerImage href="https://github.com/cmichaelsd/MySite" src="/static/ColeMichaels.png" alt="Cole Michaels" />
+            <div className="profile-image">
+                <a href="https://github.com/cmichaelsd/MySite">
+                    <img src="/static/ColeMichaels.png" alt="Cole Michaels" />
+                </a>
+            </div>
             <div className="margin">
                 <p>I'm Cole Michaels.</p>
                 <p>

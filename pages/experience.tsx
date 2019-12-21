@@ -29,7 +29,7 @@ const Experience: NextPage = () => {
                         <h2>
                             <a href="https://sculptnation.com/" target="_blank" rel="noopener noreferrer">SculptNation</a>
                         </h2>
-                        <p>SculptNation is the companion site to V Shred, it is the main focus of their e-commerce platform and the portal for users to purchase health and fitness supplements. Roughly $100 million a year passes through this system and it is considered the financial heart of the company.</p>
+                        <p>SculptNation is the companion site to V Shred, it is the main focus of their e-commerce platform and the portal for users to purchase health and fitness supplements. This system is considered the financial heart of the company.</p>
                     </div>
                 </li>
                 <li className="project">
