@@ -16,7 +16,10 @@ const Index: NextPage = () => {
             </Head>
             <div className="profile-image">
                 <a href="https://github.com/cmichaelsd/MySite">
-                    <img src="/static/ColeMichaels.png" alt="Cole Michaels" />
+                    <picture>
+                        <source srcSet="/static/ColeMichaelsMobile.png" media="(max-width: 375px)" />
+                        <img src="/static/ColeMichaels.png" alt="Cole Michaels" />
+                    </picture>
                 </a>
             </div>
             <div className="margin">
