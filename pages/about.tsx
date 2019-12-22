@@ -14,15 +14,15 @@ const Index: NextPage = () => {
             <Head>
                 <title>Coles Michaels - About</title>
             </Head>
-            <div className="profile-image">
-                <a href="https://github.com/cmichaelsd/MySite">
-                    <picture>
-                        <source srcSet="/static/ColeMichaelsMobile.png" media="(max-width: 375px)" />
-                        <img src="/static/ColeMichaels.png" alt="Cole Michaels" />
-                    </picture>
-                </a>
-            </div>
             <div className="margin">
+                <div className="profile-image">
+                    <a href="https://github.com/cmichaelsd/MySite">
+                        <picture>
+                            <source srcSet="/static/ColeMichaelsMobile.png" media="(max-width: 660px)" />
+                            <img src="/static/ColeMichaels.png" alt="Cole Michaels" />
+                        </picture>
+                    </a>
+                </div>
                 <p>I'm Cole Michaels.</p>
                 <p>
                     I'm a fulltime Fullstack Engineer for V Shred and oncall as a Fullstack Engineer for Jijenge Academy.
@@ -63,7 +63,7 @@ const Index: NextPage = () => {
                 </p>
                 <style jsx>{`
                     .margin {
-                        margin: 1rem;
+                        margin: 0.5rem;
                         margin-bottom: 4rem;
                     }
                     .margin ul li {
@@ -75,6 +75,12 @@ const Index: NextPage = () => {
                     .contact-me {
                         color: ${theme.highlight};
                         text-decoration-color: ${theme.highlight};
+                    }
+                    .profile-image {
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        margin-top: 1rem;
                     }
                 `}</style>
             </div>
