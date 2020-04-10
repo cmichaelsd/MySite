@@ -13,7 +13,7 @@ const Contact: NextPage = () => {
             <Head>
                 <title>Coles Michaels - Contact</title>
             </Head>
-            <div className="contact-container">
+            <div className="contact-container" id="contact">
                 <p>
                     Feel free to send me an email at <a className="contact-container__email-me" href="mailto:cmichaelsd@gmail.com">cmichaelsd@gmail.com</a>
                 </p>

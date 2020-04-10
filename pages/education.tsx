@@ -9,7 +9,7 @@ const Education: NextPage = () => {
             <Head>
                 <title>Coles Michaels - Education</title>
             </Head>
-            <div className="education-container">
+            <div className="education-container" id="education">
                 <BannerImage href="https://www.hackreactor.com/" src="/static/HackReactor.png" alt="Hack Reactor Logo" />
                 <p className="margin">Hack Reactor is a Fullstrack Wed Development bootcamp covering topics such as Data Structures and Memory, Databases, Microservice Architecture, Frontend Design and CSS, and Program Efficiency.</p>
                 <p className="margin">I was accepted into Hack Reactor's 21st cohort March of 2018, each cohort lasts three months and each student is required to be on campus 12 hours a day 6 days a week. This is a full immersion bootcamp where students have their eduaction equated to drinking from a firehose.</p>
