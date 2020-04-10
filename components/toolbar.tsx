@@ -38,11 +38,11 @@ const Toolbar: NextPage = () => {
                                 <a>Education</a>
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link activeClassName='active' href="/skills" as="/skills">
                                 <a>Skills</a>
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link activeClassName='active' href="/contact" as="/contact">
                                 <a>Contact</a>
