@@ -10,9 +10,9 @@ const PageTemplate: NextPage<PageTemplateProps> = (props) => {
             <style jsx>{`
                 .page-template {
                     font-size: 20px;
-                    // max-width: 660px;
                     width: 100%;
                     margin-bottom: 4rem;
+                    padding: 0 1rem;
                 }
                 .center {
                     text-align: center;
