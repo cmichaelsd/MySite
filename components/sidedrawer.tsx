@@ -21,22 +21,22 @@ const SideDrawer: NextPage = () => {
                 </li>
                 <li onClick={sideDrawerToggle}>
                     <a href="/home#about">
-                        <a>About</a>
+                        <span>About</span>
                     </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
                     <a href="/home#experience">
-                        <a>Experience</a>
+                        <span>Experience</span>
                     </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
                     <a href="/home#education">
-                        <a>Education</a>
+                        <span>Education</span>
                     </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
                     <a href="/home#contact">
-                        <a>Contact</a>
+                        <span>Contact</span>
                     </a>
                 </li>
                 <li onClick={sideDrawerToggle}>

@@ -119,7 +119,7 @@ export default class MyApp extends App {
                 </UserContext.Provider>
                 <style jsx>{`
                     main {
-                        margin-top: 64px;
+                        margin-top: 55px;
                         display: flex;
                         justify-content: center;
                     }

@@ -24,7 +24,8 @@ export default class Toolbar extends Component {
 
     handleScroll = (): void => {
         this.setState({ scrollPos: window.pageYOffset });
-        if (this.state.prevScrollPos < this.state.scrollPos) {
+        console.log(this.state.prevScrollPos);
+        if (this.state.prevScrollPos < this.state.scrollPos && this.state.prevScrollPos > 60) {
             this.setState({ navPos: -75 })
         } else {
             this.setState({ navPos: 0 });
@@ -50,24 +51,16 @@ export default class Toolbar extends Component {
                     <div className="toolbar__navigation-items">
                         <ul>
                             <li>
-                                <a href="/home#about">
-                                    <a>About</a>
-                                </a>
+                                <a href="/home#about">About</a>
                             </li>
                             <li>
-                                <a href="/home#experience">
-                                    <a>Experience</a>
-                                </a>
+                                <a href="/home#experience">Experience</a>
                             </li>
                             <li>
-                                <a href="/home#education">
-                                    <a>Education</a>
-                                </a>
+                                <a href="/home#education">Education</a>
                             </li>
                             <li>
-                                <a href="/home#contact">
-                                    <a>Contact</a>
-                                </a>
+                                <a href="/home#contact">Contact</a>
                             </li>
                             <li>
                                 <PaintRoller />
