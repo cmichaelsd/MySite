@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Head from 'next/head';
 import CanvasFullscreen from '../components/canvas-fullscreen';
 import { HomeState } from '../types-dir';
-import About from './about';
+import About from './home';
 
 export default class Home extends Component {
     state: HomeState = {
