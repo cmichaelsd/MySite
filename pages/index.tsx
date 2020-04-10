@@ -3,6 +3,7 @@ import Head from 'next/head';
 import CanvasFullscreen from '../components/canvas-fullscreen';
 import CanvasMobile from '../components/canvas-mobile';
 import { HomeState } from '../types-dir';
+import About from './about';
 
 export default class Home extends Component {
     state: HomeState = {
@@ -35,7 +36,7 @@ export default class Home extends Component {
                     this.state.innerWidth && this.state.innerWidth >= 768 ?
                         <CanvasFullscreen />
                         :
-                        <CanvasMobile />
+                        <About />
                 }
             </div>
         );
