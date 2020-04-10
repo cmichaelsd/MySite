@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Fragment, Component } from 'react';
 import Head from 'next/head';
 import CanvasFullscreen from '../components/canvas-fullscreen';
 import { HomeState } from '../types-dir';
@@ -32,7 +32,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div>
+            <Fragment>
                 <Head>
                     <title>Coles Michaels</title>
                 </Head>
@@ -44,7 +44,7 @@ export default class Home extends Component {
                         :
                         <HomePage />
                 }
-            </div>
+            </Fragment>
         );
     }
 }
