@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import Head from 'next/head';
 import CanvasFullscreen from '../components/canvas-fullscreen';
-import CanvasMobile from '../components/canvas-mobile';
 import { HomeState } from '../types-dir';
 import About from './about';
 
