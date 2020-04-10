@@ -41,18 +41,6 @@ export default class CanvasFullScreen extends Component {
         }
     };
 
-    handleMouseDown = (): void => {
-        if (this.wave && this.wave.frequency <= 1) {
-            this.wave.frequency += 0.03;
-        }
-    };
-
-    handleMouseUp = (): void => {
-        if (this.wave && this.wave.frequency > 0.01) {
-            this.wave.frequency -= 0.03;
-        }
-    };
-
     hexToRgb = (hex: string): any => {
         var shorthandRegex: any = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
         hex = hex.replace(shorthandRegex, function (m, r, g, b) {
@@ -94,8 +82,6 @@ export default class CanvasFullScreen extends Component {
         let increment: number = this.wave.frequency;
 
         window.addEventListener('resize', this.handleResize);
-        window.addEventListener('mousedown', this.handleMouseDown);
-        window.addEventListener('mouseup', this.handleMouseUp);
 
         const animate = (): void => {
             let bg: any = this.hexToRgb(this.context.theme.toneOne);
@@ -122,8 +108,6 @@ export default class CanvasFullScreen extends Component {
 
     componentWillUnmount = (): void => {
         window.removeEventListener('resize', this.handleResize);
-        window.removeEventListener('mousedown', this.handleMouseDown);
-        window.removeEventListener('mouseup', this.handleMouseUp);
     }
 
     render() {
