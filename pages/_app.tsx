@@ -60,7 +60,7 @@ export default class MyApp extends App {
         let fur: string = '#f0c048';
         let cheeks: string = '#f62d14';
         let eyes: string = 'gray';
-        let fontSize: string = '20px';
+        let fontSize: string = '10px';
         console.log(`
             %c
             ⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⣠⣤⣶⣶ \n
