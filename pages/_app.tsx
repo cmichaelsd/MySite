@@ -17,10 +17,10 @@ export default class MyApp extends App {
     state: StateContent = {
         sideDrawerOpen: false,
         theme: {
-            title: 'Dark Theme',
-            toneOne: '#272727',
-            toneTwo: '#121212',
-            textColor: '#fff',
+            title: 'Light Theme',
+            toneOne: '#fff',
+            toneTwo: '#fafafa',
+            textColor: '#121212',
             highlight: '#fa923f'
         }
     };
