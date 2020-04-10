@@ -20,29 +20,24 @@ const SideDrawer: NextPage = () => {
                     </Link>
                 </li>
                 <li onClick={sideDrawerToggle}>
-                    <Link activeClassName='active' href="/about" as="/about">
+                    <a href="/home#about">
                         <a>About</a>
-                    </Link>
+                    </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
-                    <Link activeClassName='active' href="/experience" as="/experience">
+                    <a href="/home#experience">
                         <a>Experience</a>
-                    </Link>
+                    </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
-                    <Link activeClassName='active' href="/education" as="/education">
+                    <a href="/home#education">
                         <a>Education</a>
-                    </Link>
+                    </a>
                 </li>
-                {/* <li onClick={sideDrawerToggle}>
-                    <Link activeClassName='active' href="/skills" as="/skills">
-                        <a>Skills</a>
-                    </Link>
-                </li> */}
                 <li onClick={sideDrawerToggle}>
-                    <Link activeClassName='active' href="/contact" as="/contact">
+                    <a href="/home#contact">
                         <a>Contact</a>
-                    </Link>
+                    </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
                     <PaintRoller />
