@@ -90,12 +90,12 @@ export default class Toolbar extends Component {
                     .toolbar {
                         position: fixed;
                         top: ${this.state.navPos}px;
-                        // left: 0;
                         width: 100%;
                         background: ${theme.toneOne};
                         height: 56px;
                         z-index: 200;
                         transition: top 0.3s;
+                        box-shadow: 0 0 0.625rem 0 rgba(0,0,0,0.1);
                     }
                     .toolbar__navigation {
                         display: flex;
@@ -134,6 +134,9 @@ export default class Toolbar extends Component {
                         color: ${theme.highlight};
                     }
                     @media (max-width: 768px) {
+                        .toolbar {
+                            box-shadow: none;
+                        }
                         .toolbar__navigation-items {
                             display: none;
                         }
