@@ -43,24 +43,22 @@ export default class Toolbar extends Component {
                     </div>
                     <div className="spacer"></div>
                     <div className="toolbar__logo">
-                        <Link activeClassName='active' href="/" as="/">
-                            <a>Cole Michaels</a>
-                        </Link>
+                        <span>Cole Michaels</span>
                     </div>
                     <div className="spacer-middle"></div>
                     <div className="toolbar__navigation-items">
                         <ul>
                             <li>
-                                <a href="/home#about">About</a>
+                                <a href="#about">About</a>
                             </li>
                             <li>
-                                <a href="/home#experience">Experience</a>
+                                <a href="#experience">Experience</a>
                             </li>
                             <li>
-                                <a href="/home#education">Education</a>
+                                <a href="#education">Education</a>
                             </li>
                             <li>
-                                <a href="/home#contact">Contact</a>
+                                <a href="#contact">Contact</a>
                             </li>
                             <li>
                                 <PaintRoller />
@@ -119,7 +117,7 @@ export default class Toolbar extends Component {
                     .toolbar__navigation-items li {
                         padding: 0 2rem;
                     }
-                    .toolbar__logo a {
+                    .toolbar__logo {
                         color: ${theme.textColor};
                         text-decoration: none;
                         font-size: 1.3rem;

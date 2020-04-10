@@ -15,27 +15,22 @@ const SideDrawer: NextPage = () => {
         <nav className={drawerClasses}>
             <ul>
                 <li onClick={sideDrawerToggle}>
-                    <Link activeClassName='active' href="/" as="/">
-                        <a>Home</a>
-                    </Link>
-                </li>
-                <li onClick={sideDrawerToggle}>
-                    <a href="/home#about">
+                    <a href="#about">
                         <span>About</span>
                     </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
-                    <a href="/home#experience">
+                    <a href="#experience">
                         <span>Experience</span>
                     </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
-                    <a href="/home#education">
+                    <a href="#education">
                         <span>Education</span>
                     </a>
                 </li>
                 <li onClick={sideDrawerToggle}>
-                    <a href="/home#contact">
+                    <a href="#contact">
                         <span>Contact</span>
                     </a>
                 </li>
