@@ -75,7 +75,7 @@ export default class Toolbar extends Component {
                         </ul>
                     </div>
                     <div className="spacer-middle"></div>
-                    <div className="spacer"></div>
+                    <div className="spacer-end"></div>
                 </nav>
                 <style jsx global>{`
                     * {
@@ -111,10 +111,13 @@ export default class Toolbar extends Component {
                         padding: 0 1rem;
                     }
                     .spacer {
-                        flex: 1;
+                        flex: .5;
                     }
                     .spacer-middle {
                         flex: 0.15;
+                    }
+                    .spacer-end {
+                        flex: 0.3;
                     }
                     .toolbar__navigation-items ul {
                         list-style: none;
