@@ -6,7 +6,8 @@ import HomePage from './home';
 
 export default class Home extends Component {
     state: HomeState = {
-        innerWidth: undefined
+        innerWidth: undefined,
+        clicked: false
     };
 
     handleWindowResize = (): void => {
@@ -15,14 +16,18 @@ export default class Home extends Component {
     };
 
     componentDidMount = (): void => {
+        window.addEventListener('mousedown', this.handleClick);
         window.addEventListener('resize', this.handleWindowResize);
-        this.setState({
-            innerWidth: window.innerWidth
-        });
+        this.setState({ innerWidth: window.innerWidth });
     };
 
     componentWillUnmount = (): void => {
+        window.removeEventListener('mousedown', this.handleClick);
         window.removeEventListener('resize', this.handleWindowResize);
+    };
+
+    handleClick = (): void => {
+        this.setState({ clicked: true });
     };
 
     render() {
@@ -32,7 +37,9 @@ export default class Home extends Component {
                     <title>Coles Michaels</title>
                 </Head>
                 {
-                    this.state.innerWidth && this.state.innerWidth >= 768 ?
+                    this.state.innerWidth && 
+                    this.state.innerWidth >= 768 &&
+                    !this.state.clicked ?
                         <CanvasFullscreen />
                         :
                         <HomePage />

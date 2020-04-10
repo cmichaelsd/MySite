@@ -62,7 +62,8 @@ export interface SquareImageProps {
 }
 
 export interface HomeState {
-    innerWidth: number | undefined
+    innerWidth: number | undefined,
+    clicked: boolean
 }
 
 export interface StrokeColorProps {
