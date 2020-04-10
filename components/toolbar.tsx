@@ -50,29 +50,24 @@ export default class Toolbar extends Component {
                     <div className="toolbar__navigation-items">
                         <ul>
                             <li>
-                                <Link activeClassName='active' href="/home#about" as="/home#about">
+                                <a href="/home#about">
                                     <a>About</a>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link activeClassName='active' href="/home#experience" as="/home#experience">
+                                <a href="/home#experience">
                                     <a>Experience</a>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link activeClassName='active' href="/home#education" as="/home#education">
+                                <a href="/home#education">
                                     <a>Education</a>
-                                </Link>
+                                </a>
                             </li>
-                            {/* <li>
-                                <Link activeClassName='active' href="/skills" as="/skills">
-                                    <a>Skills</a>
-                                </Link>
-                            </li> */}
                             <li>
-                                <Link activeClassName='active' href="/home#contact" as="/home#contact">
+                                <a href="/home#contact">
                                     <a>Contact</a>
-                                </Link>
+                                </a>
                             </li>
                             <li>
                                 <PaintRoller />
