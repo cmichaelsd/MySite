@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import Link from './link';
 import { NextPage } from 'next';
 import UserContext from './usercontext';
 import PaintRoller from './paint-roller';

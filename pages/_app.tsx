@@ -8,6 +8,7 @@ import Backdrop from '../components/backdrop';
 import Footer from '../components/footer';
 import UserContext from '../components/usercontext';
 import { ThemeContent, DrawerState, StateContent, AppPropsReceived } from '../types-dir';
+import CanvasFullScreen from '../components/canvas-fullscreen';
 
 Router.events.on('routeChangeComplete', (url: string): void => {
     gtag.pageview(url);
@@ -15,6 +16,8 @@ Router.events.on('routeChangeComplete', (url: string): void => {
 
 export default class MyApp extends App {
     state: StateContent = {
+        innerWidth: undefined,
+        clicked: false,
         sideDrawerOpen: false,
         theme: {
             title: 'Light Theme',
@@ -96,6 +99,23 @@ export default class MyApp extends App {
             `color: ${cheeks};font-size: ${fontSize};`,
             `color: ${fur};font-size: ${fontSize};`,
         );
+        window.addEventListener('mousedown', this.handleClick);
+        window.addEventListener('resize', this.handleWindowResize);
+        this.setState({ innerWidth: window.innerWidth });
+    };
+
+    componentWillUnmount = (): void => {
+        window.removeEventListener('mousedown', this.handleClick);
+        window.removeEventListener('resize', this.handleWindowResize);
+    };
+
+    handleWindowResize = (): void => {
+        const { innerWidth }: { innerWidth: number } = window;
+        this.setState({ innerWidth });
+    };
+
+    handleClick = (): void => {
+        this.setState({ clicked: true });
     };
 
     render() {
@@ -109,13 +129,24 @@ export default class MyApp extends App {
                     backdropClick: this.backdropClickHandler,
                     show: this.state.sideDrawerOpen
                 }}>
-                    <Toolbar />
-                    <SideDrawer />
-                    {this.state.sideDrawerOpen && <Backdrop />}
-                    <main>
-                        <Component {...pageProps} />
-                    </main>
-                    <Footer />
+
+                {
+                    this.state.innerWidth && 
+                    this.state.innerWidth >= 768 &&
+                    !this.state.clicked ?
+                        <CanvasFullScreen />
+                        :
+                        <Fragment>
+                            <Toolbar />
+                            <SideDrawer />
+                            {this.state.sideDrawerOpen && <Backdrop />}
+                            <main>
+                                <Component {...pageProps} />
+                            </main>
+                            <Footer />
+                        </Fragment>
+                }
+                
                 </UserContext.Provider>
                 <style jsx>{`
                     main {

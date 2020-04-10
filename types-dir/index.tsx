@@ -12,7 +12,9 @@ export interface DrawerState {
 
 export interface StateContent {
     sideDrawerOpen: boolean,
-    theme: ThemeContent
+    theme: ThemeContent,
+    innerWidth: number | undefined,
+    clicked: boolean
 }
 
 export interface AppPropsReceived {
@@ -59,11 +61,6 @@ export interface SquareImageProps {
     src: string,
     alt: string,
     href: string
-}
-
-export interface HomeState {
-    innerWidth: number | undefined,
-    clicked: boolean
 }
 
 export interface StrokeColorProps {

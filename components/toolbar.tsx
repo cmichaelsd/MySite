@@ -2,7 +2,6 @@ import { Component } from 'react';
 import UserContext from './usercontext';
 import Hamburger from './hamburger';
 import PaintRoller from './paint-roller';
-import Link from './link';
 import { ThemeContent } from '../types-dir';
 
 export default class Toolbar extends Component {
@@ -11,16 +10,16 @@ export default class Toolbar extends Component {
         navPos: 0,
         prevScrollPos: 0,
         scrollPos: 0
-    }
+    };
 
     componentDidMount = (): void => {
         this.setState({ prevScrollPos: window.pageYOffset });
         window.addEventListener('scroll', this.handleScroll);
-    }
+    };
 
     componentWillUnmount = (): void => {
         window.removeEventListener('scroll', this.handleScroll);
-    }
+    };
 
     handleScroll = (): void => {
         this.setState({ scrollPos: window.pageYOffset });
@@ -31,7 +30,7 @@ export default class Toolbar extends Component {
             this.setState({ navPos: 0 });
         }
         this.setState({ prevScrollPos: window.pageYOffset });
-    }
+    };
 
     render() {
         const { theme }: { theme: ThemeContent } = this.context;
