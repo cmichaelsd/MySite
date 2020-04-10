@@ -33,31 +33,7 @@ const Index: NextPage = () => {
                 </p>
                 <p>
                     Outside of Web Development I have been praticing Jiu-Jitsu since July of 2019, I also enjoy spending my freetime practicing classical guitar and improving my sight reading.
-                    I spend a lot of time reading, my most recent reads are:
                 </p>
-                <ul>
-                    <li>
-                        Gödel, Escher, Bach: an Eternal Golden Braid
-                    </li>
-                    <li>
-                        Tesla: Inventor of the Electrical Age
-                    </li>
-                    <li>
-                        The Dune Series
-                    </li>
-                    <li>
-                        Psychoanalytic Psychology: The Development of Freud's Thought
-                    </li>
-                    <li>
-                        Man and His Symbols
-                    </li>
-                    <li>
-                        How Music Works
-                    </li>
-                    <li>
-                        The Art of War
-                    </li>
-                </ul>
             </div>
             <div id="experience">
                 <ul className="projects">
@@ -114,12 +90,6 @@ const Index: NextPage = () => {
                 .margin {
                     margin: 0.5rem;
                     margin-bottom: 4rem;
-                }
-                .margin ul li {
-                    font-size: 14px;
-                    list-style: none;
-                    text-align: left;
-                    margin: 10px;
                 }
                 .contact-me {
                     color: ${theme.highlight};
