@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Head from 'next/head';
 import CanvasFullscreen from '../components/canvas-fullscreen';
 import { HomeState } from '../types-dir';
-import About from './home';
+import HomePage from './home';
 
 export default class Home extends Component {
     state: HomeState = {
@@ -29,13 +29,13 @@ export default class Home extends Component {
         return (
             <div>
                 <Head>
-                    <title>Coles Michaels - Home</title>
+                    <title>Coles Michaels</title>
                 </Head>
                 {
                     this.state.innerWidth && this.state.innerWidth >= 768 ?
                         <CanvasFullscreen />
                         :
-                        <About />
+                        <HomePage />
                 }
             </div>
         );
