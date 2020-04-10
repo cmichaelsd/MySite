@@ -14,9 +14,7 @@ export default class Toolbar extends Component {
     }
 
     componentDidMount = (): void => {
-        this.setState({
-            prevScrollPos: window.pageYOffset
-        });
+        this.setState({ prevScrollPos: window.pageYOffset });
         window.addEventListener('scroll', this.handleScroll);
     }
 
