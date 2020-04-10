@@ -12,7 +12,6 @@ const PageTemplate: NextPage<PageTemplateProps> = (props) => {
                     font-size: 20px;
                     width: 100%;
                     margin-bottom: 4rem;
-                    padding: 0 1rem;
                 }
                 .center {
                     text-align: center;

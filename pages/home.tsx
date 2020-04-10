@@ -104,7 +104,7 @@ const Index: NextPage = () => {
             </div>
             <style jsx>{`
                 .segment {
-                    padding: 0.5rem 0;
+                    padding: 0.5rem 1rem;
                 }
                 .set-width {
                     margin: auto;
