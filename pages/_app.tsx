@@ -130,13 +130,13 @@ export default class MyApp extends App {
                     show: this.state.sideDrawerOpen
                 }}>
 
-                {
+                {/* {
                     this.state.innerWidth && 
                     this.state.innerWidth >= 768 &&
                     !this.state.clicked ?
                         <CanvasFullScreen />
-                        :
-                        <Fragment>
+                        : */}
+                        {/* <Fragment> */}
                             <Toolbar />
                             <SideDrawer />
                             {this.state.sideDrawerOpen && <Backdrop />}
@@ -144,8 +144,8 @@ export default class MyApp extends App {
                                 <Component {...pageProps} />
                             </main>
                             <Footer />
-                        </Fragment>
-                }
+                        {/* </Fragment> */}
+                {/* } */}
                 
                 </UserContext.Provider>
                 <style jsx>{`
