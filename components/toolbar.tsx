@@ -23,7 +23,6 @@ export default class Toolbar extends Component {
 
     handleScroll = (): void => {
         this.setState({ scrollPos: window.pageYOffset });
-        console.log(this.state.prevScrollPos);
         if (this.state.prevScrollPos < this.state.scrollPos && this.state.prevScrollPos > 60) {
             this.setState({ navPos: -75 })
         } else {
