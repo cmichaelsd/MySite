@@ -8,30 +8,6 @@ import { ThemeContent } from '../types-dir';
 
 export default class Index extends Component {
     static contextType = UserContext;
-    // state = {
-    //     display: 'none',
-    //     prevScrollPos: 0,
-    //     scrollPos: 0
-    // };
-
-    // componentDidMount = (): void => {
-    //     this.setState({ prevScrollPos: window.pageYOffset });
-    //     window.addEventListener('scroll', this.handleScroll);
-    // };
-
-    // componentWillUnmount = (): void => {
-    //     window.removeEventListener('scroll', this.handleScroll);
-    // };
-
-    // handleScroll = (): void => {
-    //     this.setState({ scrollPos: window.pageYOffset });
-    //     console.log(this.state.scrollPos);
-    //     if (this.state.prevScrollPos < this.state.scrollPos && this.state.prevScrollPos > 160) {
-    //         this.setState({ display: 'flex' });
-    //     }
-    //     this.setState({ prevScrollPos: window.pageYOffset });
-    // };
-
     render() {
         const { theme }: { theme: ThemeContent } = this.context
         return (

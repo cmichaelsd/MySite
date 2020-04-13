@@ -7,8 +7,10 @@ import SideDrawer from '../components/sidedrawer';
 import Backdrop from '../components/backdrop';
 import Footer from '../components/footer';
 import UserContext from '../components/usercontext';
-import { ThemeContent, DrawerState, StateContent, AppPropsReceived } from '../types-dir';
+import { ThemeContent, DrawerState, StateContent } from '../types-dir';
 import CanvasFullScreen from '../components/canvas-fullscreen';
+import Index from './index';
+import { Transition } from 'react-transition-group';
 
 Router.events.on('routeChangeComplete', (url: string): void => {
     gtag.pageview(url);
@@ -102,6 +104,9 @@ export default class MyApp extends App {
         window.addEventListener('mousedown', this.handleClick);
         window.addEventListener('resize', this.handleWindowResize);
         this.setState({ innerWidth: window.innerWidth });
+        setTimeout(() => {
+            this.setState({ clicked: true });
+        }, 7000);
     };
 
     componentWillUnmount = (): void => {
@@ -119,7 +124,27 @@ export default class MyApp extends App {
     };
 
     render() {
-        const { Component, pageProps }: AppPropsReceived = this.props;
+        const duration = 500;
+
+        const defaultStyle: any = {
+            transition: `opacity ${duration}ms ease-in-out`,
+            opacity: 0,
+        }
+
+        const transitionStylesOne: any = {
+            entering: { opacity: 1 },
+            entered:  { opacity: 1 },
+            exiting:  { opacity: 0 },
+            exited:  { opacity: 0 },
+        };
+
+        const transitionStyleTwo: any = {
+            entering: { opacity: 0 },
+            entered:  { opacity: 0},
+            exiting: { opacity: 1 },
+            exited: { opacity: 1 },
+        };
+
         return (
             <Fragment>
                 <UserContext.Provider value={{
@@ -129,24 +154,41 @@ export default class MyApp extends App {
                     backdropClick: this.backdropClickHandler,
                     show: this.state.sideDrawerOpen
                 }}>
-
-                {/* {
-                    this.state.innerWidth && 
-                    this.state.innerWidth >= 768 &&
-                    !this.state.clicked ?
-                        <CanvasFullScreen />
-                        : */}
-                        {/* <Fragment> */}
-                            <Toolbar />
-                            <SideDrawer />
-                            {this.state.sideDrawerOpen && <Backdrop />}
-                            <main>
-                                <Component {...pageProps} />
-                            </main>
-                            <Footer />
-                        {/* </Fragment> */}
-                {/* } */}
-                
+                    <main>
+                        <Toolbar />
+                        <SideDrawer />
+                        {this.state.sideDrawerOpen && <Backdrop />}
+                        {
+                            this.state.innerWidth && 
+                            this.state.innerWidth >= 768 ?
+                                <Transition in={!this.state.clicked} timeout={duration}>
+                                    {state => {
+                                        if (state !== 'exited') {
+                                            return (
+                                                <div style={{
+                                                    ...defaultStyle,
+                                                    ...transitionStylesOne[state]
+                                                }}>
+                                                    <CanvasFullScreen />
+                                                </div>
+                                            )
+                                        } else {
+                                            return (
+                                                <div style={{
+                                                    ...defaultStyle,
+                                                    ...transitionStyleTwo[state]
+                                                }}>
+                                                    <Index />
+                                                </div>
+                                            )
+                                        }
+                                    }}
+                                </Transition>
+                            :
+                                <Index />
+                        }
+                        <Footer />
+                    </main>
                 </UserContext.Provider>
                 <style jsx>{`
                     main {

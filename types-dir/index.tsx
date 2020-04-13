@@ -1,7 +1,7 @@
 export interface ThemeContent {
-    title: string,
-    toneOne: string,
-    toneTwo: string,
+    title:     string,
+    toneOne:   string,
+    toneTwo:   string,
     textColor: string,
     highlight: string
 }
@@ -12,55 +12,34 @@ export interface DrawerState {
 
 export interface StateContent {
     sideDrawerOpen: boolean,
-    theme: ThemeContent,
-    innerWidth: number | undefined,
-    clicked: boolean
-}
-
-export interface AppPropsReceived {
-    Component: any,
-    pageProps: any
+    theme:          ThemeContent,
+    innerWidth:     number | undefined,
+    clicked:        boolean
 }
 
 export interface BannerImageProps {
     href: string,
-    src: string,
-    alt: string
-}
-
-export interface ActiveLinkProps {
-    children: any,
-    activeClassName: string,
-    href: string
-    as: string,
-    exact?: boolean
-}
-
-export interface SkillProps {
-    key: any
-    src: any,
-    alt: any,
-    stars: any,
-    children: any
+    src:  string,
+    alt:  string
 }
 
 export interface PageTemplateProps {
-    title: string,
+    title:    string,
     children: any
 }
 
 export interface EventProps {
-    action: string,
+    action:   string,
     category: string,
-    label: string,
-    value: number
+    label:    string,
+    value:    number
 }
 
 export interface SquareImageProps {
     background?: string,
-    src: string,
-    alt: string,
-    href: string
+    src:         string,
+    alt:         string,
+    href:        string
 }
 
 export interface StrokeColorProps {
@@ -70,8 +49,8 @@ export interface StrokeColorProps {
 }
 
 export interface WaveProps {
-    y: number,
-    length: number,
+    y:         number,
+    length:    number,
     amplitude: number,
     frequency: number
 }
