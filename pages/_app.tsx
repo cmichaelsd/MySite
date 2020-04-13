@@ -127,6 +127,7 @@ export default class MyApp extends App {
         const duration = 500;
 
         const defaultStyle: any = {
+            width: '100%',
             transition: `opacity ${duration}ms ease-in-out`,
             opacity: 0,
         }
