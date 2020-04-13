@@ -75,9 +75,9 @@ export default class CanvasFullScreen extends Component {
         }
         this.wave = {
             y: this.canvas.height / 2,
-            length: length,
-            amplitude: amplitude,
-            frequency: 0.02
+            frequency: 0.02,
+            length,
+            amplitude
         };
         let increment: number = this.wave.frequency;
 
@@ -95,6 +95,9 @@ export default class CanvasFullScreen extends Component {
             if (this.wave) {
                 for (let i: number = 0; i < this.canvas.width; i++) {
                     this.c.lineTo(i, this.wave.y + Math.sin(i * this.wave.length + increment) * (this.wave.amplitude * Math.sin(increment)));
+                }
+                for (let j: number = this.canvas.width; j > 0 ; j--) {
+                    this.c.lineTo(j, this.wave.y - Math.sin(j * this.wave.length + increment) * (this.wave.amplitude * Math.sin(increment)));
                 }
             }
             this.c.strokeStyle = `hsl(${Math.abs(this.strokeColor.h * Math.sin(increment))}, ${this.strokeColor.s}%, ${this.strokeColor.l}%)`;
@@ -115,7 +118,7 @@ export default class CanvasFullScreen extends Component {
         return (
             <Fragment>
                 <div>
-                    <h1>Welcome</h1>
+                    <h1>Cole Michaels</h1>
                 </div>
                 <canvas ref="canvas"></canvas>
                 <style jsx>{`

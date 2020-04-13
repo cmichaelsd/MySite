@@ -106,7 +106,7 @@ export default class MyApp extends App {
         this.setState({ innerWidth: window.innerWidth });
         setTimeout(() => {
             this.setState({ clicked: true });
-        }, 7000);
+        }, 10000);
     };
 
     componentWillUnmount = (): void => {
@@ -124,7 +124,7 @@ export default class MyApp extends App {
     };
 
     render() {
-        const duration = 500;
+        const duration: number = 500;
 
         const defaultStyle: any = {
             width: '100%',
@@ -166,13 +166,13 @@ export default class MyApp extends App {
                                     {state => {
                                         if (state !== 'exited') {
                                             return (
-                                                <div style={{
+                                                <div id="canvas" style={{
                                                     ...defaultStyle,
                                                     ...transitionStylesOne[state]
                                                 }}>
                                                     <CanvasFullScreen />
                                                 </div>
-                                            )
+                                            );
                                         } else {
                                             return (
                                                 <div style={{
@@ -181,7 +181,7 @@ export default class MyApp extends App {
                                                 }}>
                                                     <Index />
                                                 </div>
-                                            )
+                                            );
                                         }
                                     }}
                                 </Transition>
