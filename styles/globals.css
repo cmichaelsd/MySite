@@ -1,9 +1,21 @@
+// Change CSS variables with JavaScript
+// https://www.w3schools.com/Css/tryit.asp?filename=trycss3_var_js
+// https://www.joshwcomeau.com/css/css-variables-for-react-devs/
+:root {
+    --toneOne: #fff;
+    --toneTwo: #fafafa;
+    --textColor: #121212;
+    --highlight: #fa923f;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: #fff;
+    color: var(--textColor);
+    overscroll-behavior: none;
 }
 
 a {
@@ -11,6 +23,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+*::selection {
+    background: var(--highlight);
 }

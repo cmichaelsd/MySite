@@ -1,65 +1,72 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useContext } from 'react'
+import { ThemeContext } from '../context/ThemeContext'
+import { statuses, ApplicationStatusContext } from '../context/ApplicationStatusContext'
+import Canvas from '../components/Canvas'
+import Toolbar from '../components/Toolbar'
+import Profile from '../components/Profile'
+import Footer from '../components/Footer'
+import SideDrawer from '../components/SideDrawer'
+import Backdrop from '../components/Backdrop'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+function Home() {
+    const { theme } = useContext(ThemeContext);
+    const { status } = useContext(ApplicationStatusContext);
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+    const DisplayComponentOnInitialLoad = () => {
+        if (status === statuses.INITIAL_LOADING) {
+            return <Canvas />;
+        } else {
+            return <Profile />;
+        }
+    }
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+    const DisplayBackdrop = () => {
+        if (status === statuses.NAVIGATION_DRAWER_OPEN) {
+            return <Backdrop />;
+        } else {
+            return <></>;
+        }
+    }
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+    return (
+        <>
+            <main id="main">
+                <Toolbar />
+                <SideDrawer />
+                <DisplayBackdrop />
+                <DisplayComponentOnInitialLoad />
+                <Footer />
+            </main>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <style global jsx>{`
+                :root {
+                    --toneOne: ${theme.toneOne};
+                    --toneTwo: ${theme.toneTwo};
+                    --textColor: ${theme.textColor};
+                    --highlight: ${theme.highlight};
+                }
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                html,
+                body {
+                    padding: 0;
+                    margin: 0;
+                    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+                    background: var(--toneOne);
+                    color: var(--textColor);
+                    overscroll-behavior: none;
+                }
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+                a {
+                  color: inherit;
+                  text-decoration: none;
+                }
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+                *::selection {
+                    background: var(--highlight);
+                }
+            `}</style>
+        </>
+    )
 }
+
+export default Home;
