@@ -120,7 +120,7 @@ function Canvas() {
                     transform: translate(-50%, -50%);
                     margin: 0;
                     white-space: nowrap;
-                    color: rgba(255, 255, 255, 0.5);
+                    color: ${theme.toneTwo}80;
                     pointer-events: none;
                     font-size: 10rem;
                 }
