@@ -6,9 +6,11 @@ import { Events } from '../events'
 
 function MyApp({ Component, pageProps }) {
     const [theme, setTheme] = useState(themes.light);
+
     const [status, setStatus] = useState(statuses.INITIAL_LOADING);
 
     const themeValue = { theme, changeTheme };
+
     const statusValue = { status, changeStatus };
 
     function changeTheme() {

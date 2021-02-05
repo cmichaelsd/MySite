@@ -15,7 +15,7 @@ function ProfileSegment(props) {
 
                 .set-width {
                     margin: auto;
-                    max-width: 660px;
+                    max-width: 960px;
                 }
             `}</style>
         </>

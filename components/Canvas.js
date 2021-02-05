@@ -79,8 +79,6 @@ function Canvas() {
         if (!mounted.current) {
             mounted.current = true;
             window.addEventListener('resize', handleResize);
-
-            setTimeout(() => changeStatus(Events.INITIAL_LOADING_COMPLETE), 5000);
         }
 
         ctx = canvasRef.current.getContext('2d');
@@ -99,7 +97,11 @@ function Canvas() {
                 return;
             }
         }
-    })
+    }, [])
+
+    useEffect(() => {
+        // setTimeout(() => changeStatus(Events.INITIAL_LOADING_COMPLETE), 5000);
+    }, [])
 
     return (
         <>

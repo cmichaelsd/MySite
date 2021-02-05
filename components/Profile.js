@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
+import { ApplicationStatusContext, statuses } from '../context/ApplicationStatusContext'
 import ProfileSegment from './ProfileSegment'
 import About from './About'
 import Experience from './Experience'
