@@ -4,13 +4,11 @@ function SquareImage(props) {
 
     return (
         <>
-            <a href={props.href} target="_blank" rel="noopener noreferrer">
-                <div className="square-image__container">
-                    <div className="square-image__container--corners">
-                        <img className="square-image" src={props.src} alt={props.alt}></img>
-                    </div>
+            <div className="square-image__container">
+                <div className="square-image__container--corners">
+                    <img className="square-image" src={props.src} alt={props.alt}></img>
                 </div>
-            </a>
+            </div>
 
             <style jsx>{`
                 .square-image__container {

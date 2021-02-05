@@ -20,14 +20,6 @@ function Home() {
 
     const mounted = useRef();
 
-    const DisplayComponentOnInitialLoad = () => {
-        if (status === statuses.INITIAL_LOADING) {
-            return <Canvas />;
-        } else {
-            return <Profile />;
-        }
-    }
-
     const DisplayBackdrop = () => {
         if (status === statuses.NAVIGATION_DRAWER_OPEN) {
             return <Backdrop />;

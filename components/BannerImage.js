@@ -2,16 +2,12 @@ function BannerImage(props) {
     return (
         <>
             <div className="banner-image-container">
-                <a href={props.href} target="_blank" rel="noopener noreferrer">
+                <div>
                     <img className="banner-image" src={props.src} alt={props.alt}></img>
-                </a>
+                </div>
             </div>
 
             <style jsx>{`
-                .banner-container {
-                    margin-bottom: 3em;
-                }
-
                 .banner-image-container {
                     margin-top: 2em;
                     display: flex;
