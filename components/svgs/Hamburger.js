@@ -1,8 +1,8 @@
 import SVGButton from './SVGButton'
 import { useContext } from 'react'
-import { ThemeContext } from '../context/ThemeContext'
-import { ApplicationStatusContext } from '../context/ApplicationStatusContext'
-import { Events } from '../events'
+import { ThemeContext } from '../../context/ThemeContext'
+import { ApplicationStatusContext } from '../../context/ApplicationStatusContext'
+import { Events } from '../../events'
 
 function Hamburger() {
     const { theme } =  useContext(ThemeContext);

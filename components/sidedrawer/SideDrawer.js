@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { statuses, ApplicationStatusContext } from '../context/ApplicationStatusContext'
-import { Events } from '../events';
-import PaintRoller from './PaintRoller'
+import { statuses, ApplicationStatusContext } from '../../context/ApplicationStatusContext'
+import { Events } from '../../events';
+import PaintRoller from '../svgs/PaintRoller'
 
 function SideDrawer() {
     const { status, changeStatus } = useContext(ApplicationStatusContext);

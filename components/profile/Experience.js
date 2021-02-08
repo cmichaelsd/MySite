@@ -1,5 +1,5 @@
-import SquareImage from './SquareImage'
-import Checkmark from './Checkmark'
+import SquareImage from '../SquareImage'
+import Checkmark from '../svgs/Checkmark'
 
 // TODO: Replace bullets with emojis / catching bullets
 function Experience() {
@@ -74,19 +74,6 @@ function Experience() {
 
                 .project__content {
                     margin-left: 4em;
-                }
-
-                .project__content h1 {
-                    text-decoration: none;
-                    color: var(--highlight);
-                }
-
-                .project__content h4 {
-                    margin: 0;
-                }
-
-                .project__content h2 {
-                    margin: 16px 0 0 0;
                 }
 
                 .project__content p {

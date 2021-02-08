@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { ThemeContext } from '../context/ThemeContext'
-import { ApplicationStatusContext, statuses } from '../context/ApplicationStatusContext'
+import { ThemeContext } from '../../context/ThemeContext'
+import { ApplicationStatusContext, statuses } from '../../context/ApplicationStatusContext'
 import ProfileSegment from './ProfileSegment'
 import About from './About'
 import Experience from './Experience'
@@ -12,7 +12,7 @@ function Profile() {
 
     return (
         <>
-            <div>
+            <div id="profile">
                 <ProfileSegment id="about" background={theme.toneOne}>
                     <About />
                 </ProfileSegment>
@@ -31,7 +31,7 @@ function Profile() {
             </div>
 
             <style jsx>{`
-                div {
+                #profile {
                     margin: 75px 0 42px 0;
                 }
             `}</style>

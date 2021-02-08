@@ -1,15 +1,15 @@
-import Plus from './Plus'
+import Plus from '../svgs/Plus'
 
 function About() {
     return (
         <>
             <div className="profile-image">
                 <picture>
-                    <source srcSet="/static/ColeMichaelsMobile.png" media="(max-width: 660px)" />
-                    <img src="/static/ColeMichaels.png" alt="Cole Michaels" />
+                    <source srcSet="/static/ColeMichaelsMobile2.png" media="(max-width: 660px)" />
+                    <img src="/static/ColeMichaels2.png" alt="Cole Michaels" />
                 </picture>
             </div>
-            <p>I'm Cole Michaels.</p>
+            <h1>About Me</h1>
             <p>I am a self-motivated, resourceful, and highly analytical professional. During my career with previous employers, I have attained comprehensive experience in collaborating with technical teams to assess key requirements and concerns, proposing effective technology solutions for the seamless flow of day to day operations. My area of expertise lies in</p>
             <ul>
                 <li><Plus /> Strategic Planning</li>

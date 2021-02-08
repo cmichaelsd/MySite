@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import Hamburger from './Hamburger'
-import PaintRoller from './PaintRoller.js'
+import Hamburger from './svgs/Hamburger'
+import PaintRoller from './svgs/PaintRoller'
 
 function Toolbar() {
     const [navPos, setNavPos] = useState(0);

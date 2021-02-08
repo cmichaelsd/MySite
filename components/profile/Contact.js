@@ -1,6 +1,5 @@
-import SquareImage from './SquareImage'
+import SquareImage from '../SquareImage'
 
-// TODO: Replace bullets with emojis / catching bullets
 function Contact() {
     return (
         <>

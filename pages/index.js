@@ -3,10 +3,10 @@ import { ThemeContext } from '../context/ThemeContext'
 import { statuses, ApplicationStatusContext } from '../context/ApplicationStatusContext'
 import Canvas from '../components/Canvas'
 import Toolbar from '../components/Toolbar'
-import Profile from '../components/Profile'
+import Profile from '../components/profile/Profile'
 import Footer from '../components/Footer'
-import SideDrawer from '../components/SideDrawer'
-import Backdrop from '../components/Backdrop'
+import SideDrawer from '../components/sidedrawer/SideDrawer'
+import Backdrop from '../components/sidedrawer/Backdrop'
 import Fade from '../components/animations/Fade'
 
 function Home() {
@@ -42,10 +42,10 @@ function Home() {
                 <Toolbar />
                 <SideDrawer />
                 <DisplayBackdrop />
-                <Fade show={showCanvas}>
+                <Fade fadeIn={false} show={showCanvas} time={2}>
                     <Canvas />
                 </Fade>
-                <Fade show={showProfile}>
+                <Fade fadeOut={false} show={showProfile} time={1}>
                     <Profile />
                 </Fade>
                 <Footer />
@@ -72,6 +72,19 @@ function Home() {
                 a {
                   color: inherit;
                   text-decoration: none;
+                }
+
+                h1 {
+                    text-decoration: none;
+                    color: var(--highlight);
+                }
+
+                h1,h2,h3,h4,h5,h6 {
+                    margin: 16px 0 0 0;
+                }
+
+                h4 {
+                    margin: 0;
                 }
 
                 *::selection {
