@@ -74,6 +74,15 @@ function Home() {
                   text-decoration: none;
                 }
 
+                .list {
+                    list-style: none;
+                }
+
+                .list li {
+                    display: flex;
+                    gap: 5px;
+                }
+
                 h1 {
                     text-decoration: none;
                     color: var(--highlight);
