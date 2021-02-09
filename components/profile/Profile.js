@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeContext'
-import { ApplicationStatusContext, statuses } from '../../context/ApplicationStatusContext'
 import ProfileSegment from './ProfileSegment'
 import About from './About'
 import Experience from './Experience'
+import Projects from './Projects'
 import Education from './Education'
 import Contact from './Contact'
 
@@ -21,11 +21,15 @@ function Profile() {
                     <Experience />
                 </ProfileSegment>
 
-                <ProfileSegment id="education" background={theme.toneOne}>
+                {/*<ProfileSegment id="projects" background={theme.toneOne}>
+                    <Projects />
+                </ProfileSegment>*/}
+
+                <ProfileSegment id="education" background={theme.toneTwo}>
                     <Education />
                 </ProfileSegment>
 
-                <ProfileSegment id="contact" background={theme.toneTwo}>
+                <ProfileSegment id="contact" background={theme.toneOne}>
                     <Contact />
                 </ProfileSegment>
             </div>

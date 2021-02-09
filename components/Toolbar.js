@@ -5,19 +5,23 @@ import PaintRoller from './svgs/PaintRoller'
 function Toolbar() {
     const [navPos, setNavPos] = useState(0);
 
+    let prevScrollPos = null;
     let scrollPos = null;
 
     const handleScroll = () => {
         scrollPos = window.pageYOffset;
 
-        if (scrollPos > 60) {
+        if (prevScrollPos < scrollPos && prevScrollPos > 60) {
             setNavPos(-75);
         } else {
             setNavPos(0);
         }
+
+        prevScrollPos = window.pageYOffset;
     }
 
     useEffect(() => {
+        prevScrollPos = window.pageYOffset;
         window.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -45,6 +49,9 @@ function Toolbar() {
                             <li>
                                 <a href="#experience">Experience</a>
                             </li>
+                            {/*<li>
+                                <a href="#projects">Projects</a>
+                            </li>*/}
                             <li>
                                 <a href="#education">Education</a>
                             </li>

@@ -91,6 +91,21 @@ function Home() {
                     background: var(--highlight);
                 }
 
+                
+                // CSS for nested SquareImage background corner colors, need to update this to decouple it from ProfileSegment
+                .segment:nth-of-type(odd) {
+                    background: var(--toneOne);
+                }
+
+                .segment:nth-of-type(odd) .square-image__container--corners:after {
+                    background:
+                        linear-gradient(45deg,  var(--toneOne) 75px, transparent 75px),
+                        linear-gradient(135deg, var(--toneOne) 75px, transparent 75px),
+                        linear-gradient(225deg, var(--toneOne) 75px, transparent 75px),
+                        linear-gradient(315deg, var(--toneOne) 75px, transparent 75px);
+                }
+                //
+
                 @keyframes fadeIn {
                     0% {
                         opacity: 0;

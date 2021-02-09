@@ -35,7 +35,12 @@ function SideDrawer() {
 						<a href="#experience">
 							<span>Experience</span>
 						</a>
-					</li>
+                    </li>
+                    {/*<li onClick={toggleSideDrawer}>
+                        <a href="#projects">
+                            <span>Projects</span>
+                        </a>
+                    </li>*/}
                     <li onClick={toggleSideDrawer}>
 						<a href="#education">
 							<span>Education</span>

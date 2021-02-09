@@ -48,7 +48,7 @@ function Experience() {
                 <li className="project">
                     <SquareImage src="/static/Trilogy-Web.png" alt="Trilogy Logo" />
                     <div className="project__content">
-                        <h1>SculptNation</h1>
+                        <h1>Trilogy Education</h1>
                         <h2>Software Engineer Tutor</h2>
                         <p>I perform administrative tasks, manage a roster of students, and create progress reports to show a history of improving competence in software engineering.</p>
                         <h4>Role Focus</h4>

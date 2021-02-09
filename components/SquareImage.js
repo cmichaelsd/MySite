@@ -1,3 +1,5 @@
+
+// TODO: Update to use background tone of profile segment instead of hardcoded toneTwo.
 function SquareImage(props) {
     // Background may need to be set for custom colors, else always white.
     const background = props.background || '#fff';
