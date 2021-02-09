@@ -40,7 +40,6 @@ function MyApp({ Component, pageProps }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#fff" />
                 <meta name="description" content="Cole Michaels' Personal Website" />
-                <link rel="shortcut icon" href="/static/head/favicon.ico" />
                 <link rel="shortcut icon" href="/static/head/favicon-16x16.png" sizes="16x16" type="image/png" />
                 <link rel="shortcut icon" href="/static/head/favicon-32x32.png" sizes="32x32" type="image/png" />
                 <link rel="apple-touch-icon" href="/static/head/apple-touch-icon.png" />
