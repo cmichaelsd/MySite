@@ -7,7 +7,7 @@ function Education() {
             <div className="education-container">
                 <BannerImage src="/static/HackReactor.png" alt="Hack Reactor Logo" />
                 <h1>Education</h1>
-                <p>Hack Reactor is a Fullstrack Wed Development bootcamp covering topics such as</p>
+                <p>Hack Reactor is a Full Stack Wed Development bootcamp covering topics such as</p>
                 <ul>
                     <li><Checkmark /> <div>Data Structures</div></li>
                     <li><Checkmark /> <div>Databases</div></li> 
