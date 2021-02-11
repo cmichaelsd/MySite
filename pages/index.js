@@ -20,6 +20,11 @@ function Home() {
 
     const mounted = useRef();
 
+    const skipCanvasAnimation = () => {
+        setShowCanvas(false);
+        setShowProfile(true);
+    }
+
     const DisplayBackdrop = () => {
         if (status === statuses.NAVIGATION_DRAWER_OPEN) {
             return <Backdrop />;
@@ -31,8 +36,8 @@ function Home() {
     useEffect(() => {
         if (!mounted.current) {
             mounted.current = true;
-            setTimeout(() => setShowCanvas(showCanvas => !showCanvas), 5000);
-            setTimeout(() => setShowProfile(showProfile => !showProfile), 7000);
+            setTimeout(() => setShowCanvas(false), 5000);
+            setTimeout(() => setShowProfile(true), 7000);
         }
     })
 
@@ -43,7 +48,7 @@ function Home() {
                 <SideDrawer />
                 <DisplayBackdrop />
                 <Fade fadeIn={false} show={showCanvas} time={2}>
-                    <Canvas />
+                    <Canvas skipCanvasAnimation={skipCanvasAnimation} />
                 </Fade>
                 <Fade fadeOut={false} show={showProfile} time={1}>
                     <Profile />
@@ -106,6 +111,8 @@ function Home() {
                 }
                 //
 
+                // Animations
+                // Fade
                 @keyframes fadeIn {
                     0% {
                         opacity: 0;

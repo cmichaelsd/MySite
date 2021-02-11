@@ -1,13 +1,9 @@
 import { useEffect, useRef, useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
-import { ApplicationStatusContext } from '../context/ApplicationStatusContext'
-import { Events } from '../events'
 import { hexToRgb } from '../helpers'
 
-function Canvas() {
+function Canvas(props) {
     const { theme } = useContext(ThemeContext);
-
-    const { changeStatus } = useContext(ApplicationStatusContext);
 
     const canvasRef = useRef(null);
 
@@ -99,13 +95,9 @@ function Canvas() {
         }
     }, [])
 
-    useEffect(() => {
-        // setTimeout(() => changeStatus(Events.INITIAL_LOADING_COMPLETE), 5000);
-    }, [])
-
     return (
         <>
-            <div id="hover-text-container">
+            <div id="hover-text-container" onClick={props.skipCanvasAnimation}>
                 <h1 id="hover-text">Cole Michaels</h1>
                 <canvas ref={canvasRef} id="canvas"></canvas>
             </div>

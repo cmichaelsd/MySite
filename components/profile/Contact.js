@@ -11,7 +11,6 @@ function Contact() {
             <div className="links-container">
                 <SquareImage href="https://github.com/cmichaelsd" src="/static/Github-Web.png" alt="Github Logo" />
                 <SquareImage href="https://linkedin.com/in/cole-daniel-michaels/" src="/static/LinkedIn-Web.png" alt="LinkedIn Logo" />
-                {/*<SquareImage href="https://glitch.com/@cmichaelsd" src="/static/Glitch-Web.png" alt="Glitch Logo" />*/}
             </div>
 
             <style jsx>{`
