@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }) {
     }
 
     function changeStatus(event) {
-        console.log(event);
         switch (event) {
             case Events.NAVIGATION_DRAWER_CLOSED:
             case Events.INITIAL_LOADING_COMPLETE:

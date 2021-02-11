@@ -72,6 +72,7 @@ function Home() {
                     background: var(--toneOne);
                     color: var(--textColor);
                     overscroll-behavior: none;
+                    overflow-x: hidden;
                 }
 
                 a {
