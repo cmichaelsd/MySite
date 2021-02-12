@@ -6,7 +6,7 @@ function About() {
             <div className="profile-image">
                 <picture>
                     <source srcSet="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile2.png" media="(max-width: 660px)" />
-                    <img src="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels2.png" alt="Cole Michaels" height="500" />
+                    <img src="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels2.png" alt="Cole Michaels" />
                 </picture>
             </div>
             <h1>About Me</h1>
