@@ -3,7 +3,7 @@ function BannerImage(props) {
         <>
             <div className="banner-image-container">
                 <div>
-                    <img className="banner-image" src={props.src} alt={props.alt}></img>
+                    <img className="banner-image" src={props.src} alt={props.alt} height={props.height} width={props.width}></img>
                 </div>
             </div>
 

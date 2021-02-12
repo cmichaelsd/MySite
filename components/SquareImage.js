@@ -8,7 +8,7 @@ function SquareImage(props) {
         <>
             <div className="square-image__container">
                 <div className="square-image__container--corners">
-                    <img className="square-image" src={props.src} alt={props.alt}></img>
+                    <img className="square-image" src={props.src} alt={props.alt} height={props.height} width={props.width}></img>
                 </div>
             </div>
 
