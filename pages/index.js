@@ -62,6 +62,8 @@ function Home() {
                     --toneTwo: ${theme.toneTwo};
                     --textColor: ${theme.textColor};
                     --highlight: ${theme.highlight};
+                    --navBarOffset: 56px;
+                    --footerOffser: 43px;
                 }
 
                 html,

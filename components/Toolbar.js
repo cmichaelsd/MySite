@@ -12,7 +12,7 @@ function Toolbar() {
         scrollPos = window.pageYOffset;
 
         if (prevScrollPos < scrollPos && prevScrollPos > 60) {
-            setNavPos(-75);
+            setNavPos(-56);
         } else {
             setNavPos(0);
         }

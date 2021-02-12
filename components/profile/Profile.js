@@ -36,7 +36,7 @@ function Profile() {
 
             <style jsx>{`
                 #profile {
-                    margin: 75px 0 42px 0;
+                    margin: var(--navBarOffset) 0 var(--footerOffset) 0;
                 }
             `}</style>
         </>

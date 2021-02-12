@@ -1,6 +1,6 @@
 function SVGButton(props) {
     return (
-        <button className="svgButton" onClick={() => props.svgButtonAction()}>
+        <button className="svgButton" aria-label={props.label} onClick={() => props.svgButtonAction()}>
             {props.children}
 
             <style jsx>{`
