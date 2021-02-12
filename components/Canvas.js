@@ -9,8 +9,6 @@ function Canvas(props) {
 
     const mounted = useRef();
 
-    const OFFSET_Y_OVERFLOW = -60;
-
     const strokeColor = { h: 200, s: 50, l: 50 };
 
     const wave = {
@@ -36,7 +34,7 @@ function Canvas(props) {
 
     const handleResize = () => {
         canvasRef.current.width = window.innerWidth;
-        canvasRef.current.height = window.innerHeight + OFFSET_Y_OVERFLOW;
+        canvasRef.current.height = window.innerHeight;
 
         // evaluateWave();
         wave.y = canvasRef.current.height / 2;
@@ -79,7 +77,7 @@ function Canvas(props) {
 
         ctx = canvasRef.current.getContext('2d');
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight + OFFSET_Y_OVERFLOW;
+        canvas.height = window.innerHeight;
 
         // evaluateWave();
 
@@ -110,7 +108,7 @@ function Canvas(props) {
                 #hover-text {
                     position: absolute;
                     left: 50%;
-                    top: 46%;
+                    top: 47%;
                     transform: translate(-50%, -50%);
                     margin: 0;
                     white-space: nowrap;
@@ -121,12 +119,21 @@ function Canvas(props) {
 
                 #canvas {
                     height: 100%;
+                    margin: 0 56px 0 0;
                 }
 
                 @media (max-width: 968px) {
                     #hover-text {
                         font-size: 3rem;
+                        top: 49%;
                     }
+                }
+            `}</style>
+
+            <style global jsx>{`
+                html,
+                body {
+                    overflow-y: hidden;
                 }
             `}</style>
         </>
