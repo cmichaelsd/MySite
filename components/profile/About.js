@@ -28,10 +28,17 @@ function About() {
                     justify-content: center;
                     align-content: center;
                     margin-top: 1rem;
+                    height: 500px;
                 }
 
                 ul {
                     list-style: none;
+                }
+
+                @media (max-width: 660px) {
+                    .profile-image {
+                        height: 300px;
+                    }
                 }
             `}</style>
         </>
