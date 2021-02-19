@@ -5,7 +5,7 @@ function Education() {
     return (
         <>
             <div className="education-container">
-                <BannerImage src="https://d3p2ju5slp2tm7.cloudfront.net/HackReactor.png" alt="Hack Reactor Logo" height="125" width="400" />
+                <BannerImage src="https://d3p2ju5slp2tm7.cloudfront.net/HackReactor.png" alt="Hack Reactor Logo" height="125" />
                 <h1>Education</h1>
                 <p>Hack Reactor is a Full Stack Wed Development bootcamp covering topics such as</p>
                 <ul>
