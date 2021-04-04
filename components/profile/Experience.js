@@ -8,7 +8,7 @@ function Experience() {
                 <li className="project">
                     <SquareImage src="https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png" alt="V Shred Logo" height="150" width="150" />
                     <div className="project__content">
-                        <h1>V Shred</h1>
+                        <h1 className="headline">V Shred</h1>
                         <h2>Android Developer</h2>
                         <p>I foster coordination with designers for translation of sketch designs into Android UI activities and implement backend logic.</p>
                         <h4>Role Focus</h4>
@@ -34,7 +34,7 @@ function Experience() {
                 <li className="project">
                     <SquareImage background="#f16870" src="https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png" alt="Jijenge Logo" height="150" width="150" />
                     <div className="project__content">
-                        <h1>Jijenge Academy</h1>
+                        <h1 className="headline">Jijenge Academy</h1>
                         <h2>Full Stack Engineer</h2>
                         <p>I developed components through the utilization of React to build scalable and reusable features.</p>
                         <h4>Role Focus</h4>
@@ -48,7 +48,7 @@ function Experience() {
                 <li className="project">
                     <SquareImage src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" alt="Trilogy Logo" height="150" width="150" />
                     <div className="project__content">
-                        <h1>Trilogy Education</h1>
+                        <h1 className="headline">Trilogy Education</h1>
                         <h2>Software Engineer Tutor</h2>
                         <p>I perform administrative tasks, manage a roster of students, and create progress reports to show a history of improving competence in software engineering.</p>
                         <h4>Role Focus</h4>
@@ -84,8 +84,9 @@ function Experience() {
                 }
 
                 li {
+                    margin-bottom: 10px;
                     display: flex;
-                    gap: 5px;
+                    gap: 10px;
                 }
 
                 @media (max-width: 768px) {

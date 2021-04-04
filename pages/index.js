@@ -69,7 +69,7 @@ function Home() {
                 body {
                     padding: 0;
                     margin: 0;
-                    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+                    font-family: 'Noto Sans', sans-serif;
                     background: var(--toneOne);
                     color: var(--textColor);
                     overscroll-behavior: none;
@@ -81,17 +81,13 @@ function Home() {
                   text-decoration: none;
                 }
 
-                h1 {
-                    text-decoration: none;
+                .headline {
+                    text-decoration: underline;
                     color: var(--highlight);
                 }
 
                 h1,h2,h3,h4,h5,h6 {
                     margin: 16px 0 0 0;
-                }
-
-                h4 {
-                    margin: 0;
                 }
 
                 *::selection {

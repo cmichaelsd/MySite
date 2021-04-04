@@ -42,7 +42,9 @@ function MyApp({ Component, pageProps }) {
                 <link rel="icon" href="https://d3p2ju5slp2tm7.cloudfront.net/head/favicon-16x16.png" sizes="16x16" type="image/png" />
                 <link rel="icon" href="https://d3p2ju5slp2tm7.cloudfront.net/head/favicon-32x32.png" sizes="32x32" type="image/png" />
                 <link rel="apple-touch-icon" href="https://d3p2ju5slp2tm7.cloudfront.net/head/apple-touch-icon.png" />
-                <link rel="me" href="mailto:cmichaelsd@gmail.com"></link>
+                <link rel="me" href="mailto:cmichaelsd@gmail.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet" />
                 <title>Cole Michaels</title>
             </Head>
 
