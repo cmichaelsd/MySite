@@ -57,14 +57,6 @@ function Home() {
             </main>
 
             <style global jsx>{`
-                @font-face {
-                    font-family: 'Noto Sans';
-                    font-style: normal;
-                    font-weight: 400;
-                    src: local('Noto Sans'), url('../fonts/Noto_Sans/NotoSans-Regular.ttf') format('truetype');
-                    font-display: swap;
-                }
-
                 :root {
                     --toneOne: ${theme.toneOne};
                     --toneTwo: ${theme.toneTwo};
@@ -77,7 +69,7 @@ function Home() {
                 body {
                     padding: 0;
                     margin: 0;
-                    font-family: 'Noto Sans', sans-serif;
+                    font-family: sans-serif;
                     background: var(--toneOne);
                     color: var(--textColor);
                     overscroll-behavior: none;
