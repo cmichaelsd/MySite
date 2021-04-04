@@ -10,7 +10,7 @@ function ProfileSegment(props) {
             <style jsx>{`
                 .segment {
                     padding: 0.5rem 1rem;
-                    background: var(--toneTwo);
+                    background: ${props.background};
                 }
 
                 .set-width {

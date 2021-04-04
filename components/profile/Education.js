@@ -1,7 +1,7 @@
 import BannerImage from '../BannerImage'
 import Checkmark from '../svgs/Checkmark'
 
-function Education() {
+function Education({background}) {
     return (
         <>
             <div className="education-container">

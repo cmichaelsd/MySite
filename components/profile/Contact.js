@@ -1,6 +1,6 @@
 import SquareImage from '../SquareImage'
 
-function Contact() {
+function Contact({background}) {
     return (
         <>
             <div className="contact-container">
@@ -9,8 +9,8 @@ function Contact() {
                 </p>
             </div>
             <div className="links-container">
-                <SquareImage href="https://github.com/cmichaelsd" src="https://d3p2ju5slp2tm7.cloudfront.net/Github-Web.png" alt="Github Logo" height="150" width="150" />
-                <SquareImage href="https://linkedin.com/in/cole-daniel-michaels/" src="https://d3p2ju5slp2tm7.cloudfront.net/LinkedIn-Web.png" alt="LinkedIn Logo" height="150" width="150" />
+                <SquareImage parentBackground={background} href="https://github.com/cmichaelsd" src="https://d3p2ju5slp2tm7.cloudfront.net/Github-Web.png" alt="Github Logo" height="150" width="150" />
+                <SquareImage parentBackground={background} href="https://linkedin.com/in/cole-daniel-michaels/" src="https://d3p2ju5slp2tm7.cloudfront.net/LinkedIn-Web.png" alt="LinkedIn Logo" height="150" width="150" />
             </div>
 
             <style jsx>{`

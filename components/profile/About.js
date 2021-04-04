@@ -1,6 +1,6 @@
 import Plus from '../svgs/Plus'
 
-function About() {
+function About({background}) {
     return (
         <>
             <div className="profile-image">

@@ -34,10 +34,10 @@ function SquareImage(props) {
                         width: 200px;
                         height: 200px;
                         background:
-                            linear-gradient(45deg,  var(--toneTwo) 75px, transparent 75px),
-                            linear-gradient(135deg, var(--toneTwo) 75px, transparent 75px),
-                            linear-gradient(225deg, var(--toneTwo) 75px, transparent 75px),
-                            linear-gradient(315deg, var(--toneTwo) 75px, transparent 75px);
+                            linear-gradient(45deg,  ${props.parentBackground} 75px, transparent 75px),
+                            linear-gradient(135deg, ${props.parentBackground} 75px, transparent 75px),
+                            linear-gradient(225deg, ${props.parentBackground} 75px, transparent 75px),
+                            linear-gradient(315deg, ${props.parentBackground} 75px, transparent 75px);
                     }
 
                     .square-image {

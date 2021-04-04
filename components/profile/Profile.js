@@ -14,23 +14,23 @@ function Profile() {
         <>
             <div id="profile">
                 <ProfileSegment id="about" background={theme.toneOne}>
-                    <About />
+                    <About background={theme.toneOne} />
                 </ProfileSegment>
 
                 <ProfileSegment id="experience" background={theme.toneTwo}>
-                    <Experience />
+                    <Experience background={theme.toneTwo} />
                 </ProfileSegment>
 
                 {/*<ProfileSegment id="projects" background={theme.toneOne}>
                     <Projects />
                 </ProfileSegment>*/}
 
-                <ProfileSegment id="education" background={theme.toneTwo}>
-                    <Education />
+                <ProfileSegment id="education" background={theme.toneOne}>
+                    <Education background={theme.toneOne} />
                 </ProfileSegment>
 
-                <ProfileSegment id="contact" background={theme.toneOne}>
-                    <Contact />
+                <ProfileSegment id="contact" background={theme.toneTwo}>
+                    <Contact background={theme.toneTwo} />
                 </ProfileSegment>
             </div>
 

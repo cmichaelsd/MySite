@@ -1,12 +1,12 @@
 import SquareImage from '../SquareImage'
 import Checkmark from '../svgs/Checkmark'
 
-function Experience() {
+function Experience({background}) {
     return (
         <>
             <ul className="projects">
                 <li className="project">
-                    <SquareImage src="https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png" alt="V Shred Logo" height="150" width="150" />
+                    <SquareImage parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png" alt="V Shred Logo" height="150" width="150" />
                     <div className="project__content">
                         <h1 className="headline">V Shred</h1>
                         <h2>Android Developer</h2>
@@ -32,7 +32,7 @@ function Experience() {
                     </div>
                 </li>
                 <li className="project">
-                    <SquareImage background="#f16870" src="https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png" alt="Jijenge Logo" height="150" width="150" />
+                    <SquareImage parentBackground={background} background="#f16870" src="https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png" alt="Jijenge Logo" height="150" width="150" />
                     <div className="project__content">
                         <h1 className="headline">Jijenge Academy</h1>
                         <h2>Full Stack Engineer</h2>
@@ -46,7 +46,7 @@ function Experience() {
                     </div>
                 </li>
                 <li className="project">
-                    <SquareImage src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" alt="Trilogy Logo" height="150" width="150" />
+                    <SquareImage parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" alt="Trilogy Logo" height="150" width="150" />
                     <div className="project__content">
                         <h1 className="headline">Trilogy Education</h1>
                         <h2>Software Engineer Tutor</h2>
