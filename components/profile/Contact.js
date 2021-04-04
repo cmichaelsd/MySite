@@ -15,7 +15,6 @@ function Contact({background}) {
 
             <style jsx>{`
                 .contact-container {
-                    margin-top: 3rem;
                     text-align: center;
                 }
 

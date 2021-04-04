@@ -9,7 +9,6 @@ function BannerImage(props) {
 
             <style jsx>{`
                 .banner-image-container {
-                    margin-top: 2em;
                     display: flex;
                     justify-content: center;
                     align-content: center;

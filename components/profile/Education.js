@@ -18,10 +18,6 @@ function Education({background}) {
             </div>
 
             <style jsx>{`
-                .education-container {
-                    margin-bottom: 5rem;
-                }
-
                 ul {
                     list-style: none;
                 }

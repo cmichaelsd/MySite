@@ -9,7 +9,7 @@ function ProfileSegment(props) {
 
             <style jsx>{`
                 .segment {
-                    padding: 0.5rem 1rem;
+                    padding: 2rem;
                     background: ${props.background};
                 }
 
