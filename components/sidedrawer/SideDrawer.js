@@ -36,11 +36,6 @@ function SideDrawer() {
 							<span>Experience</span>
 						</a>
                     </li>
-                    {/*<li onClick={toggleSideDrawer}>
-                        <a href="#projects">
-                            <span>Projects</span>
-                        </a>
-                    </li>*/}
                     <li onClick={toggleSideDrawer}>
 						<a href="#education">
 							<span>Education</span>
@@ -93,11 +88,6 @@ function SideDrawer() {
                     color: var(--textColor);
                     text-decoration: none;
                     font-size: 1.2rem;
-                }
-
-                .side-drawer a:hover,
-                .side-drawer a.active {
-                    color: var(--highlight);
                 }
 
                 @media (min-width: 769px) {

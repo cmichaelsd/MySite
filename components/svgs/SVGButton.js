@@ -3,7 +3,7 @@ function SVGButton(props) {
         <button className="svgButton" aria-label={props.label} onClick={() => props.svgButtonAction()}>
             {props.children}
 
-            <style jsx>{`
+            <style jsx global>{`
                 .svgButton {
                     background: none;
                     border: none;
@@ -16,7 +16,7 @@ function SVGButton(props) {
                 }
             `}</style>
         </button>
-    );
+    )
 }
 
-export default SVGButton;
+export default SVGButton

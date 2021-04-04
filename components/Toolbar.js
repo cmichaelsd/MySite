@@ -49,9 +49,6 @@ function Toolbar() {
                             <li>
                                 <a href="#experience">Experience</a>
                             </li>
-                            {/*<li>
-                                <a href="#projects">Projects</a>
-                            </li>*/}
                             <li>
                                 <a href="#education">Education</a>
                             </li>
@@ -59,7 +56,7 @@ function Toolbar() {
                                 <a href="#contact">Contact</a>
                             </li>
                             <li>
-                                <PaintRoller />
+                                <PaintRoller enableHover={true} />
                             </li>
                         </ul>
                     </div>
@@ -106,6 +103,13 @@ function Toolbar() {
 
                 .toolbar__navigation--items li {
                     padding: 0 2rem;
+                    color: var(--textColor);
+                    text-decoration: none;
+                }
+
+                .toolbar__navigation--items li:hover,
+                .toolbar__navigation--items li:active {
+                    color: var(--highlight);
                 }
 
                 .toolbar__logo {
@@ -113,16 +117,6 @@ function Toolbar() {
                     text-decoration: none;
                     font-size: 1.3rem;
                     text-transform: uppercase;
-                }
-
-                .toolbar__lavigation--items a {
-                    color: var(--textColor);
-                    text-decoration: none;
-                }
-
-                .toolbar__lavigation--items a:hover,
-                .toolbar__lavigation--items a.active {
-                    color: var(--highlight);
                 }
 
                 @media (max-width: 768px) {
