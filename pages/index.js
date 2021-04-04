@@ -59,7 +59,10 @@ function Home() {
             <style global jsx>{`
                 @font-face {
                     font-family: 'Noto Sans';
+                    font-style: normal;
+                    font-weight: 400;
                     src: local('Noto Sans'), url('../fonts/Noto_Sans/NotoSans-Regular.ttf') format('truetype');
+                    font-display: swap;
                 }
 
                 :root {
