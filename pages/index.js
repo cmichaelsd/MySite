@@ -57,6 +57,11 @@ function Home() {
             </main>
 
             <style global jsx>{`
+                @font-face {
+                    font-family: 'Noto Sans';
+                    src: local('Noto Sans'), url('../fonts/Noto_Sans/NotoSans-Regular.ttf') format('truetype');
+                }
+
                 :root {
                     --toneOne: ${theme.toneOne};
                     --toneTwo: ${theme.toneTwo};
