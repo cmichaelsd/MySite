@@ -19,6 +19,7 @@ function Contact({background}) {
                 }
 
                 .contact-container__email-me {
+                    text-decoration: underline;
                     color: var(--highlight);
                     text-decoration-color: var(--highlight);
                 }

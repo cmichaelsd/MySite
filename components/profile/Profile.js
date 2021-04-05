@@ -41,7 +41,7 @@ function Profile() {
 
             <style jsx global>{`
                 #profile {
-                    margin: var(--navAndFooterOffset);
+                    padding: var(--navAndFooterOffset);
                 }
 
                 .project {

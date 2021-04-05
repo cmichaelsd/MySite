@@ -43,17 +43,19 @@ function Home() {
 
     return (
         <>
-            <SideDrawer />
             <main id="main">
-                <Toolbar />
-                <DisplayBackdrop />
-                <Fade fadeIn={false} show={showCanvas} time={2}>
-                    <Canvas skipCanvasAnimation={skipCanvasAnimation} />
-                </Fade>
-                <Fade fadeOut={false} show={showProfile} time={1}>
-                    <Profile />
-                </Fade>
-                <Footer />
+                <SideDrawer />
+                <div id="content">
+                    <Toolbar />
+                    <DisplayBackdrop />
+                    <Fade fadeIn={false} show={showCanvas} time={2}>
+                        <Canvas skipCanvasAnimation={skipCanvasAnimation} />
+                    </Fade>
+                    <Fade fadeOut={false} show={showProfile} time={1}>
+                        <Profile />
+                    </Fade>
+                    <Footer />
+                </div>
             </main>
 
             <style global jsx>{`
@@ -62,7 +64,7 @@ function Home() {
                     --toneTwo: ${theme.toneTwo};
                     --textColor: ${theme.textColor};
                     --highlight: ${theme.highlight};
-                    --navAndFooterOffset: 56px 0 43px 0;
+                    --navAndFooterOffset: 30px 0 43px 0;
                 }
 
                 html,
@@ -94,7 +96,7 @@ function Home() {
                     background: var(--highlight);
                 }
                 
-                #profile, #toolbar, #footer, #canvas {
+                #content {
                     transition: 0.6s filter;
                 }
 
@@ -115,6 +117,25 @@ function Home() {
                     }
                     100% {
                         opacity: 0;
+                    }
+                }
+
+                // Slide
+                @keyframes slideUp {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    100% {
+                        transform: translateY(-5px);
+                    }
+                }
+
+                @keyframes slideDown {
+                    0% {
+                        transform: translateY(-5px);
+                    }
+                    100% {
+                        transform: translateY(0);
                     }
                 }
             `}</style>

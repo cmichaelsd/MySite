@@ -19,7 +19,7 @@ function Backdrop() {
                     z-index: 100;
                 }
 
-                #profile, #toolbar, #footer, #canvas {
+                #content {
                     filter: blur(3px) contrast(.8) brightness(.8);
                 }
             `}</style>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Hamburger from './svgs/Hamburger'
 import PaintRoller from './svgs/PaintRoller'
+import Slide from './animations/Slide'
 
 function Toolbar() {
     const [navPos, setNavPos] = useState(0);
@@ -49,19 +50,29 @@ function Toolbar() {
                     <div className="toolbar__navigation--items">
                         <ul>
                             <li>
-                                <a href="#about">About</a>
+                                <Slide>
+                                    <a href="#about">About</a>
+                                </Slide>
                             </li>
                             <li>
-                                <a href="#experience">Experience</a>
+                                <Slide>
+                                    <a href="#experience">Experience</a>
+                                </Slide>
                             </li>
                             <li>
-                                <a href="#education">Education</a>
+                                <Slide>
+                                    <a href="#education">Education</a>
+                                </Slide>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <Slide>
+                                    <a href="#contact">Contact</a>
+                                </Slide>
                             </li>
                             <li>
-                                <PaintRoller enableHover={true} />
+                                <Slide>
+                                    <PaintRoller enableHover={true} />
+                                </Slide>
                             </li>
                         </ul>
                     </div>
@@ -110,11 +121,6 @@ function Toolbar() {
                     padding: 0 2rem;
                     color: var(--textColor);
                     text-decoration: none;
-                }
-
-                .toolbar__navigation--items li:hover,
-                .toolbar__navigation--items li:active {
-                    color: var(--highlight);
                 }
 
                 .toolbar__logo {
