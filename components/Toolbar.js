@@ -5,14 +5,19 @@ import PaintRoller from './svgs/PaintRoller'
 function Toolbar() {
     const [navPos, setNavPos] = useState(0);
 
+    const SCROLL_TO_HIDE_TOOLBAR = 69;
+
+    const SIZE_OF_TOOLBAR = 65;
+
     let prevScrollPos = null;
+
     let scrollPos = null;
 
     const handleScroll = () => {
         scrollPos = window.pageYOffset;
 
-        if (prevScrollPos < scrollPos && prevScrollPos > 60) {
-            setNavPos(-56);
+        if (prevScrollPos < scrollPos && prevScrollPos > SCROLL_TO_HIDE_TOOLBAR) {
+            setNavPos(-SIZE_OF_TOOLBAR);
         } else {
             setNavPos(0);
         }
@@ -31,7 +36,7 @@ function Toolbar() {
 
     return (
         <>
-            <header className="toolbar">
+            <header id="toolbar">
                 <nav className="toolbar__navigation">
                     <div className="toolbar__toggle-button">
                         <Hamburger />
@@ -66,13 +71,13 @@ function Toolbar() {
             </header>
 
             <style jsx>{`
-                .toolbar {
+                #toolbar {
                     position: fixed;
                     top: ${navPos}px;
                     width: 100%;
                     background: var(--toneOne);
-                    height: 56px;
-                    z-index: 200;
+                    height: 65px;
+                    z-index: 1;
                     transition: top 0.3s;
                     box-shadow: 0 0 0.625rem 0 rgba(0,0,0,0.1);
                 }
@@ -120,7 +125,7 @@ function Toolbar() {
                 }
 
                 @media (max-width: 768px) {
-                    .toolbar {
+                    #toolbar {
                         box-shadow: none;
                     }
 

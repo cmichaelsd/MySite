@@ -7,10 +7,8 @@ function SideDrawer() {
     const { status, changeStatus } = useContext(ApplicationStatusContext);
 
     const drawerClasses = () => {
-        let drawerClasses = 'side-drawer';
-
         if (status === statuses.INITIAL_LOADING || status === statuses.READY) {
-            return drawerClasses;
+            return "";
         }
 
         if (status === statuses.NAVIGATION_DRAWER_OPEN) {
@@ -24,7 +22,7 @@ function SideDrawer() {
 
     return (
 		<>
-			<nav className={drawerClasses()}>
+			<nav id="side-drawer" className={drawerClasses()}>
 				<ul>
                     <li onClick={toggleSideDrawer}>
 						<a href="#about">
@@ -53,45 +51,46 @@ function SideDrawer() {
 			</nav>
 
             <style jsx>{`
-                .side-drawer {
+                #side-drawer {
                     height: 100%;
                     background: var(--toneTwo);
                     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5px);
                     position: fixed;
                     top: 0;
                     left: 0;
-                    width: 70%;
+                    width: 60%;
                     max-width: 400px;
                     z-index: 200;
                     transform: translateX(-100%);
                     transition: transform 0.3s ease-out;
                 }
 
-                .side-drawer.open {
+                #side-drawer.open {
                     transform: translateX(0);
                 }
 
-                .side-drawer ul {
+                #side-drawer ul {
                     height: 100%;
                     list-style: none;
+                    padding: 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                 }
 
-                .side-drawer li {
+                #side-drawer li {
                     margin: 0.5rem 0;
                 }
 
-                .side-drawer a {
+                #side-drawer a {
                     color: var(--textColor);
                     text-decoration: none;
                     font-size: 1.2rem;
                 }
 
                 @media (min-width: 769px) {
-                    .side-drawer {
+                    #side-drawer {
                         display: none;
                     }
                 }

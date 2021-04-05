@@ -43,9 +43,9 @@ function Home() {
 
     return (
         <>
+            <SideDrawer />
             <main id="main">
                 <Toolbar />
-                <SideDrawer />
                 <DisplayBackdrop />
                 <Fade fadeIn={false} show={showCanvas} time={2}>
                     <Canvas skipCanvasAnimation={skipCanvasAnimation} />
@@ -92,6 +92,10 @@ function Home() {
 
                 *::selection {
                     background: var(--highlight);
+                }
+                
+                #profile, #toolbar, #footer, #canvas {
+                    transition: 0.6s filter;
                 }
 
                 // Animations

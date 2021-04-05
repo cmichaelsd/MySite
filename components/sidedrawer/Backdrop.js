@@ -7,17 +7,20 @@ function Backdrop() {
 
 	return (
 		<>
-			<div onClick={() => changeStatus(Events.NAVIGATION_DRAWER_CLOSED)}></div>
+			<div id="backdrop" onClick={() => changeStatus(Events.NAVIGATION_DRAWER_CLOSED)}></div>
 
-			<style jsx>{`
-                div {
+			<style jsx global>{`
+               #backdrop {
                     position: fixed;
                     width: 100%;
                     height: 100%;
                     top: 0;
                     left: 0;
-                    background: rgba(0, 0, 0, 0.3);
                     z-index: 100;
+                }
+
+                #profile, #toolbar, #footer, #canvas {
+                    filter: blur(3px) contrast(.8) brightness(.8);
                 }
             `}</style>
 		</>

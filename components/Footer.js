@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
-// Correct scrolling
 function Footer() {
     const [footerPos, setFooterPos] = useState(0);
+
+    const SIZE_OF_FOOTER = 55;
 
     const handleScroll = () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             setFooterPos(0);
         } else {
-            setFooterPos(-50);
+            setFooterPos(-SIZE_OF_FOOTER);
         }
     }
 
@@ -22,16 +23,17 @@ function Footer() {
 
     return (
         <>
-            <footer>
+            <footer id="footer">
                 <p>Made in Las Vegas, NV</p>
             </footer>
 
             <style jsx>{`
-                footer {
+                #footer {
                     position: fixed;
                     background: var(--toneOne);
                     bottom: ${footerPos}px;
                     width: 100%;
+                    height: 55px;
                     color: var(--textColor);
                     display: flex;
                     justify-content: center;
