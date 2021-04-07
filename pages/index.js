@@ -90,6 +90,7 @@ function Home() {
 
                 h1,h2,h3,h4,h5,h6 {
                     margin: 16px 0 0 0;
+                    font-family: Helvetica;
                 }
 
                 * {
