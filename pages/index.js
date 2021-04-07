@@ -48,12 +48,12 @@ function Home() {
                 <div id="content">
                     <Toolbar />
                     <DisplayBackdrop />
-                    <Fade fadeIn={false} show={showCanvas} time={2}>
+                    {/* <Fade fadeIn={false} show={showCanvas} time={2}>
                         <Canvas skipCanvasAnimation={skipCanvasAnimation} />
-                    </Fade>
-                    <Fade fadeOut={false} show={showProfile} time={1}>
+                    </Fade> */}
+                    {/* <Fade fadeOut={false} show={showProfile} time={1}> */}
                         <Profile />
-                    </Fade>
+                    {/* </Fade> */}
                     <Footer />
                 </div>
             </main>
@@ -90,6 +90,10 @@ function Home() {
 
                 h1,h2,h3,h4,h5,h6 {
                     margin: 16px 0 0 0;
+                }
+
+                * {
+                    box-sizing: border-box;
                 }
 
                 *::selection {
@@ -143,7 +147,16 @@ function Home() {
                 // Slide Horizontal
                 @keyframes slideLeft {
                     0% {
-                        transform: translateX(-100%);
+                        transform: translateX(150%);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes slideRight {
+                    0% {
+                        transform: translateX(-150%);
                     }
                     100% {
                         transform: translateX(0);

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Hamburger from './svgs/Hamburger'
 import PaintRoller from './svgs/PaintRoller'
-import Slide from './animations/Slide'
+import SlidVertical from './animations/SlidVertical'
 
 function Toolbar() {
     const [navPos, setNavPos] = useState(0);
@@ -50,29 +50,29 @@ function Toolbar() {
                     <div className="toolbar__navigation--items">
                         <ul>
                             <li>
-                                <Slide>
+                                <SlidVertical>
                                     <a href="#about">About</a>
-                                </Slide>
+                                </SlidVertical>
                             </li>
                             <li>
-                                <Slide>
+                                <SlidVertical>
                                     <a href="#experience">Experience</a>
-                                </Slide>
+                                </SlidVertical>
                             </li>
                             <li>
-                                <Slide>
+                                <SlidVertical>
                                     <a href="#education">Education</a>
-                                </Slide>
+                                </SlidVertical>
                             </li>
                             <li>
-                                <Slide>
+                                <SlidVertical>
                                     <a href="#contact">Contact</a>
-                                </Slide>
+                                </SlidVertical>
                             </li>
                             <li>
-                                <Slide>
+                                <SlidVertical>
                                     <PaintRoller enableHover={true} />
-                                </Slide>
+                                </SlidVertical>
                             </li>
                         </ul>
                     </div>

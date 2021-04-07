@@ -4,16 +4,16 @@ import Checkmark from '../../svgs/Checkmark'
 function Jijenge({background}) {
     return (
         <div className="project">
-            <SquareImage parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" alt="Trilogy Logo" height="150" width="150" />
+            <SquareImage parentBackground={background} background="#f16870" src="https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png" alt="Jijenge Logo" height="150" width="150" />
             <div className="project__content">
-                <h1 className="headline">Trilogy Education</h1>
-                <h2>Software Engineer Tutor</h2>
-                <p>I perform administrative tasks, manage a roster of students, and create progress reports to show a history of improving competence in software engineering.</p>
+                <h1 className="headline">Jijenge Academy</h1>
+                <h2>Full Stack Engineer</h2>
+                <p>I developed components through the utilization of React to build scalable and reusable features.</p>
                 <h4>Role Focus</h4>
-                <p>Meet one on one with an average of 10 students a week for tutoring sessions on the Trilogy Education curriculum. Perform administrative tasks such as creating student progress reports using Google Forms and personal discretion.</p>
+                <p>Coordinated with the Boston based Jijenge Team and other Full Stack Engineers to design and develop the Jijenge site from conception to completion. Generated components through the utilization of React to build scalable and reusable features. Led the effective implementation of Stripe for users' donations, managing secure transactions for Jijenge Academy. Designed the architecture of the NodeJS serve for Jijenge in order to handle traffic and API requests from the users.</p>
                 <h4>Key Outcomes</h4>
                 <ul>
-                    <li><Checkmark /> <div>I saw a dramatic improvement in student performance and understanding of software engineering principles throughout tutoring sessions.</div></li>
+                    <li><Checkmark /> <div>Generated revenue up to $10K in the first month to mentor Kenyan students on technical skills.</div></li>
                 </ul>
             </div>
         </div>

@@ -5,8 +5,9 @@ import About from './About'
 import Education from './Education'
 import Contact from './Contact'
 import VShred from './experience/VShred'
-import TrilogyEducation from './experience/TrilogyEducation'
 import Jijenge from './experience/Jijenge'
+import TrilogyEducation from './experience/TrilogyEducation'
+import SlideHorizontal from '../animations/SlideHorizontal'
 
 function Profile() {
     const { theme } = useContext(ThemeContext);
@@ -19,19 +20,27 @@ function Profile() {
                 </ProfileSegment>
 
                 <ProfileSegment id="experience" background={theme.toneTwo}>
-                    <VShred background={theme.toneTwo} />
+                    <SlideHorizontal toStart={false}>
+                            <VShred background={theme.toneTwo} />
+                    </SlideHorizontal>
                 </ProfileSegment>
 
-                <ProfileSegment id="experience" background={theme.toneOne}>
-                    <TrilogyEducation background={theme.toneOne} />
+                <ProfileSegment background={theme.toneOne}>
+                    <SlideHorizontal>
+                        <TrilogyEducation background={theme.toneOne} />
+                    </SlideHorizontal>
                 </ProfileSegment>
 
-                <ProfileSegment id="experience" background={theme.toneTwo}>
-                    <Jijenge background={theme.toneTwo} />
+                <ProfileSegment background={theme.toneTwo}>
+                    <SlideHorizontal toStart={false}>
+                        <Jijenge background={theme.toneTwo} />
+                    </SlideHorizontal>
                 </ProfileSegment>
 
-                <ProfileSegment id="education" background={theme.toneOne}>
-                    <Education background={theme.toneOne} />
+                <ProfileSegment background={theme.toneOne}>
+                    <SlideHorizontal>
+                        <Education background={theme.toneOne} />
+                    </SlideHorizontal>
                 </ProfileSegment>
 
                 <ProfileSegment id="contact" background={theme.toneTwo}>
