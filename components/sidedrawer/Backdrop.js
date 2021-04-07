@@ -16,7 +16,7 @@ function Backdrop() {
                     height: 100%;
                     top: 0;
                     left: 0;
-                    z-index: 100;
+                    z-index: 1;
                 }
 
                 #content {

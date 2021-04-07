@@ -20,7 +20,7 @@ function Canvas(props) {
 
     let ctx = null;
 
-    /**
+    /*
     const evaluateWave = () => {
         if (canvasRef.current.width >= 1814) {
             wave.length = 0.010;
@@ -108,7 +108,7 @@ function Canvas(props) {
                 #hover-text {
                     position: absolute;
                     left: 50%;
-                    top: 47%;
+                    top: 49%;
                     transform: translate(-50%, -50%);
                     margin: 0;
                     white-space: nowrap;
@@ -125,7 +125,6 @@ function Canvas(props) {
                 @media (max-width: 968px) {
                     #hover-text {
                         font-size: 3rem;
-                        top: 49%;
                     }
                 }
             `}</style>

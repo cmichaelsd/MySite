@@ -71,7 +71,7 @@ function Home() {
                 body {
                     padding: 0;
                     margin: 0;
-                    font-family: sans-serif;
+                    font-family: 'Courier New', monospace; // screen-play font joke
                     background: var(--toneOne);
                     color: var(--textColor);
                     overscroll-behavior: none;
@@ -98,6 +98,7 @@ function Home() {
                 
                 #content {
                     transition: 0.6s filter;
+                    overflow: hidden;
                 }
 
                 // Animations
@@ -120,7 +121,7 @@ function Home() {
                     }
                 }
 
-                // Slide
+                // Slide Vertical
                 @keyframes slideUp {
                     0% {
                         transform: translateY(0);
@@ -136,6 +137,16 @@ function Home() {
                     }
                     100% {
                         transform: translateY(0);
+                    }
+                }
+
+                // Slide Horizontal
+                @keyframes slideLeft {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+                    100% {
+                        transform: translateX(0);
                     }
                 }
             `}</style>

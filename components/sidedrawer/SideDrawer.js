@@ -12,7 +12,7 @@ function SideDrawer() {
         }
 
         if (status === statuses.NAVIGATION_DRAWER_OPEN) {
-            return `${drawerClasses} open`;
+            return `open`;
         }
     }
 
@@ -60,7 +60,7 @@ function SideDrawer() {
                     left: 0;
                     width: 60%;
                     max-width: 400px;
-                    z-index: 200;
+                    z-index: 2;
                     transform: translateX(-100%);
                     transition: transform 0.3s ease-out;
                 }

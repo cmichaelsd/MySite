@@ -15,9 +15,17 @@ function Slide({ time = 0.5, children }) {
                 {children}
             </div>
 
-            <style jsx>{`
+            <style jsx global>{`
                 .slide-container:hover {
                     color: var(--highlight);
+                }
+
+                .slide-container:hover svg {
+                    fill: var(--highlight);
+                }
+
+                .slide-container svg {
+                    transition: 0.5s fill;
                 }
 
                 .slide-container {
