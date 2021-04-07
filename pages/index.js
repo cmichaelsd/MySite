@@ -94,6 +94,8 @@ function Home() {
 
                 * {
                     box-sizing: border-box;
+                    transition: 0.5s color;
+                    transition: 0.5s background;
                 }
 
                 *::selection {
