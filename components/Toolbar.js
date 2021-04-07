@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import Hamburger from './svgs/Hamburger'
-import PaintRoller from './svgs/PaintRoller'
-import SlidVertical from './animations/SlidVertical'
+import {Hamburger} from './svgs/Hamburger'
+import {PaintRoller} from './svgs/PaintRoller'
+import {SlideVertical} from './animations/SlideVertical'
 
 function Toolbar() {
     const [navPos, setNavPos] = useState(0);
@@ -50,29 +50,29 @@ function Toolbar() {
                     <div className="toolbar__navigation--items">
                         <ul>
                             <li>
-                                <SlidVertical>
+                                <SlideVertical>
                                     <a href="#about">About</a>
-                                </SlidVertical>
+                                </SlideVertical>
                             </li>
                             <li>
-                                <SlidVertical>
+                                <SlideVertical>
                                     <a href="#experience">Experience</a>
-                                </SlidVertical>
+                                </SlideVertical>
                             </li>
                             <li>
-                                <SlidVertical>
+                                <SlideVertical>
                                     <a href="#education">Education</a>
-                                </SlidVertical>
+                                </SlideVertical>
                             </li>
                             <li>
-                                <SlidVertical>
+                                <SlideVertical>
                                     <a href="#contact">Contact</a>
-                                </SlidVertical>
+                                </SlideVertical>
                             </li>
                             <li>
-                                <SlidVertical>
+                                <SlideVertical>
                                     <PaintRoller enableHover={true} />
-                                </SlidVertical>
+                                </SlideVertical>
                             </li>
                         </ul>
                     </div>
@@ -158,4 +158,4 @@ function Toolbar() {
     )
 }
 
-export default Toolbar;
+export {Toolbar};

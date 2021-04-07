@@ -13,4 +13,4 @@ function Checkmark() {
     )
 }
 
-export default Checkmark
+export {Checkmark}

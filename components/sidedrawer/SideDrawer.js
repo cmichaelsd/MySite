@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { statuses, ApplicationStatusContext } from '../../context/ApplicationStatusContext'
 import { Events } from '../../events';
-import PaintRoller from '../svgs/PaintRoller'
+import {PaintRoller} from '../svgs/PaintRoller'
 
 function SideDrawer() {
     const { status, changeStatus } = useContext(ApplicationStatusContext);
@@ -99,4 +99,4 @@ function SideDrawer() {
 	)
 }
 
-export default SideDrawer;
+export {SideDrawer};

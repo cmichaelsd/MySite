@@ -30,4 +30,4 @@ function Fade({ show, fadeIn = true, fadeOut = true, time = 2, children }) {
 
 }
 
-export default Fade
+export {Fade}

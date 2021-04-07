@@ -139,4 +139,4 @@ function Canvas(props) {
     )
 }
 
-export default Canvas
+export {Canvas}

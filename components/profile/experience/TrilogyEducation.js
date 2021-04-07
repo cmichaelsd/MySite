@@ -1,5 +1,5 @@
-import SquareImage from '../../SquareImage'
-import Checkmark from '../../svgs/Checkmark'
+import {SquareImage} from '../../SquareImage'
+import {Checkmark} from '../../svgs/Checkmark'
 
 function TrilogyEducation({background}) {
     return (
@@ -20,4 +20,4 @@ function TrilogyEducation({background}) {
     )
 }
 
-export default TrilogyEducation
+export {TrilogyEducation}

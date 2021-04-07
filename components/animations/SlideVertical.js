@@ -37,4 +37,4 @@ function SlideVertical({ time = 0.5, children }) {
 
 }
 
-export default SlideVertical
+export {SlideVertical}

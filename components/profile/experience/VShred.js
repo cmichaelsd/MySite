@@ -1,5 +1,5 @@
-import SquareImage from '../../SquareImage'
-import Checkmark from '../../svgs/Checkmark'
+import {SquareImage} from '../../SquareImage'
+import {Checkmark} from '../../svgs/Checkmark'
 
 function VShred({background}) {
     return (
@@ -32,4 +32,4 @@ function VShred({background}) {
     )
 }
 
-export default VShred
+export {VShred}

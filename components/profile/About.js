@@ -1,4 +1,4 @@
-import Plus from '../svgs/Plus'
+import {Plus} from '../svgs/Plus'
 
 function About({background}) {
     return (
@@ -51,4 +51,4 @@ function About({background}) {
     )
 }
 
-export default About
+export {About}

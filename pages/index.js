@@ -1,13 +1,13 @@
 import { useContext, useState, useEffect, useRef } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
 import { statuses, ApplicationStatusContext } from '../context/ApplicationStatusContext'
-import Canvas from '../components/Canvas'
-import Toolbar from '../components/Toolbar'
-import Profile from '../components/profile/Profile'
-import Footer from '../components/Footer'
-import SideDrawer from '../components/sidedrawer/SideDrawer'
-import Backdrop from '../components/sidedrawer/Backdrop'
-import Fade from '../components/animations/Fade'
+import {Canvas} from '../components/Canvas'
+import {Toolbar} from '../components/Toolbar'
+import {Profile} from '../components/profile/Profile'
+import {Footer} from '../components/Footer'
+import {SideDrawer} from '../components/sidedrawer/SideDrawer'
+import {Backdrop} from '../components/sidedrawer/Backdrop'
+import {Fade} from '../components/animations/Fade'
 
 function Home() {
     const { theme } = useContext(ThemeContext);

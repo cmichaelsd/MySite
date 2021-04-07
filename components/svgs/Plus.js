@@ -13,4 +13,4 @@ function Plus() {
 	)
 }
 
-export default Plus
+export {Plus}

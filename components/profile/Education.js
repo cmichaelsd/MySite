@@ -1,5 +1,5 @@
-import BannerImage from '../BannerImage'
-import Checkmark from '../svgs/Checkmark'
+import {BannerImage} from '../BannerImage'
+import {Checkmark} from '../svgs/Checkmark'
 
 function Education({background}) {
     return (
@@ -32,4 +32,4 @@ function Education({background}) {
     )
 }
 
-export default Education
+export {Education}

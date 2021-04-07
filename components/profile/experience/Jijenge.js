@@ -1,5 +1,5 @@
-import SquareImage from '../../SquareImage'
-import Checkmark from '../../svgs/Checkmark'
+import {SquareImage} from '../../SquareImage'
+import {Checkmark} from '../../svgs/Checkmark'
 
 function Jijenge({background}) {
     return (
@@ -20,4 +20,4 @@ function Jijenge({background}) {
     )
 }
 
-export default Jijenge
+export {Jijenge}

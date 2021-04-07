@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeContext'
-import ProfileSegment from './ProfileSegment'
-import About from './About'
-import Education from './Education'
-import Contact from './Contact'
-import VShred from './experience/VShred'
-import Jijenge from './experience/Jijenge'
-import TrilogyEducation from './experience/TrilogyEducation'
-import SlideHorizontal from '../animations/SlideHorizontal'
+import {ProfileSegment} from './ProfileSegment'
+import {About} from './About'
+import {Education} from './Education'
+import {Contact} from './Contact'
+import {VShred} from './experience/VShred'
+import {Jijenge} from './experience/Jijenge'
+import {TrilogyEducation} from './experience/TrilogyEducation'
+import {SlideHorizontal} from '../animations/SlideHorizontal'
 
 function Profile() {
     const { theme } = useContext(ThemeContext);
@@ -91,4 +91,4 @@ function Profile() {
     )
 }
 
-export default Profile
+export {Profile}

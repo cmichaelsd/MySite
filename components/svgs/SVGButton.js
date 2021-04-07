@@ -19,4 +19,4 @@ function SVGButton(props) {
     )
 }
 
-export default SVGButton
+export {SVGButton}

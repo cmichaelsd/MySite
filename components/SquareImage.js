@@ -60,4 +60,4 @@ function SquareImage(props) {
     return props.href ? clickable() : base()
 }
 
-export default SquareImage
+export {SquareImage}

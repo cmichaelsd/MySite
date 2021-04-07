@@ -41,4 +41,4 @@ function SlideHorizontal({ toStart = true, time = 1, children }) {
 
 }
 
-export default SlideHorizontal
+export {SlideHorizontal}

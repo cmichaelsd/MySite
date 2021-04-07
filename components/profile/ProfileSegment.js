@@ -22,4 +22,4 @@ function ProfileSegment(props) {
     )
 }
 
-export default ProfileSegment
+export {ProfileSegment}

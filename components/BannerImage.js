@@ -23,4 +23,4 @@ function BannerImage(props) {
     )
 }
 
-export default BannerImage
+export {BannerImage}

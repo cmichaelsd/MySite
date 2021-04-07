@@ -27,4 +27,4 @@ function Backdrop() {
 	)
 }
 
-export default Backdrop;
+export {Backdrop};

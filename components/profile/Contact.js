@@ -1,4 +1,4 @@
-import SquareImage from '../SquareImage'
+import {SquareImage} from '../SquareImage'
 
 function Contact({background}) {
     return (
@@ -48,4 +48,4 @@ function Contact({background}) {
     )
 }
 
-export default Contact
+export {Contact}
