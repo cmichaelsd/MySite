@@ -58,6 +58,10 @@ function Profile() {
                     align-content: center;
                 }
 
+                .segment:nth-of-type(2n+1) .project {
+                    flex-direction: row-reverse;
+                }
+
                 .project .project__content {
                     margin-left: 4em;
                 }
@@ -80,6 +84,10 @@ function Profile() {
                     .project {
                         flex-direction: column;
                         align-items: center;
+                    }
+
+                    .segment:nth-of-type(2n+1) .project {
+                        flex-direction: column;
                     }
 
                     .project .project__content {
