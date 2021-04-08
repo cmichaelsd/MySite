@@ -5,12 +5,6 @@ function TiltIn({trigger, invert = false, time = 0.5, children}) {
 
     const animationString = `${time}s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`;
 
-    const handleValue = (n) => {
-        console.log(invert, n, ~n+1);
-        if (invert) return ~n + 1;
-        return n;
-    }
-
     useEffect(() => {
         if (trigger && invert) setAnimation(`tiltInRight ${animationString}`)
         if (trigger && !invert) setAnimation(`tiltInLeft ${animationString}`)

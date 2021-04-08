@@ -48,12 +48,12 @@ function Home() {
                 <div id="content">
                     <Toolbar />
                     <DisplayBackdrop />
-                    {/* <Fade fadeIn={false} show={showCanvas} time={2}>
+                    <Fade fadeIn={false} show={showCanvas} time={2}>
                         <Canvas skipCanvasAnimation={skipCanvasAnimation} />
-                    </Fade> */}
-                    {/* <Fade fadeOut={false} show={showProfile} time={1}> */}
+                    </Fade>
+                    <Fade fadeOut={false} show={showProfile} time={1}>
                         <Profile />
-                    {/* </Fade> */}
+                    </Fade>
                     <Footer />
                 </div>
             </main>

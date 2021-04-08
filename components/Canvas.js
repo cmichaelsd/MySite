@@ -125,6 +125,7 @@ function Canvas(props) {
                 @media (max-width: 968px) {
                     #hover-text {
                         font-size: 3rem;
+                        top: 50%;
                     }
                 }
             `}</style>

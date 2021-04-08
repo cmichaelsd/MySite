@@ -18,6 +18,8 @@ function Profile() {
     
     const [animateCompleteThree, setAnimateCompleteThree] = useState(false);
 
+    const [animateCompleteFour, setAnimateCompleteFour] = useState(false);
+
     return (
         <>
             <div id="profile">
@@ -44,8 +46,8 @@ function Profile() {
                 </ProfileSegment>
 
                 <ProfileSegment background={theme.toneOne}>
-                    <SlideHorizontal>
-                        <Education background={theme.toneOne} />
+                    <SlideHorizontal setAnimateEnd={setAnimateCompleteFour}>
+                        <Education background={theme.toneOne} animate={animateCompleteFour} />
                     </SlideHorizontal>
                 </ProfileSegment>
 
@@ -94,6 +96,7 @@ function Profile() {
 
                     .segment:nth-of-type(2n+1) .project {
                         flex-direction: column;
+                        align-items: center;
                     }
 
                     .project .project__content {
