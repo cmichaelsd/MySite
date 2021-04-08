@@ -9,11 +9,11 @@ function Education({background}) {
                 <h1 className="headline">Education</h1>
                 <p>Hack Reactor is a Full Stack Wed Development bootcamp covering topics such as</p>
                 <ul>
-                    <li><Checkmark /> <div>Data Structures</div></li>
-                    <li><Checkmark /> <div>Databases</div></li> 
-                    <li><Checkmark /> <div>Microservice Architecture</div></li>
-                    <li><Checkmark /> <div>Frontend Design</div></li>
-                    <li><Checkmark /> <div>Program Efficiency</div></li>
+                    <li><Checkmark /><div>Data Structures</div></li>
+                    <li><Checkmark /><div>Databases</div></li> 
+                    <li><Checkmark /><div>Microservice Architecture</div></li>
+                    <li><Checkmark /><div>Frontend Design</div></li>
+                    <li><Checkmark /><div>Program Efficiency</div></li>
                 </ul>
             </div>
 

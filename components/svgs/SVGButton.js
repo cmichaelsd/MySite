@@ -14,14 +14,6 @@ function SVGButton(props) {
                 .svgButton:focus {
                     outline: none;
                 }
-
-                .svgButton svg {
-                    fill: var(--textColor);
-                }
-
-                .svgButton .svgHighlight:hover {
-                    fill: var(--highlight);
-                }
             `}</style>
         </button>
     )

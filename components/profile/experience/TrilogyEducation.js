@@ -1,10 +1,13 @@
 import {SquareImage} from '../../SquareImage'
 import {Checkmark} from '../../svgs/Checkmark'
+import {TiltIn} from '../../animations/TiltIn'
 
-function TrilogyEducation({background}) {
+function TrilogyEducation({background, animate}) {
     return (
         <div className="project">
-            <SquareImage parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" alt="Trilogy Logo" height="150" width="150" />
+            <TiltIn trigger={animate} invert={true}>
+                <SquareImage parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" alt="Trilogy Logo" height="150" width="150" />
+            </TiltIn>
             <div className="project__content">
                 <h1 className="headline">Trilogy Education</h1>
                 <h2>Software Engineer Tutor</h2>
@@ -13,7 +16,7 @@ function TrilogyEducation({background}) {
                 <p>Meet one on one with an average of 10 students a week for tutoring sessions on the Trilogy Education curriculum. Perform administrative tasks such as creating student progress reports using Google Forms and personal discretion.</p>
                 <h4>Key Outcomes</h4>
                 <ul>
-                    <li><Checkmark /> <div>I saw a dramatic improvement in student performance and understanding of software engineering principles throughout tutoring sessions.</div></li>
+                    <li><Checkmark /><div>I saw a dramatic improvement in student performance and understanding of software engineering principles throughout tutoring sessions.</div></li>
                 </ul>
             </div>
         </div>

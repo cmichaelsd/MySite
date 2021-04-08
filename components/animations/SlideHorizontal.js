@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-function SlideHorizontal({ toStart = true, time = 1, children }) {
+function SlideHorizontal({ setAnimateEnd, toStart = true, time = 1, children }) {
     const [animation, setAnimation] = useState("");
 
     const slideHorizontalRef = useRef(null);
@@ -27,6 +27,7 @@ function SlideHorizontal({ toStart = true, time = 1, children }) {
             <div className="slide-horizontal-container"
                 style={{ animation: animation }}
                 ref={slideHorizontalRef}
+                onAnimationEnd={() => setAnimateEnd(true)}
             >
                 {children}
             </div>

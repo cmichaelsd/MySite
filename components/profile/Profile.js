@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { ThemeContext } from '../../context/ThemeContext'
 import {ProfileSegment} from './ProfileSegment'
 import {About} from './About'
@@ -12,6 +12,12 @@ import {SlideHorizontal} from '../animations/SlideHorizontal'
 function Profile() {
     const { theme } = useContext(ThemeContext);
 
+    const [animateCompleteOne, setAnimateCompleteOne] = useState(false);
+
+    const [animateCompleteTwo, setAnimateCompleteTwo] = useState(false);
+    
+    const [animateCompleteThree, setAnimateCompleteThree] = useState(false);
+
     return (
         <>
             <div id="profile">
@@ -20,20 +26,20 @@ function Profile() {
                 </ProfileSegment>
 
                 <ProfileSegment id="experience" background={theme.toneTwo}>
-                    <SlideHorizontal toStart={false}>
-                            <VShred background={theme.toneTwo} />
+                    <SlideHorizontal toStart={false} setAnimateEnd={setAnimateCompleteOne}>
+                            <VShred background={theme.toneTwo} animate={animateCompleteOne}/>
                     </SlideHorizontal>
                 </ProfileSegment>
 
                 <ProfileSegment background={theme.toneOne}>
-                    <SlideHorizontal>
-                        <TrilogyEducation background={theme.toneOne} />
+                    <SlideHorizontal setAnimateEnd={setAnimateCompleteTwo}>
+                        <TrilogyEducation background={theme.toneOne} animate={animateCompleteTwo} />
                     </SlideHorizontal>
                 </ProfileSegment>
 
                 <ProfileSegment background={theme.toneTwo}>
-                    <SlideHorizontal toStart={false}>
-                        <Jijenge background={theme.toneTwo} />
+                    <SlideHorizontal toStart={false} setAnimateEnd={setAnimateCompleteThree}>
+                        <Jijenge background={theme.toneTwo} animate={animateCompleteThree}/>
                     </SlideHorizontal>
                 </ProfileSegment>
 
