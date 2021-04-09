@@ -3,7 +3,7 @@ function BannerImage(props) {
         <>
             <div className="banner-image-container">
                 <div>
-                    <img className="banner-image" src={props.src} alt={props.alt} height={props.height}></img>
+                    <img className="banner-image" src={props.src} alt={props.alt}></img>
                 </div>
             </div>
 
@@ -12,11 +12,18 @@ function BannerImage(props) {
                     display: flex;
                     justify-content: center;
                     align-content: center;
+                    height: ${props.height}px;
                 }
 
                 .banner-image {
                     background: #fff;
                     width: 100%;
+                }
+
+                @media (max-width: 660px) {
+                    .banner-image-container {
+                        height: ${props.altHeight ? props.altHeight : props.height}px;
+                    }
                 }
             `}</style>
         </>

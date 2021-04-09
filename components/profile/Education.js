@@ -7,7 +7,12 @@ function Education({background, animate}) {
         <>
             <div className="education-container">
                 <SwingIn trigger={animate}>
-                    <BannerImage src="https://d3p2ju5slp2tm7.cloudfront.net/HackReactor.png" alt="Hack Reactor Logo" height="125" />
+                    <BannerImage 
+                        src="https://d3p2ju5slp2tm7.cloudfront.net/HackReactor.png"
+                        alt="Hack Reactor Logo" 
+                        height="125"
+                        altHeight="93"
+                    />
                 </SwingIn>
                 <h1 className="headline">Education</h1>
                 <p>Hack Reactor is a Full-Stack Web Development bootcamp covering topics such as</p>
