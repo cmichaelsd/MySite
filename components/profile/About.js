@@ -5,8 +5,8 @@ function About({background}) {
         <>
             <div className="profile-image">
                 <picture>
-                    <source srcSet="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile2.png" media="(max-width: 660px)" />
-                    <img src="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels2.png" alt="Cole Michaels" />
+                    <source srcSet="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile3.png" media="(max-width: 660px)" />
+                    <img src="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels3.png" alt="Cole Michaels" />
                 </picture>
             </div>
             <h1 className="headline">About Me</h1>
@@ -28,7 +28,7 @@ function About({background}) {
                     justify-content: center;
                     align-content: center;
                     margin-top: 1rem;
-                    height: 500px;
+                    height: 637px;
                 }
 
                 ul {
@@ -43,7 +43,7 @@ function About({background}) {
 
                 @media (max-width: 660px) {
                     .profile-image {
-                        height: 300px;
+                        height: 330px;
                     }
                 }
             `}</style>
