@@ -45,7 +45,7 @@ function Profile() {
                     </SlideHorizontal>
                 </ProfileSegment>
 
-                <ProfileSegment background={theme.toneOne}>
+                <ProfileSegment id="education" background={theme.toneOne}>
                     <SlideHorizontal setAnimateEnd={setAnimateCompleteFour}>
                         <Education background={theme.toneOne} animate={animateCompleteFour} />
                     </SlideHorizontal>
