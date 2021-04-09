@@ -8,6 +8,7 @@ import {Footer} from '../components/Footer'
 import {SideDrawer} from '../components/sidedrawer/SideDrawer'
 import {Backdrop} from '../components/sidedrawer/Backdrop'
 import {Fade} from '../components/animations/Fade'
+import {KeyFrames} from '../components/animations/KeyFrames'
 
 function Home() {
     const { theme } = useContext(ThemeContext);
@@ -107,46 +108,9 @@ function Home() {
                     transition: 0.6s filter;
                     overflow: hidden;
                 }
-
-                // Animations
-                // Fade
-                @keyframes fadeIn {
-                    0% {
-                        opacity: 0;
-                    }
-                    100% {
-                        opacity: 1;
-                    }
-                }
-
-                @keyframes fadeOut {
-                    0% {
-                        opacity: 1;
-                    }
-                    100% {
-                        opacity: 0;
-                    }
-                }
-
-                // Slide Horizontal
-                @keyframes slideLeft {
-                    0% {
-                        transform: translateX(150%);
-                    }
-                    100% {
-                        transform: translateX(0);
-                    }
-                }
-
-                @keyframes slideRight {
-                    0% {
-                        transform: translateX(-150%);
-                    }
-                    100% {
-                        transform: translateX(0);
-                    }
-                }
             `}</style>
+
+            <KeyFrames />
         </>
     )
 }

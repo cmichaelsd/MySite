@@ -24,37 +24,6 @@ function TiltIn({trigger, invert = false, time = 0.5, children}) {
                 .tilt-in-container {
                     opacity: 0;
                 }
-                
-                // Tilt
-                @keyframes tiltInLeft {
-                    0% {
-                        transform: 
-                            rotateY(-20deg) 
-                            rotateX(35deg) 
-                            translate(-25px, -25px) 
-                            skew(35deg, -10deg);
-                        opacity: 0;
-                    }
-                    100% {
-                        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-                        opacity: 1;
-                    }
-                }
-
-                @keyframes tiltInRight {
-                    0% {
-                        transform: 
-                            rotateY(20deg) 
-                            rotateX(35deg) 
-                            translate(25px, -25px) 
-                            skew(-35deg, 10deg);
-                        opacity: 0;
-                    }
-                    100% {
-                        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-                        opacity: 1;
-                    }
-                }
             `}</style>
         </>
     )

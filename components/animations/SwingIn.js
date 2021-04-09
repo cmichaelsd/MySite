@@ -22,20 +22,6 @@ function SwingIn({trigger, time = 0.6, children}) {
             <style jsx global>{`
                 .swing-in-container {
                     opacity: 0;
-                }
-                
-                // Swing
-                @keyframes swingIn {
-                    0% {
-                        transform: rotateX(-100deg);
-                        transform-origin: top;
-                        opacity: 0;
-                    }
-                    100% {
-                        transform: rotateX(0deg);
-                        transform-origin: top;
-                        opacity: 1;
-                    }
                 }       
             `}</style>
         </>

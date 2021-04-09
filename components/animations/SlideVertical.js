@@ -31,25 +31,6 @@ function SlideVertical({ time = 0.5, children }) {
                 .slide-vertical-container {
                     transition: ${time}s color;
                 }
-
-                // Slide Vertical
-                @keyframes slideUp {
-                    0% {
-                        transform: translateY(0);
-                    }
-                    100% {
-                        transform: translateY(-5px);
-                    }
-                }
-
-                @keyframes slideDown {
-                    0% {
-                        transform: translateY(-5px);
-                    }
-                    100% {
-                        transform: translateY(0);
-                    }
-                }
             `}</style>
         </>
     )
