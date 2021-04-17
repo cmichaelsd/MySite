@@ -27,7 +27,7 @@ export function About({background}) {
                     justify-content: center;
                     align-content: center;
                     margin-top: 1rem;
-                    height: 637px;
+                    height: ${Dimens.profile_image_height}px;
                 }
 
                 ul {
@@ -42,7 +42,7 @@ export function About({background}) {
 
                 @media (max-width: ${Dimens.mobile_image_width}px) {
                     .profile-image {
-                        height: 330px;
+                        height: ${Dimens.profile_mobile_image_height}px;
                     }
                 }
             `}</style>

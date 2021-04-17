@@ -2,12 +2,13 @@ import { SquareImage } from '../../SquareImage'
 import { Checkmark } from '../../svgs/Checkmark'
 import { TiltIn } from '../../animations/TiltIn'
 import { Strings } from '../../../res/strings'
+import { Dimens } from '../../../res/dimens'
 
 export function VShred({background, animate}) {
     return (
         <div className="project">
             <TiltIn trigger={animate}>
-                <SquareImage trigger={animate} parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png" alt="V Shred Logo" height="150" width="150" />
+                <SquareImage trigger={animate} parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png" alt="V Shred Logo" height={Dimens.square_image_length} width={Dimens.square_image_length} />
             </TiltIn>
             <div className="project__content">
                 <h1 className="headline">{Strings.experience_vshred}</h1>

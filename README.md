@@ -4,7 +4,6 @@
 
 ### Technologies Used
 - Next.js
-- TypeScript
 - Netlify
 - SVGs by IcoMoon
 

@@ -2,12 +2,13 @@ import { SquareImage } from '../../SquareImage'
 import { Checkmark } from '../../svgs/Checkmark'
 import { TiltIn } from '../../animations/TiltIn'
 import { Strings } from '../../../res/strings'
+import { Dimens } from '../../../res/dimens'
 
 export function TrilogyEducation({background, animate}) {
     return (
         <div className="project">
             <TiltIn trigger={animate} invert={true}>
-                <SquareImage parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" alt="Trilogy Logo" height="150" width="150" />
+                <SquareImage parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" alt="Trilogy Logo" height={Dimens.square_image_length} width={Dimens.square_image_length} />
             </TiltIn>
             <div className="project__content">
                 <h1 className="headline">{Strings.experience_trilogy}</h1>

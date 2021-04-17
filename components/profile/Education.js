@@ -2,6 +2,7 @@ import { BannerImage } from '../BannerImage'
 import { Checkmark } from '../svgs/Checkmark'
 import { SwingIn } from '../animations/SwingIn'
 import { Strings } from '../../res/strings'
+import { Dimens } from '../../res/dimens'
 
 export function Education({background, animate}) {
     return (
@@ -11,8 +12,8 @@ export function Education({background, animate}) {
                     <BannerImage 
                         src="https://d3p2ju5slp2tm7.cloudfront.net/HackReactor.png"
                         alt="Hack Reactor Logo" 
-                        height="125"
-                        altHeight="93"
+                        height={Dimens.banner_image_hackreactor_height}
+                        altHeight={Dimens.banner_image_mobile_hackreactor_height}
                     />
                 </SwingIn>
                 <h1 className="headline">{Strings.education_headline}</h1>

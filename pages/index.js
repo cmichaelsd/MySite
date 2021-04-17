@@ -1,14 +1,14 @@
 import { useContext, useState, useEffect, useRef } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
 import { statuses, ApplicationStatusContext } from '../context/ApplicationStatusContext'
-import {Canvas} from '../components/Canvas'
-import {Toolbar} from '../components/Toolbar'
-import {Profile} from '../components/profile/Profile'
-import {Footer} from '../components/Footer'
-import {SideDrawer} from '../components/sidedrawer/SideDrawer'
-import {Backdrop} from '../components/sidedrawer/Backdrop'
-import {Fade} from '../components/animations/Fade'
-import {KeyFrames} from '../components/animations/KeyFrames'
+import { Canvas } from '../components/Canvas'
+import { Toolbar } from '../components/Toolbar'
+import { Profile } from '../components/profile/Profile'
+import { Footer } from '../components/Footer'
+import { SideDrawer } from '../components/sidedrawer/SideDrawer'
+import { Backdrop } from '../components/sidedrawer/Backdrop'
+import { Fade } from '../components/animations/Fade'
+import { KeyFrames } from '../components/animations/KeyFrames'
 
 function Home() {
     const { theme } = useContext(ThemeContext);
@@ -65,7 +65,6 @@ function Home() {
                     --toneTwo: ${theme.toneTwo};
                     --textColor: ${theme.textColor};
                     --highlight: ${theme.highlight};
-                    --navAndFooterOffset: 30px 0 43px 0;
                 }
 
                 html,
