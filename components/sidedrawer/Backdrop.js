@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { ApplicationStatusContext } from '../../context/ApplicationStatusContext'
 import { Events } from '../../events'
 
-function Backdrop() {
+export function Backdrop() {
     const { changeStatus } = useContext(ApplicationStatusContext);
 
 	return (
@@ -26,5 +26,3 @@ function Backdrop() {
 		</>
 	)
 }
-
-export {Backdrop};

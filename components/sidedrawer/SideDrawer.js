@@ -1,10 +1,18 @@
 import { useContext } from 'react'
 import { statuses, ApplicationStatusContext } from '../../context/ApplicationStatusContext'
 import { Events } from '../../events';
-import {PaintRoller} from '../svgs/PaintRoller'
+import { PaintRoller } from '../svgs/PaintRoller'
+import { Strings } from '../../res/strings'
 
-function SideDrawer() {
+export function SideDrawer() {
     const { status, changeStatus } = useContext(ApplicationStatusContext);
+    
+    const headlines = [
+        Strings.about_headline,
+        Strings.experience_headline,
+        Strings.education_headline,
+        Strings.contact_headline
+    ];
 
     const drawerClasses = () => {
         if (status === statuses.INITIAL_LOADING || status === statuses.READY) {
@@ -24,26 +32,13 @@ function SideDrawer() {
 		<>
 			<nav id="side-drawer" className={drawerClasses()}>
 				<ul>
-                    <li onClick={toggleSideDrawer}>
-						<a href="#about">
-							<span>About</span>
-						</a>
-					</li>
-                    <li onClick={toggleSideDrawer}>
-						<a href="#experience">
-							<span>Experience</span>
-						</a>
-                    </li>
-                    <li onClick={toggleSideDrawer}>
-						<a href="#education">
-							<span>Education</span>
-						</a>
-					</li>
-                    <li onClick={toggleSideDrawer}>
-						<a href="#contact">
-							<span>Contact</span>
-						</a>
-					</li>
+                    {headlines.map(headline => (    
+                        <li onClick={toggleSideDrawer}>
+                            <a href={`$${headline.toLowerCase()}`}>
+                                <span>{headline}</span>
+                            </a>
+                        </li>
+                    ))}
                     <li onClick={toggleSideDrawer}>
 						<PaintRoller />
 					</li>
@@ -98,5 +93,3 @@ function SideDrawer() {
 		</>
 	)
 }
-
-export {SideDrawer};
