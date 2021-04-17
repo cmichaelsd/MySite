@@ -41,6 +41,32 @@ export const Strings = {
 
     about_paragraph_three: "I orchestrate estimation, planning, and execution of projects, features, and integrations coupled with quality code, new technologies, and architectural design. Well-organized and quality-minded with planning strategies and a true team player who thrives in a fast-paced environment.",
     
-    
+    experience_vshred:     "V Shred",
 
+    experience_android:    "Android Developer",
+
+    experience_vshred_android: "I foster coordination with designers for translation of sketch designs into Android UI activities and implement backend logic.",
+
+    experience_vshred_android_focus: "Develop and implement features for the mobile application utilizing the Kotlin programming language. Coordinate with designers for translation of Sketch designs into activities and Fragments. Leverage Repositories, Live Databinding, and View Models to develop an application in adherence to MVVM architecture.",
+
+    experience_vshred_android_bullets: [
+        "Acted as a liaison with iOS developers, assuring identical functioning of both iOS and Android applications. I streamlined the seamless flow of day-to-day tasks, complying with Agile methodology.",
+        "I functioned as the only Android developer and in charge of writing features for the Android application processing over $15,000 in revenue daily."
+    ],
+
+    role_focus:                "Role Focus",
+
+    key_outcomes:              "Key Outcomes",
+
+    experience_fullstack:      "Full Stack Engineer",
+
+    experience_vshred_fullstack: "I collaborate with designers to design sales pages, boosting revenue and enhancing organization processes.",
+
+    experience_vshred_fullstack_focus: "Collaborate with designers to create frontend pages in PHP and VueJS, increasing revenue and traffic. Implement new products leveraging Stripe and Braintree to guarantee secure and compliant financial transactions. Manage AWS systems and Cloudfront to serve both quickly and reliably to users around the globe. Generate user insights through tracking services and custom internal services to drive revenue. Increase marketing's ability to target audiences and see real-time conversion rates. Facilitating marketing's vision of new products into existing Laravel codebases.",
+
+    experience_vshred_fullstack_bullets: [
+        "I adhered to Agile methodology and steer the completion/partition of appointed assignments effectually.",
+        "Ensured secure user payments by implementing new website products through Stripe and Braintree.",
+        "Wrote features for multiple E-Commerce systems processing millions of dollars annually."
+    ],
 };

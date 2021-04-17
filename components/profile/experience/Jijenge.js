@@ -1,8 +1,8 @@
-import {SquareImage} from '../../SquareImage'
-import {Checkmark} from '../../svgs/Checkmark'
-import {TiltIn} from '../../animations/TiltIn'
+import { SquareImage } from '../../SquareImage'
+import { Checkmark } from '../../svgs/Checkmark'
+import { TiltIn } from '../../animations/TiltIn'
 
-function Jijenge({background, animate}) {
+export function Jijenge({background, animate}) {
     return (
         <div className="project">
             <TiltIn trigger={animate}>
@@ -22,5 +22,3 @@ function Jijenge({background, animate}) {
         </div>
     )
 }
-
-export {Jijenge}

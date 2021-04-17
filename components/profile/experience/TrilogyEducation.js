@@ -1,8 +1,8 @@
-import {SquareImage} from '../../SquareImage'
-import {Checkmark} from '../../svgs/Checkmark'
-import {TiltIn} from '../../animations/TiltIn'
+import { SquareImage } from '../../SquareImage'
+import { Checkmark } from '../../svgs/Checkmark'
+import { TiltIn } from '../../animations/TiltIn'
 
-function TrilogyEducation({background, animate}) {
+export function TrilogyEducation({background, animate}) {
     return (
         <div className="project">
             <TiltIn trigger={animate} invert={true}>
@@ -22,5 +22,3 @@ function TrilogyEducation({background, animate}) {
         </div>
     )
 }
-
-export {TrilogyEducation}
