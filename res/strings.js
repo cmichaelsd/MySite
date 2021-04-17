@@ -69,4 +69,19 @@ export const Strings = {
         "Ensured secure user payments by implementing new website products through Stripe and Braintree.",
         "Wrote features for multiple E-Commerce systems processing millions of dollars annually."
     ],
+
+    experience_trilogy:                  "Trilogy Education",
+
+    experience_software_tutor:           "Software Engineer Tutor",
+
+    experience_trilogy_software_tutor:   "I perform administrative tasks, manage a roster of students, and create progress reports to show a history of improving competence in software engineering.",
+
+    experience_trilogy_software_tutor_focus: "Meet one on one with an average of 10 students a week for tutoring sessions on the Trilogy Education curriculum. Perform administrative tasks such as creating student progress reports using Google Forms and personal discretion.",
+
+    experience_trilogy_software_tutor_bullets: [
+        "I saw a dramatic improvement in student performance and understanding of software engineering principles throughout tutoring sessions."
+    ],
+
+    
+
 };
