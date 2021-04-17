@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Strings } from '../res/strings'
+import { Dimens } from '../res/dimens'
 
 export function Footer() {
     const [footerPos, setFooterPos] = useState(0);
-
-    const SIZE_OF_FOOTER = 55;
 
     const handleScroll = () => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             setFooterPos(0);
         } else {
-            setFooterPos(-SIZE_OF_FOOTER);
+            setFooterPos(-Dimens.size_of_footer);
         }
     }
 
@@ -34,7 +33,7 @@ export function Footer() {
                     background: var(--toneOne);
                     bottom: ${footerPos}px;
                     width: 100%;
-                    height: 55px;
+                    height: ${Dimens.size_of_footer}px;
                     color: var(--textColor);
                     display: flex;
                     justify-content: center;

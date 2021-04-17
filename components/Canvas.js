@@ -1,6 +1,7 @@
 import { useEffect, useRef, useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
 import { hexToRgb } from '../helpers'
+import { Dimens } from '../res/dimens';
 import { Strings } from '../res/strings' 
 
 export function Canvas(props) {
@@ -120,10 +121,10 @@ export function Canvas(props) {
 
                 #canvas {
                     height: 100%;
-                    margin: 0 56px 0 0;
+                    margin: 0 ${Dimens.size_of_toolbar}px 0 0;
                 }
 
-                @media (max-width: 968px) {
+                @media (max-width: ${Dimens.canvas_mobile_width}px) {
                     #hover-text {
                         font-size: 3rem;
                         top: 50%;

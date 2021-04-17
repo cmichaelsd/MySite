@@ -1,3 +1,5 @@
+import { Dimens } from '../../res/dimens'
+
 export function ProfileSegment(props) {
     return (
         <>
@@ -15,7 +17,7 @@ export function ProfileSegment(props) {
 
                 .set-width {
                     margin: auto;
-                    max-width: 960px;
+                    max-width: ${Dimens.profile_segment_width}px;
                 }
             `}</style>
         </>

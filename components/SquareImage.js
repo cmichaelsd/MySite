@@ -1,3 +1,5 @@
+import { Dimens } from '../res/dimens'
+
 export function SquareImage(props) {
     // Background may need to be set for custom colors, else always white.
     const background = props.background || '#fff';
@@ -13,13 +15,13 @@ export function SquareImage(props) {
 
                 <style jsx>{`
                     .square-image__container {
-                        height: 200px;
-                        width: 200px;
+                        height: ${Dimens.square_image_size}px;
+                        width: ${Dimens.square_image_size}px;
                         background: ${background};
                     }
 
                     .square-image__container--corners {
-                        width: 200px;
+                        width: ${Dimens.square_image_size}px;
                         margin: 0 auto;
                         position: relative;
                     }
@@ -29,8 +31,8 @@ export function SquareImage(props) {
                         position: absolute;
                         top: 0;
                         left: 0;
-                        width: 200px;
-                        height: 200px;
+                        width: ${Dimens.square_image_size}px;
+                        height: ${Dimens.square_image_size}px;
                         background:
                             linear-gradient(45deg,  ${props.parentBackground} 75px, transparent 75px),
                             linear-gradient(135deg, ${props.parentBackground} 75px, transparent 75px),

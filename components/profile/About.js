@@ -1,5 +1,6 @@
 import { Plus } from '../svgs/Plus'
 import { Strings } from '../../res/strings'
+import { Dimens } from '../../res/dimens'
 
 export function About({background}) {
     return (
@@ -39,7 +40,7 @@ export function About({background}) {
                     gap: 10px;
                 }
 
-                @media (max-width: 660px) {
+                @media (max-width: ${Dimens.mobile_image_width}px) {
                     .profile-image {
                         height: 330px;
                     }

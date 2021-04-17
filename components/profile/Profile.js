@@ -9,6 +9,7 @@ import { Jijenge } from './experience/Jijenge'
 import { TrilogyEducation } from './experience/TrilogyEducation'
 import { SlideHorizontal } from '../animations/SlideHorizontal'
 import { Strings } from '../../res/strings'
+import { Dimens } from '../../res/dimens'
 
 export function Profile() {
     const { theme } = useContext(ThemeContext);
@@ -89,7 +90,7 @@ export function Profile() {
                     gap: 10px;
                 }
 
-                @media (max-width: 768px) {
+                @media (max-width: ${Dimens.mobile_media_width}px) {
                     .project {
                         flex-direction: column;
                         align-items: center;

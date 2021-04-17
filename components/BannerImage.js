@@ -1,3 +1,5 @@
+import { Dimens } from "../res/dimens";
+
 export function BannerImage(props) {
     return (
         <>
@@ -20,7 +22,7 @@ export function BannerImage(props) {
                     width: 100%;
                 }
 
-                @media (max-width: 660px) {
+                @media (max-width: ${Dimens.mobile_image_width}px) {
                     .banner-image-container {
                         height: ${props.altHeight ? props.altHeight : props.height}px;
                     }

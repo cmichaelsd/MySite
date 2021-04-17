@@ -3,6 +3,7 @@ import { statuses, ApplicationStatusContext } from '../../context/ApplicationSta
 import { Events } from '../../events';
 import { PaintRoller } from '../svgs/PaintRoller'
 import { Strings } from '../../res/strings'
+import { Dimens } from '../../res/dimens';
 
 export function SideDrawer() {
     const { status, changeStatus } = useContext(ApplicationStatusContext);
@@ -84,7 +85,7 @@ export function SideDrawer() {
                     font-size: 1.2rem;
                 }
 
-                @media (min-width: 769px) {
+                @media (min-width: ${Dimens.sidedrawer_mobile_width}px) {
                     #side-drawer {
                         display: none;
                     }

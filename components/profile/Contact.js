@@ -1,5 +1,6 @@
 import { SquareImage } from '../SquareImage'
 import { Strings } from '../../res/strings'
+import { Dimens } from '../../res/dimens'
 
 export function Contact({background}) {
     return (
@@ -32,7 +33,7 @@ export function Contact({background}) {
                     padding-top: 1em;
                 }
 
-                @media (max-width: 768px) {
+                @media (max-width: ${Dimens.mobile_media_width}px) {
                     .contact-container {
                         margin-top: 1rem;
                         text-align: center;
