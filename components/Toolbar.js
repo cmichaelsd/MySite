@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import {Hamburger} from './svgs/Hamburger'
-import {PaintRoller} from './svgs/PaintRoller'
-import {SlideVertical} from './animations/SlideVertical'
+import { Hamburger } from './svgs/Hamburger'
+import { PaintRoller } from './svgs/PaintRoller'
+import { SlideVertical } from './animations/SlideVertical'
+import { Strings } from '../res/strings'
 
-function Toolbar() {
+export function Toolbar() {
     const [navPos, setNavPos] = useState(0);
 
     const SCROLL_TO_HIDE_TOOLBAR = 69;
@@ -13,6 +14,13 @@ function Toolbar() {
     let prevScrollPos = null;
 
     let scrollPos = null;
+
+    const headlines = [
+        Strings.about_headline,
+        Strings.experience_headline,
+        Strings.education_headline,
+        Strings.contact_headline
+    ];
 
     const handleScroll = () => {
         scrollPos = window.pageYOffset;
@@ -44,31 +52,20 @@ function Toolbar() {
                     </div>
                     <div className="spacer"></div>
                     <div className="toolbar__logo">
-                        <span>Cole Michaels</span>
+                        <span>{Strings.name}</span>
                     </div>
                     <div className="spacer-middle"></div>
                     <div className="toolbar__navigation--items">
                         <ul>
-                            <li>
-                                <SlideVertical>
-                                    <a href="#about">About</a>
-                                </SlideVertical>
-                            </li>
-                            <li>
-                                <SlideVertical>
-                                    <a href="#experience">Experience</a>
-                                </SlideVertical>
-                            </li>
-                            <li>
-                                <SlideVertical>
-                                    <a href="#education">Education</a>
-                                </SlideVertical>
-                            </li>
-                            <li>
-                                <SlideVertical>
-                                    <a href="#contact">Contact</a>
-                                </SlideVertical>
-                            </li>
+                            {headlines.map(headline => (
+                                <li>
+                                    <SlideVertical>
+                                        <a href={`$${headline.toLowerCase()}`}>
+                                            {headline}
+                                        </a>
+                                    </SlideVertical>
+                                </li>
+                            ))}
                             <li>
                                 <SlideVertical>
                                     <PaintRoller enableHover={true} />
@@ -157,5 +154,3 @@ function Toolbar() {
         </>
     )
 }
-
-export {Toolbar};

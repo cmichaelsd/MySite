@@ -1,8 +1,9 @@
 import { useEffect, useRef, useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
 import { hexToRgb } from '../helpers'
+import { Strings } from '../res/strings' 
 
-function Canvas(props) {
+export function Canvas(props) {
     const { theme } = useContext(ThemeContext);
 
     const canvasRef = useRef(null);
@@ -96,7 +97,7 @@ function Canvas(props) {
     return (
         <>
             <div id="hover-text-container" onClick={props.skipCanvasAnimation}>
-                <h1 id="hover-text">Cole Michaels</h1>
+                <h1 id="hover-text">{Strings.name}</h1>
                 <canvas ref={canvasRef} id="canvas"></canvas>
             </div>
 
@@ -139,5 +140,3 @@ function Canvas(props) {
         </>
     )
 }
-
-export {Canvas}

@@ -1,4 +1,4 @@
-function SquareImage(props) {
+export function SquareImage(props) {
     // Background may need to be set for custom colors, else always white.
     const background = props.background || '#fff';
 
@@ -59,5 +59,3 @@ function SquareImage(props) {
 
     return props.href ? clickable() : base()
 }
-
-export {SquareImage}

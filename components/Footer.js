@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
+import { Strings } from '../res/strings'
 
-function Footer() {
+export function Footer() {
     const [footerPos, setFooterPos] = useState(0);
 
     const SIZE_OF_FOOTER = 55;
@@ -24,7 +25,7 @@ function Footer() {
     return (
         <>
             <footer id="footer">
-                <p>Made in Las Vegas, NV</p>
+                <p>{Strings.location}</p>
             </footer>
 
             <style jsx>{`
@@ -46,5 +47,3 @@ function Footer() {
     )
 
 }
-
-export {Footer}

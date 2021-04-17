@@ -1,4 +1,4 @@
-function BannerImage(props) {
+export function BannerImage(props) {
     return (
         <>
             <div className="banner-image-container">
@@ -29,5 +29,3 @@ function BannerImage(props) {
         </>
     )
 }
-
-export {BannerImage}
