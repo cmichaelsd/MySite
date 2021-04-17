@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeContext'
 
-function Checkmark() {
+export function Checkmark() {
     const { theme } = useContext(ThemeContext);
 
     return (
@@ -12,5 +12,3 @@ function Checkmark() {
         </div>
     )
 }
-
-export {Checkmark}

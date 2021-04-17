@@ -4,7 +4,7 @@ import { ThemeContext } from '../../context/ThemeContext'
 import { ApplicationStatusContext } from '../../context/ApplicationStatusContext'
 import { Events } from '../../events'
 
-function Hamburger() {
+export function Hamburger() {
     const { theme } =  useContext(ThemeContext);
     const { changeStatus } = useContext(ApplicationStatusContext);
 
@@ -16,5 +16,3 @@ function Hamburger() {
         </SVGButton>
     )
 }
-
-export {Hamburger};

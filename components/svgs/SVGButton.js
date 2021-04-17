@@ -1,4 +1,4 @@
-function SVGButton(props) {
+export function SVGButton(props) {
     return (
         <button className="svgButton" aria-label={props.label} onClick={() => props.svgButtonAction()}>
             {props.children}
@@ -18,5 +18,3 @@ function SVGButton(props) {
         </button>
     )
 }
-
-export {SVGButton}

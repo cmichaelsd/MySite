@@ -2,7 +2,7 @@ import {SVGButton} from './SVGButton'
 import { useContext } from 'react'
 import { ThemeContext } from '../../context/ThemeContext'
 
-function PaintRoller({enableHover}) {
+export function PaintRoller({enableHover}) {
     const { changeTheme } = useContext(ThemeContext);
 
     return (
@@ -19,5 +19,3 @@ function PaintRoller({enableHover}) {
         </SVGButton>
     )
 }
-
-export {PaintRoller}
