@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function SlideVertical({ time = 0.5, children }) {
+export function SlideVertical({ time = 0.5, children }) {
     const [animation, setAnimation] = useState("");
 
     const animationString = `${ time }s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`;
@@ -36,5 +36,3 @@ function SlideVertical({ time = 0.5, children }) {
     )
 
 }
-
-export {SlideVertical}

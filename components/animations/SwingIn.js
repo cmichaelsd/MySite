@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function SwingIn({trigger, time = 0.6, children}) {
+export function SwingIn({trigger, time = 0.6, children}) {
     const [animation, setAnimation] = useState("");
 
     const animationString = `${time}s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`;
@@ -28,5 +28,3 @@ function SwingIn({trigger, time = 0.6, children}) {
     )
 
 }
-
-export {SwingIn}

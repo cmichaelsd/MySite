@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-function SlideHorizontal({ setAnimateEnd, toStart = true, time = 1, children }) {
+export function SlideHorizontal({ setAnimateEnd, toStart = true, time = 1, children }) {
     const [animation, setAnimation] = useState("");
 
     const slideHorizontalRef = useRef(null);
@@ -41,5 +41,3 @@ function SlideHorizontal({ setAnimateEnd, toStart = true, time = 1, children }) 
     )
 
 }
-
-export {SlideHorizontal}

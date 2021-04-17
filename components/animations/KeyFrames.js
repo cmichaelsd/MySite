@@ -1,4 +1,4 @@
-function KeyFrames() {
+export function KeyFrames() {
     return (
         <style jsx global>{`
             // Fade
@@ -105,5 +105,3 @@ function KeyFrames() {
         `}</style>
     )
 }
-
-export {KeyFrames}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function Fade({ show, fadeIn = true, fadeOut = true, time = 2, children }) {
+export function Fade({ show, fadeIn = true, fadeOut = true, time = 2, children }) {
     const [shouldRender, setShouldRender] = useState(show);
 
     const onAnimationEnd = () => {
@@ -29,5 +29,3 @@ function Fade({ show, fadeIn = true, fadeOut = true, time = 2, children }) {
     )
 
 }
-
-export {Fade}
