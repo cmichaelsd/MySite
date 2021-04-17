@@ -1,6 +1,7 @@
 import { SquareImage } from '../../SquareImage'
 import { Checkmark } from '../../svgs/Checkmark'
 import { TiltIn } from '../../animations/TiltIn'
+import { Strings } from '../../../res/strings'
 
 export function Jijenge({background, animate}) {
     return (
@@ -9,14 +10,14 @@ export function Jijenge({background, animate}) {
                 <SquareImage parentBackground={background} background="#f16870" src="https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png" alt="Jijenge Logo" height="150" width="150" />
             </TiltIn>
             <div className="project__content">
-                <h1 className="headline">Jijenge Academy</h1>
-                <h2>Full Stack Engineer</h2>
-                <p>I developed components through the utilization of React to build scalable and reusable features.</p>
-                <h4>Role Focus</h4>
-                <p>Coordinated with the Boston based Jijenge Team and other Full Stack Engineers to design and develop the Jijenge site from conception to completion. Generated components through the utilization of React to build scalable and reusable features. Led the effective implementation of Stripe for users' donations, managing secure transactions for Jijenge Academy. Designed the architecture of the NodeJS serve for Jijenge in order to handle traffic and API requests from the users.</p>
-                <h4>Key Outcomes</h4>
+                <h1 className="headline">{Strings.experience_jijenge}</h1>
+                <h2>{Strings.experience_fullstack}</h2>
+                <p>{Strings.experience_jijenge_fullstack}</p>
+                <h4>{Strings.role_focus}</h4>
+                <p>{Strings.experience_jijenge_fullstack_focus}</p>
+                <h4>{Strings.key_outcomes}</h4>
                 <ul>
-                    <li><Checkmark /><div>Generated revenue up to $10K in the first month to mentor Kenyan students on technical skills.</div></li>
+                    <li><Checkmark /><div>{Strings.experience_jijenge_fullstack_bullets}</div></li>
                 </ul>
             </div>
         </div>
