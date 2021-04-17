@@ -8,7 +8,13 @@ export function VShred({background, animate}) {
     return (
         <div className="project">
             <TiltIn trigger={animate}>
-                <SquareImage trigger={animate} parentBackground={background} src="https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png" alt="V Shred Logo" height={Dimens.square_image_length} width={Dimens.square_image_length} />
+                <SquareImage
+                    parentBackground={background} 
+                    src="https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png" 
+                    alt={Dimens.square_image_vshred_alt_tag} 
+                    height={Dimens.square_image_length} 
+                    width={Dimens.square_image_length} 
+                />
             </TiltIn>
             <div className="project__content">
                 <h1 className="headline">{Strings.experience_vshred}</h1>
@@ -22,7 +28,6 @@ export function VShred({background, animate}) {
                         <li key={index}><Checkmark /><div>{bullet}</div></li>
                     ))}
                 </ul>
-
                 <h2>{Strings.experience_fullstack}</h2>
                 <p>{Strings.experience_vshred_fullstack}</p>
                 <h4>{Strings.role_focus}</h4>

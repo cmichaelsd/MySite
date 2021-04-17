@@ -1,17 +1,18 @@
 import { createContext } from 'react'
+import { Colors } from '../res/colors'
 
 export const themes = {
     dark: {
-        toneOne: '#272727',
-        toneTwo: '#232323',
-        textColor: '#fff',
-        highlight: '#fa923f'
+        toneOne: Colors.dark_tone_one,
+        toneTwo: Colors.dark_tone_two,
+        textColor: Colors.dark_text_color,
+        highlight: Colors.highlight
     },
     light: {
-        toneOne: '#fff',
-        toneTwo: '#fafafa',
-        textColor: '#121212',
-        highlight: '#fa923f'
+        toneOne: Colors.light_tone_one,
+        toneTwo: Colors.light_tone_two,
+        textColor: Colors.light_text_color,
+        highlight: Colors.highlight
     },
     setTheme: () => { }
 }

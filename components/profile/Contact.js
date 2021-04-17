@@ -12,8 +12,22 @@ export function Contact({background}) {
                 </p>
             </div>
             <div className="links-container">
-                <SquareImage parentBackground={background} href="https://github.com/cmichaelsd" src="https://d3p2ju5slp2tm7.cloudfront.net/Github-Web.png" alt="Github Logo" height={Dimens.square_image_length} width={Dimens.square_image_length} />
-                <SquareImage parentBackground={background} href="https://linkedin.com/in/cole-daniel-michaels/" src="https://d3p2ju5slp2tm7.cloudfront.net/LinkedIn-Web.png" alt="LinkedIn Logo" height={Dimens.square_image_length} width={Dimens.square_image_length} />
+                <SquareImage 
+                    parentBackground={background} 
+                    href="https://github.com/cmichaelsd" 
+                    src="https://d3p2ju5slp2tm7.cloudfront.net/Github-Web.png" 
+                    alt={Strings.square_image_github_alt_tag} 
+                    height={Dimens.square_image_length} 
+                    width={Dimens.square_image_length} 
+                />
+                <SquareImage 
+                    parentBackground={background} 
+                    href="https://linkedin.com/in/cole-daniel-michaels/" 
+                    src="https://d3p2ju5slp2tm7.cloudfront.net/LinkedIn-Web.png" 
+                    alt={Strings.square_image_linkedin_alt_tag} 
+                    height={Dimens.square_image_length} 
+                    width={Dimens.square_image_length} 
+                />
             </div>
 
             <style jsx>{`

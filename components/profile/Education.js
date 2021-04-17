@@ -11,7 +11,7 @@ export function Education({background, animate}) {
                 <SwingIn trigger={animate}>
                     <BannerImage 
                         src="https://d3p2ju5slp2tm7.cloudfront.net/HackReactor.png"
-                        alt="Hack Reactor Logo" 
+                        alt={Strings.banner_image_hackreactor_alt_tag} 
                         height={Dimens.banner_image_hackreactor_height}
                         altHeight={Dimens.banner_image_mobile_hackreactor_height}
                     />

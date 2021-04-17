@@ -17,11 +17,11 @@ export function SideDrawer() {
 
     const drawerClasses = () => {
         if (status === statuses.INITIAL_LOADING || status === statuses.READY) {
-            return "";
+            return '';
         }
 
         if (status === statuses.NAVIGATION_DRAWER_OPEN) {
-            return `open`;
+            return 'open';
         }
     }
 

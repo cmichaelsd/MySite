@@ -124,7 +124,7 @@ export function Toolbar() {
                     text-transform: uppercase;
                 }
 
-                @media (max-width: 768px) {
+                @media (max-width: ${Dimens.mobile_media_width}px) {
                     #toolbar {
                         box-shadow: none;
                     }
@@ -138,7 +138,7 @@ export function Toolbar() {
                     }
                 }
 
-                @media (min-width: 769px) {
+                @media (min-width: ${Dimens.sidedrawer_mobile_width}px) {
                     .toolbar__toggle-button {
                         display: none;
                     }

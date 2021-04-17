@@ -3,12 +3,20 @@ import { Checkmark } from '../../svgs/Checkmark'
 import { TiltIn } from '../../animations/TiltIn'
 import { Strings } from '../../../res/strings'
 import { Dimens } from '../../../res/dimens'
+import { Colors } from '../../../res/colors'
 
 export function Jijenge({background, animate}) {
     return (
         <div className="project">
             <TiltIn trigger={animate}>
-                <SquareImage parentBackground={background} background="#f16870" src="https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png" alt="Jijenge Logo" height={Dimens.square_image_length} width={Dimens.square_image_length} />
+                <SquareImage 
+                    parentBackground={background} 
+                    background={Colors.square_image_jijenge_color} 
+                    src="https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png" 
+                    alt={Strings.square_image_jijenge_alt_tag} 
+                    height={Dimens.square_image_length} 
+                    width={Dimens.square_image_length} 
+                />
             </TiltIn>
             <div className="project__content">
                 <h1 className="headline">{Strings.experience_jijenge}</h1>

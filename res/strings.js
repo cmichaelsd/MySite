@@ -92,4 +92,16 @@ export const Strings = {
         "Generated revenue up to $10K in the first month to mentor Kenyan students on technical skills."
     ],
 
+    square_image_jijenge_alt_tag:              "Jijenge Logo",
+
+    square_image_trilogy_alt_tag:              "Trilogy Logo",
+
+    square_image_vshred_alt_tag:               "V Shred Logo",
+
+    square_image_github_alt_tag:               "Github Logo",
+
+    square_image_linkedin_alt_tag:             "LinkedIn Logo",
+
+    banner_image_hackreactor_alt_tag:          "Hack Reactor Logo",
+    
 };

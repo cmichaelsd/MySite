@@ -7,8 +7,8 @@ export function About({background}) {
         <>
             <div className="profile-image">
                 <picture>
-                    <source srcSet="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile3.png" media="(max-width: 660px)" />
-                    <img src="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels3.png" alt="Cole Michaels" />
+                    <source srcSet="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile3.png" media={`(max-width: ${Dimens.mobile_image_width}px)`} />
+                    <img src="https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels3.png" alt={Strings.name} />
                 </picture>
             </div>
             <h1 className="headline">{Strings.about_headline}</h1>
