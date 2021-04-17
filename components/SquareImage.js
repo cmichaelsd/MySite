@@ -54,7 +54,7 @@ export function SquareImage(props) {
 
     const clickable = () => {
         return (
-            <a href={props.href}>
+            <a href={props.href} rel="noreferrer noopener" target="_blank">
                 {base()}
             </a>
         )

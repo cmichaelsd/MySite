@@ -26,7 +26,7 @@ export function Contact({background}) {
                     src={Strings.square_image_linkedin_src} 
                     alt={Strings.square_image_linkedin_alt_tag} 
                     height={Dimens.square_image_length} 
-                    width={Dimens.square_image_length} 
+                    width={Dimens.square_image_length}
                 />
             </div>
 
