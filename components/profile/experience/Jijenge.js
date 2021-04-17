@@ -17,7 +17,9 @@ export function Jijenge({background, animate}) {
                 <p>{Strings.experience_jijenge_fullstack_focus}</p>
                 <h4>{Strings.key_outcomes}</h4>
                 <ul>
-                    <li><Checkmark /><div>{Strings.experience_jijenge_fullstack_bullets}</div></li>
+                    {Strings.experience_jijenge_fullstack_bullets.map((bullet, index) => (
+                        <li key={index}><Checkmark /><div>{bullet}</div></li>
+                    ))}
                 </ul>
             </div>
         </div>

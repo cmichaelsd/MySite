@@ -18,8 +18,8 @@ export function Education({background, animate}) {
                 <h1 className="headline">{Strings.education_headline}</h1>
                 <p>{Strings.education_info}</p>
                 <ul>
-                    {Strings.education_bullets.map(bullet => (
-                        <li><Checkmark /><div>{bullet}</div></li>
+                    {Strings.education_bullets.map((bullet, index) => (
+                        <li key={index}><Checkmark /><div>{bullet}</div></li>
                     ))}
                 </ul>
             </div>

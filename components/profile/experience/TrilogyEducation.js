@@ -17,8 +17,8 @@ export function TrilogyEducation({background, animate}) {
                 <p>{Strings.experience_trilogy_software_tutor_focus}</p>
                 <h4>{Strings.key_outcomes}</h4>
                 <ul>
-                    {Strings.experience_trilogy_software_tutor_bullets.map(bullet => (
-                        <li><Checkmark /><div>{bullet}</div></li>
+                    {Strings.experience_trilogy_software_tutor_bullets.map((bullet, index) => (
+                        <li key={index}><Checkmark /><div>{bullet}</div></li>
                     ))}
                 </ul>
             </div>

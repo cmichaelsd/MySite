@@ -17,8 +17,8 @@ export function VShred({background, animate}) {
                 <p>{Strings.experience_vshred_android_focus}</p>
                 <h4>{Strings.key_outcomes}</h4>
                 <ul>
-                    {Strings.experience_vshred_android_bullets.map(bullet => (
-                        <li><Checkmark /><div>{bullet}</div></li>
+                    {Strings.experience_vshred_android_bullets.map((bullet, index) => (
+                        <li key={index}><Checkmark /><div>{bullet}</div></li>
                     ))}
                 </ul>
 
@@ -28,8 +28,8 @@ export function VShred({background, animate}) {
                 <p>{Strings.experience_vshred_fullstack_focus}</p>
                 <h4>{Strings.key_outcomes}</h4>
                 <ul>
-                    {Strings.experience_vshred_fullstack_bullets.map(bullet => (
-                        <li><Checkmark /><div>{bullet}</div></li>
+                    {Strings.experience_vshred_fullstack_bullets.map((bullet, index) => (
+                        <li key={index}><Checkmark /><div>{bullet}</div></li>
                     ))}
                 </ul>
             </div>

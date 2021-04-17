@@ -3,13 +3,10 @@ import { Hamburger } from './svgs/Hamburger'
 import { PaintRoller } from './svgs/PaintRoller'
 import { SlideVertical } from './animations/SlideVertical'
 import { Strings } from '../res/strings'
+import { Dimens } from '../res/dimens'
 
 export function Toolbar() {
     const [navPos, setNavPos] = useState(0);
-
-    const SCROLL_TO_HIDE_TOOLBAR = 69;
-
-    const SIZE_OF_TOOLBAR = 65;
 
     let prevScrollPos = null;
 
@@ -25,8 +22,8 @@ export function Toolbar() {
     const handleScroll = () => {
         scrollPos = window.pageYOffset;
 
-        if (prevScrollPos < scrollPos && prevScrollPos > SCROLL_TO_HIDE_TOOLBAR) {
-            setNavPos(-SIZE_OF_TOOLBAR);
+        if (prevScrollPos < scrollPos && prevScrollPos > Dimens.scroll_to_hide_toolbar) {
+            setNavPos(-Dimens.size_of_toolbar);
         } else {
             setNavPos(0);
         }
@@ -57,8 +54,8 @@ export function Toolbar() {
                     <div className="spacer-middle"></div>
                     <div className="toolbar__navigation--items">
                         <ul>
-                            {headlines.map(headline => (
-                                <li>
+                            {headlines.map((headline, index) => (
+                                <li key={index}>
                                     <SlideVertical>
                                         <a href={`#${headline.toLowerCase()}`}>
                                             {headline}
@@ -84,7 +81,7 @@ export function Toolbar() {
                     top: ${navPos}px;
                     width: 100%;
                     background: var(--toneOne);
-                    height: 65px;
+                    height: ${Dimens.size_of_toolbar}px;
                     z-index: 1;
                     transition: top 0.3s;
                     box-shadow: 0 0 0.625rem 0 rgba(0,0,0,0.1);

@@ -32,8 +32,8 @@ export function SideDrawer() {
 		<>
 			<nav id="side-drawer" className={drawerClasses()}>
 				<ul>
-                    {headlines.map(headline => (    
-                        <li onClick={toggleSideDrawer}>
+                    {headlines.map((headline, index) => (
+                        <li onClick={toggleSideDrawer} key={index}>
                             <a href={`#${headline.toLowerCase()}`}>
                                 <span>{headline}</span>
                             </a>

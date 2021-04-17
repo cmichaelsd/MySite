@@ -13,8 +13,8 @@ export function About({background}) {
             <h1 className="headline">{Strings.about_headline}</h1>
             <p>{Strings.about_paragraph_one}</p>
             <ul>
-                {Strings.about_bullets.map(bullet => (
-                    <li><Plus /><div>{bullet}</div></li>
+                {Strings.about_bullets.map((bullet, index) => (
+                    <li key={index}><Plus /><div>{bullet}</div></li>
                 ))}
             </ul>
             <p>{Strings.about_paragraph_two}</p>
