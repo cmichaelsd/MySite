@@ -24,7 +24,7 @@ export const Strings = {
         "Program Efficiency"
     ],
 
-    contact_text:                              "Feel free to send me an email at",
+    contact_text:                              "Feel free to send me an email at ",
     
     about_paragraph_one:                       "I am a self-motivated, resourceful, and highly analytical professional. During my career with previous employers, I have attained comprehensive experience in collaborating with technical teams to assess key requirements and concerns, proposing effective technology solutions for the seamless flow of day to day operations. My area of expertise lies in",
 
