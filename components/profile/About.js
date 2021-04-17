@@ -1,6 +1,6 @@
-import { Plus } from '../svgs/Plus'
+import { Plus }    from '../svgs/Plus'
 import { Strings } from '../../res/strings'
-import { Dimens } from '../../res/dimens'
+import { Dimens }  from '../../res/dimens'
 
 export function About({background}) {
     return (

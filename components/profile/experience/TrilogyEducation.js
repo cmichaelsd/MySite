@@ -1,8 +1,8 @@
 import { SquareImage } from '../../SquareImage'
 import { Checkmark } from '../../svgs/Checkmark'
-import { TiltIn } from '../../animations/TiltIn'
+import { TiltIn }  from '../../animations/TiltIn'
 import { Strings } from '../../../res/strings'
-import { Dimens } from '../../../res/dimens'
+import { Dimens }  from '../../../res/dimens'
 
 export function TrilogyEducation({background, animate}) {
     return (

@@ -1,6 +1,6 @@
 import { SquareImage } from '../SquareImage'
-import { Strings } from '../../res/strings'
-import { Dimens } from '../../res/dimens'
+import { Strings }     from '../../res/strings'
+import { Dimens }      from '../../res/dimens'
 
 export function Contact({background}) {
     return (

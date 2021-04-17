@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Strings } from '../res/strings'
-import { Dimens } from '../res/dimens'
+import { Strings }             from '../res/strings'
+import { Dimens }              from '../res/dimens'
 
 export function Footer() {
     const [footerPos, setFooterPos] = useState(0);

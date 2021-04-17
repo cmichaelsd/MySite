@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import { useState } from 'react'
-import { themes, ThemeContext } from '../context/ThemeContext'
+import Head                                   from 'next/head'
+import { useState }                           from 'react'
+import { themes, ThemeContext }               from '../context/ThemeContext'
 import { statuses, ApplicationStatusContext } from '../context/ApplicationStatusContext'
-import { Events } from '../events'
+import { Events }                             from '../events'
 
 function MyApp({ Component, pageProps }) {
     const [theme, setTheme] = useState(themes.light);

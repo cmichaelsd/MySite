@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Hamburger } from './svgs/Hamburger'
-import { PaintRoller } from './svgs/PaintRoller'
-import { SlideVertical } from './animations/SlideVertical'
-import { Strings } from '../res/strings'
-import { Dimens } from '../res/dimens'
+import { Hamburger }           from './svgs/Hamburger'
+import { PaintRoller }         from './svgs/PaintRoller'
+import { SlideVertical }       from './animations/SlideVertical'
+import { Strings }             from '../res/strings'
+import { Dimens }              from '../res/dimens'
 
 export function Toolbar() {
     const [navPos, setNavPos] = useState(0);
