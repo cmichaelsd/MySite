@@ -60,7 +60,7 @@ export function Toolbar() {
                             {headlines.map(headline => (
                                 <li>
                                     <SlideVertical>
-                                        <a href={`$${headline.toLowerCase()}`}>
+                                        <a href={`#${headline.toLowerCase()}`}>
                                             {headline}
                                         </a>
                                     </SlideVertical>

@@ -1,4 +1,4 @@
-function ProfileSegment(props) {
+export function ProfileSegment(props) {
     return (
         <>
             <div id={props.id} className="segment">
@@ -21,5 +21,3 @@ function ProfileSegment(props) {
         </>
     )
 }
-
-export {ProfileSegment}

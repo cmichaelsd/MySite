@@ -1,8 +1,9 @@
-import {BannerImage} from '../BannerImage'
-import {Checkmark} from '../svgs/Checkmark'
-import {SwingIn} from '../animations/SwingIn'
+import { BannerImage } from '../BannerImage'
+import { Checkmark } from '../svgs/Checkmark'
+import { SwingIn } from '../animations/SwingIn'
+import { Strings } from '../../res/strings'
 
-function Education({background, animate}) {
+export function Education({background, animate}) {
     return (
         <>
             <div className="education-container">
@@ -14,14 +15,12 @@ function Education({background, animate}) {
                         altHeight="93"
                     />
                 </SwingIn>
-                <h1 className="headline">Education</h1>
-                <p>Hack Reactor is a Full-Stack Web Development bootcamp covering topics such as</p>
+                <h1 className="headline">{Strings.education_headline}</h1>
+                <p>{Strings.education_info}</p>
                 <ul>
-                    <li><Checkmark /><div>Data Structures</div></li>
-                    <li><Checkmark /><div>Databases</div></li> 
-                    <li><Checkmark /><div>Microservice Architecture</div></li>
-                    <li><Checkmark /><div>Frontend Design</div></li>
-                    <li><Checkmark /><div>Program Efficiency</div></li>
+                    {Strings.education_bullets.map(bullet => (
+                        <li><Checkmark /><div>{bullet}</div></li>
+                    ))}
                 </ul>
             </div>
 
@@ -39,5 +38,3 @@ function Education({background, animate}) {
         </>
     )
 }
-
-export {Education}

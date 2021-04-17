@@ -34,7 +34,7 @@ export function SideDrawer() {
 				<ul>
                     {headlines.map(headline => (    
                         <li onClick={toggleSideDrawer}>
-                            <a href={`$${headline.toLowerCase()}`}>
+                            <a href={`#${headline.toLowerCase()}`}>
                                 <span>{headline}</span>
                             </a>
                         </li>

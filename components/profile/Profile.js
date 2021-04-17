@@ -1,15 +1,16 @@
 import { useContext, useState } from 'react'
 import { ThemeContext } from '../../context/ThemeContext'
-import {ProfileSegment} from './ProfileSegment'
-import {About} from './About'
-import {Education} from './Education'
-import {Contact} from './Contact'
-import {VShred} from './experience/VShred'
-import {Jijenge} from './experience/Jijenge'
-import {TrilogyEducation} from './experience/TrilogyEducation'
-import {SlideHorizontal} from '../animations/SlideHorizontal'
+import { ProfileSegment } from './ProfileSegment'
+import { About } from './About'
+import { Education } from './Education'
+import { Contact } from './Contact'
+import { VShred } from './experience/VShred'
+import { Jijenge } from './experience/Jijenge'
+import { TrilogyEducation } from './experience/TrilogyEducation'
+import { SlideHorizontal } from '../animations/SlideHorizontal'
+import { Strings } from '../../res/strings'
 
-function Profile() {
+export function Profile() {
     const { theme } = useContext(ThemeContext);
 
     const [animateCompleteOne, setAnimateCompleteOne] = useState(false);
@@ -23,11 +24,11 @@ function Profile() {
     return (
         <>
             <div id="profile">
-                <ProfileSegment id="about" background={theme.toneOne}>
+                <ProfileSegment id={`${Strings.about_headline.toLowerCase()}`} background={theme.toneOne}>
                     <About background={theme.toneOne} />
                 </ProfileSegment>
 
-                <ProfileSegment id="experience" background={theme.toneTwo}>
+                <ProfileSegment id={`${Strings.experience_headline.toLowerCase()}`} background={theme.toneTwo}>
                     <SlideHorizontal toStart={false} setAnimateEnd={setAnimateCompleteOne}>
                             <VShred background={theme.toneTwo} animate={animateCompleteOne}/>
                     </SlideHorizontal>
@@ -45,13 +46,13 @@ function Profile() {
                     </SlideHorizontal>
                 </ProfileSegment>
 
-                <ProfileSegment id="education" background={theme.toneOne}>
+                <ProfileSegment id={`${Strings.education_headline.toLowerCase()}`} background={theme.toneOne}>
                     <SlideHorizontal setAnimateEnd={setAnimateCompleteFour}>
                         <Education background={theme.toneOne} animate={animateCompleteFour} />
                     </SlideHorizontal>
                 </ProfileSegment>
 
-                <ProfileSegment id="contact" background={theme.toneTwo}>
+                <ProfileSegment id={`${Strings.contact_headline.toLowerCase()}`} background={theme.toneTwo}>
                     <Contact background={theme.toneTwo} />
                 </ProfileSegment>
             </div>
@@ -107,5 +108,3 @@ function Profile() {
         </>
     )
 }
-
-export {Profile}

@@ -1,11 +1,13 @@
-import {SquareImage} from '../SquareImage'
+import { SquareImage } from '../SquareImage'
+import { Strings } from '../../res/strings'
 
-function Contact({background}) {
+export function Contact({background}) {
     return (
         <>
             <div className="contact-container">
                 <p>
-                    Feel free to send me an email at <a className="contact-container__email-me" href="mailto:cmichaelsd@gmail.com">cmichaelsd@gmail.com</a>
+                    {Strings.contact_text} 
+                    <a className="contact-container__email-me" href={`mailto:${Strings.email}`}>{Strings.email}</a>
                 </p>
             </div>
             <div className="links-container">
@@ -47,5 +49,3 @@ function Contact({background}) {
         </>
     )
 }
-
-export {Contact}
