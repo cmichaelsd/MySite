@@ -10,7 +10,7 @@ export function VShred({background, animate}) {
             <TiltIn trigger={animate}>
                 <SquareImage
                     parentBackground={background} 
-                    src="https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png" 
+                    src={Strings.square_image_vshred_src}
                     alt={Dimens.square_image_vshred_alt_tag} 
                     height={Dimens.square_image_length} 
                     width={Dimens.square_image_length} 

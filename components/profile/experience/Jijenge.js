@@ -12,7 +12,7 @@ export function Jijenge({background, animate}) {
                 <SquareImage 
                     parentBackground={background} 
                     background={Colors.square_image_jijenge_color} 
-                    src="https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png" 
+                    src={Strings.square_image_jijenge_src} 
                     alt={Strings.square_image_jijenge_alt_tag} 
                     height={Dimens.square_image_length} 
                     width={Dimens.square_image_length} 

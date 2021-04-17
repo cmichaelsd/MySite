@@ -1,8 +1,8 @@
 export const Strings = {
 
-    name:                                     "Cole Michaels",
+    name:                                      "Cole Michaels",
 
-    location:                                 "Made in Seoul, KR",
+    location:                                  "Made in Seoul, KR",
 
     email:                                     "cmichaelsd@gmail.com",
 
@@ -37,7 +37,7 @@ export const Strings = {
         "Database Management"
     ],
 
-    about_paragraph_two:                      "Equipped with a certification in Advanced Software Engineering, I am able to design full-stack applications with modular well-tested code to boost company revenue, meeting technical and consumer needs. I have verifiable expertise in leveraging various technologies to spearhead the implementation of full-stack features. Known for enhancing and implementing features in large scale projects.",
+    about_paragraph_two:                       "Equipped with a certification in Advanced Software Engineering, I am able to design full-stack applications with modular well-tested code to boost company revenue, meeting technical and consumer needs. I have verifiable expertise in leveraging various technologies to spearhead the implementation of full-stack features. Known for enhancing and implementing features in large scale projects.",
 
     about_paragraph_three:                     "I orchestrate estimation, planning, and execution of projects, features, and integrations coupled with quality code, new technologies, and architectural design. Well-organized and quality-minded with planning strategies and a true team player who thrives in a fast-paced environment.",
 
@@ -54,9 +54,9 @@ export const Strings = {
         "I functioned as the only Android developer and in charge of writing features for the Android application processing over $15,000 in revenue daily."
     ],
 
-    role_focus:                               "Role Focus",
+    role_focus:                                "Role Focus",
 
-    key_outcomes:                             "Key Outcomes",
+    key_outcomes:                              "Key Outcomes",
 
     experience_fullstack:                      "Full Stack Engineer",
 
@@ -103,5 +103,27 @@ export const Strings = {
     square_image_linkedin_alt_tag:             "LinkedIn Logo",
 
     banner_image_hackreactor_alt_tag:          "Hack Reactor Logo",
+
+    banner_image_hackreactor_src:              "https://d3p2ju5slp2tm7.cloudfront.net/HackReactor.png",
+
+    square_image_jijenge_src:                  "https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png",
+
+    square_image_trilogy_src:                  "https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png",
+
+    square_image_vshred_src:                   "https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png",
+
+    square_image_github_href:                  "https://github.com/cmichaelsd",
+
+    square_image_github_src:                   "https://d3p2ju5slp2tm7.cloudfront.net/Github-Web.png",
+
+    square_image_linkedin_href:                "https://linkedin.com/in/cole-daniel-michaels/",
+
+    square_image_linkedin_src:                 "https://d3p2ju5slp2tm7.cloudfront.net/LinkedIn-Web.png",
+
+    profile_image_src_set:                     "https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile3.png",
+
+    profile_image_src:                         "https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels3.png",
+
+
     
 };

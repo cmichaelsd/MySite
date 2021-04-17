@@ -10,7 +10,7 @@ export function TrilogyEducation({background, animate}) {
             <TiltIn trigger={animate} invert={true}>
                 <SquareImage 
                     parentBackground={background} 
-                    src="https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png" 
+                    src={Strings.square_image_trilogy_src} 
                     alt={Strings.square_image_trilogy_alt_tag} 
                     height={Dimens.square_image_length} 
                     width={Dimens.square_image_length} 
