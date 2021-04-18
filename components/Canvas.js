@@ -102,6 +102,12 @@ export function Canvas(props) {
                 <canvas ref={canvasRef} id="canvas"></canvas>
             </div>
 
+            <style global jsx>{`
+                html, body {
+                    overflow-y:     hidden;
+                }
+            `}</style>
+
             <style jsx>{`
                 #hover-text-container {
                     position:       relavtive;

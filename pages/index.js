@@ -67,10 +67,6 @@ function Home() {
                     --highlight:         ${theme.highlight};
                 }
 
-                html {
-                    overflow-y:          scroll;
-                }
-
                 html,
                 body {
                     padding:             0;

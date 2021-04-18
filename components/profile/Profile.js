@@ -59,6 +59,10 @@ export function Profile() {
             </div>
 
             <style jsx global>{`
+                html {
+                    overflow-y:         overlay;
+                }
+
                 #profile {
                     padding-top:        ${Dimens.profile_padding_top}px;
                     padding-bottom:     ${Dimens.profile_padding_bottom}px;
