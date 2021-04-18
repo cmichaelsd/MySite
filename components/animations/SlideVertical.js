@@ -17,11 +17,11 @@ export function SlideVertical({ time = 0.5, children }) {
 
             <style jsx global>{`
                 .slide-vertical-container:hover {
-                    color: var(--highlight);
+                    color:      var(--highlight);
                 }
 
                 .slide-vertical-container:hover svg {
-                    fill: var(--highlight);
+                    fill:       var(--highlight);
                 }
 
                 .slide-vertical-container svg {

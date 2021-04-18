@@ -32,32 +32,32 @@ export function Contact({background}) {
 
             <style jsx>{`
                 .contact-container {
-                    text-align: center;
+                    text-align:            center;
                 }
 
                 .contact-container__email-me {
-                    text-decoration: underline;
-                    color: var(--highlight);
+                    text-decoration:       underline;
+                    color:                 var(--highlight);
                     text-decoration-color: var(--highlight);
                 }
 
                 .links-container {
-                    display: flex;
-                    justify-content: center;
-                    padding-top: 1em;
+                    display:               flex;
+                    justify-content:       center;
+                    padding-top:           1em;
                 }
 
                 @media (max-width: ${Dimens.mobile_media_width}px) {
                     .contact-container {
-                        margin-top: 1rem;
-                        text-align: center;
+                        margin-top:        1rem;
+                        text-align:        center;
                     }
 
                     .links-container {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        padding-top: 0;
+                        display:           flex;
+                        flex-direction:    column;
+                        align-items:       center;
+                        padding-top:       0;
                     }
                 }
             `}</style>

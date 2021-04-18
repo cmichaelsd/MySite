@@ -27,13 +27,13 @@ export function Education({background, animate}) {
 
             <style jsx>{`
                 ul {
-                    list-style: none;
+                    list-style:    none;
                 }
 
                 li {
                     margin-bottom: 10px;
-                    display: flex;
-                    gap: 10px;
+                    display:       flex;
+                    gap:           10px;
                 }
             `}</style>
         </>

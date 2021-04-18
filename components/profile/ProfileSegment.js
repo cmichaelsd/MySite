@@ -11,13 +11,13 @@ export function ProfileSegment(props) {
 
             <style jsx>{`
                 .segment {
-                    padding: 2rem;
+                    padding:    2rem;
                     background: ${props.background};
                 }
 
                 .set-width {
-                    margin: auto;
-                    max-width: ${Dimens.profile_segment_width}px;
+                    margin:     auto;
+                    max-width:  ${Dimens.profile_segment_width}px;
                 }
             `}</style>
         </>

@@ -6,13 +6,13 @@ export function SVGButton(props) {
             <style jsx global>{`
                 .svgButton {
                     background: none;
-                    border: none;
-                    cursor: pointer;
-                    padding: 0;
+                    border:     none;
+                    cursor:     pointer;
+                    padding:    0;
                 }
 
                 .svgButton:focus {
-                    outline: none;
+                    outline:    none;
                 }
             `}</style>
         </button>

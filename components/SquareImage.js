@@ -16,35 +16,35 @@ export function SquareImage(props) {
 
                 <style jsx>{`
                     .square-image__container {
-                        height: ${Dimens.square_image_size}px;
-                        width: ${Dimens.square_image_size}px;
-                        background: ${background};
+                        height:      ${Dimens.square_image_size}px;
+                        width:       ${Dimens.square_image_size}px;
+                        background:  ${background};
                     }
 
                     .square-image__container--corners {
-                        width: ${Dimens.square_image_size}px;
-                        margin: 0 auto;
-                        position: relative;
+                        width:       ${Dimens.square_image_size}px;
+                        margin:      0 auto;
+                        position:    relative;
                     }
 
                     .square-image__container--corners:after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: ${Dimens.square_image_size}px;
-                        height: ${Dimens.square_image_size}px;
+                        content:     "";
+                        position:    absolute;
+                        top:         0;
+                        left:        0;
+                        width:       ${Dimens.square_image_size}px;
+                        height:      ${Dimens.square_image_size}px;
                         background:
-                            linear-gradient(45deg,  ${props.parentBackground} 75px, transparent 75px),
-                            linear-gradient(135deg, ${props.parentBackground} 75px, transparent 75px),
-                            linear-gradient(225deg, ${props.parentBackground} 75px, transparent 75px),
-                            linear-gradient(315deg, ${props.parentBackground} 75px, transparent 75px);
+                                     linear-gradient(45deg,  ${props.parentBackground} 75px, transparent 75px),
+                                     linear-gradient(135deg, ${props.parentBackground} 75px, transparent 75px),
+                                     linear-gradient(225deg, ${props.parentBackground} 75px, transparent 75px),
+                                     linear-gradient(315deg, ${props.parentBackground} 75px, transparent 75px);
                     }
 
                     .square-image {
-                        margin-top: 40px;
+                        margin-top:  40px;
                         margin-left: 25px;
-                        width: 75%;
+                        width:       75%;
                     }
                 `}</style>
             </>

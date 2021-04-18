@@ -120,7 +120,7 @@ export const Strings = {
 
     square_image_linkedin_src:                 "https://d3p2ju5slp2tm7.cloudfront.net/LinkedIn-Web.png",
 
-    profile_image_src_set:                     "https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile3.png",
+    profile_image_mobile_src:                  "https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile3.png",
 
     profile_image_src:                         "https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels3.png",
 

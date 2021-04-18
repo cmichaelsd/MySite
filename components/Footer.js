@@ -29,17 +29,17 @@ export function Footer() {
 
             <style jsx>{`
                 #footer {
-                    position: fixed;
-                    background: var(--toneOne);
-                    bottom: ${footerPos}px;
-                    width: 100%;
-                    height: ${Dimens.size_of_footer}px;
-                    color: var(--textColor);
-                    display: flex;
+                    position:        fixed;
+                    background:      var(--toneOne);
+                    bottom:          ${footerPos}px;
+                    width:           100%;
+                    height:          ${Dimens.size_of_footer}px;
+                    color:           var(--textColor);
+                    display:         flex;
                     justify-content: center;
-                    align-items: center;
-                    font-size: 0.8rem;
-                    transition: bottom 0.3s;
+                    align-items:     center;
+                    font-size:       0.8rem;
+                    transition:      bottom 0.3s;
                 }
             `}</style>
         </>

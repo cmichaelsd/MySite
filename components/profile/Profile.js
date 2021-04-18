@@ -60,50 +60,50 @@ export function Profile() {
 
             <style jsx global>{`
                 #profile {
-                    padding-top: ${Dimens.profile_padding_top}px;
-                    padding-bottom: ${Dimens.profile_padding_bottom}px;
+                    padding-top:        ${Dimens.profile_padding_top}px;
+                    padding-bottom:     ${Dimens.profile_padding_bottom}px;
                 }
 
                 .project {
-                    display: flex;
-                    align-content: center;
+                    display:            flex;
+                    align-content:      center;
                 }
 
                 .segment:nth-of-type(2n+1) .project {
-                    flex-direction: row-reverse;
+                    flex-direction:     row-reverse;
                 }
 
                 .project .project__content {
-                    margin-left: 4em;
+                    margin-left:        4em;
                 }
 
                 .project .project__content p {
-                    margin: 0 0 12px 0;
+                    margin:             0 0 12px 0;
                 }
 
                 .project ul {
-                    list-style: none;
+                    list-style:         none;
                 }
 
                 .project li {
-                    margin-bottom: 10px;
-                    display: flex;
-                    gap: 10px;
+                    margin-bottom:      10px;
+                    display:            flex;
+                    gap:                10px;
                 }
 
                 @media (max-width: ${Dimens.mobile_media_width}px) {
                     .project {
                         flex-direction: column;
-                        align-items: center;
+                        align-items:    center;
                     }
 
                     .segment:nth-of-type(2n+1) .project {
                         flex-direction: column;
-                        align-items: center;
+                        align-items:    center;
                     }
 
                     .project .project__content {
-                        margin-left: auto;
+                        margin-left:    auto;
                     }
                 }
             `}</style>

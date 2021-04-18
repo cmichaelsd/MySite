@@ -7,7 +7,7 @@ export function About({background}) {
         <>
             <div className="profile-image">
                 <picture>
-                    <source srcSet={Strings.profile_image_src_set} media={`(max-width: ${Dimens.mobile_image_width}px)`} />
+                    <source srcSet={Strings.profile_image_mobile_src} media={`(max-width: ${Dimens.mobile_image_width}px)`} />
                     <img src={Strings.profile_image_src} alt={Strings.name} />
                 </picture>
             </div>
@@ -23,26 +23,26 @@ export function About({background}) {
 
             <style jsx>{`
                 .profile-image {
-                    display: flex;
+                    display:         flex;
                     justify-content: center;
-                    align-content: center;
-                    margin-top: 1rem;
-                    height: ${Dimens.profile_image_height}px;
+                    align-content:   center;
+                    margin-top:      1rem;
+                    height:          ${Dimens.profile_image_height}px;
                 }
 
                 ul {
-                    list-style: none;
+                    list-style:      none;
                 }
 
                 li {
-                    margin-bottom: 10px;
-                    display: flex;
-                    gap: 10px;
+                    margin-bottom:   10px;
+                    display:         flex;
+                    gap:             10px;
                 }
 
                 @media (max-width: ${Dimens.mobile_image_width}px) {
                     .profile-image {
-                        height: ${Dimens.profile_mobile_image_height}px;
+                        height:      ${Dimens.profile_mobile_image_height}px;
                     }
                 }
             `}</style>

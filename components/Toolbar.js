@@ -77,70 +77,70 @@ export function Toolbar() {
 
             <style jsx>{`
                 #toolbar {
-                    position: fixed;
-                    top: ${navPos}px;
-                    width: 100%;
-                    background: var(--toneOne);
-                    height: ${Dimens.size_of_toolbar}px;
-                    z-index: 1;
-                    transition: top 0.3s;
-                    box-shadow: 0 0 0.625rem 0 rgba(0,0,0,0.1);
+                    position:        fixed;
+                    top:             ${navPos}px;
+                    width:           100%;
+                    background:      var(--toneOne);
+                    height:          ${Dimens.size_of_toolbar}px;
+                    z-index:         1;
+                    transition:      top 0.3s;
+                    box-shadow:      0 0 0.625rem 0 rgba(0,0,0,0.1);
                 }
 
                 .toolbar__navigation {
-                    display: flex;
-                    height: 100%;
-                    align-items: center;
-                    padding: 0 1rem;
+                    display:         flex;
+                    height:          100%;
+                    align-items:     center;
+                    padding:         0 1rem;
                 }
 
                 .spacer {
-                    flex: .5;
+                    flex:            .5;
                 }
 
                 .spacer-middle {
-                    flex: 0.15;
+                    flex:            0.15;
                 }
 
                 .spacer-end {
-                    flex: 0.3;
+                    flex:            0.3;
                 }
 
                 .toolbar__navigation--items ul {
-                    list-style: none;
-                    display: flex;
+                    list-style:      none;
+                    display:         flex;
                 }
 
                 .toolbar__navigation--items li {
-                    padding: 0 2rem;
-                    color: var(--textColor);
+                    padding:         0 2rem;
+                    color:           var(--textColor);
                     text-decoration: none;
                 }
 
                 .toolbar__logo {
-                    color: var(--textColor);
+                    color:           var(--textColor);
                     text-decoration: none;
-                    font-size: 1.3rem;
-                    text-transform: uppercase;
+                    font-size:       1.3rem;
+                    text-transform:  uppercase;
                 }
 
                 @media (max-width: ${Dimens.mobile_media_width}px) {
                     #toolbar {
-                        box-shadow: none;
+                        box-shadow:  none;
                     }
 
                     .toolbar__navigation--items {
-                        display: none;
+                        display:     none;
                     }
 
                     .spacer {
-                        flex: 0.1;
+                        flex:        0.1;
                     }
                 }
 
                 @media (min-width: ${Dimens.sidedrawer_mobile_width}px) {
                     .toolbar__toggle-button {
-                        display: none;
+                        display:     none;
                     }
 
                     .toolbar__logo {

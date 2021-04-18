@@ -1,4 +1,5 @@
 import { Dimens } from "../res/dimens";
+import { Colors } from "../res/colors"
 
 export function BannerImage(props) {
     return (
@@ -11,20 +12,20 @@ export function BannerImage(props) {
 
             <style jsx>{`
                 .banner-image-container {
-                    display: flex;
+                    display:         flex;
                     justify-content: center;
-                    align-content: center;
-                    height: ${props.height}px;
+                    align-content:   center;
+                    height:          ${props.height}px;
                 }
 
                 .banner-image {
-                    background: #fff;
-                    width: 100%;
+                    background:      ${Colors.light_tone_one};
+                    width:           100%;
                 }
 
                 @media (max-width: ${Dimens.mobile_image_width}px) {
                     .banner-image-container {
-                        height: ${props.altHeight ? props.altHeight : props.height}px;
+                        height:      ${props.altHeight ? props.altHeight : props.height}px;
                     }
                 }
             `}</style>

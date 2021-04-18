@@ -61,55 +61,58 @@ function Home() {
 
             <style global jsx>{`
                 :root {
-                    --toneOne: ${theme.toneOne};
-                    --toneTwo: ${theme.toneTwo};
-                    --textColor: ${theme.textColor};
-                    --highlight: ${theme.highlight};
+                    --toneOne:           ${theme.toneOne};
+                    --toneTwo:           ${theme.toneTwo};
+                    --textColor:         ${theme.textColor};
+                    --highlight:         ${theme.highlight};
+                }
+
+                html {
+                    overflow-y:          scroll;
                 }
 
                 html,
                 body {
-                    padding: 0;
-                    margin: 0;
-                    font-family: 'Courier New', monospace; // screen-play font joke
-                    background: var(--toneOne);
-                    color: var(--textColor);
+                    padding:             0;
+                    margin:              0;
+                    font-family:         'Courier New', monospace;
+                    background:          var(--toneOne);
+                    color:               var(--textColor);
                     overscroll-behavior: none;
-                    overflow-x: hidden;
+                    overflow-x:          hidden;
                 }
 
                 a {
-                  color: inherit;
-                  text-decoration: none;
+                  color:                 inherit;
+                  text-decoration:       none;
                 }
 
                 .headline {
-                    text-decoration: underline;
-                    color: var(--highlight);
+                    text-decoration:     underline;
+                    color:               var(--highlight);
                 }
                 
                 .headline::selection {
-                    background: transparent;
+                    background:          transparent;
                 }
 
                 h1,h2,h3,h4,h5,h6 {
-                    margin: 16px 0 0 0;
-                    font-family: Helvetica;
+                    margin:              16px 0 0 0;
+                    font-family:         Helvetica;
                 }
 
                 * {
-                    box-sizing: border-box;
-                    transition: 0.5s color;
-                    transition: 0.5s background;
+                    box-sizing:          border-box;
+                    transition:          0.5s color;
+                    transition:          0.5s background;
                 }
 
                 *::selection {
-                    background: var(--highlight);
+                    background:          var(--highlight);
                 }
                 
                 #content {
-                    transition: 0.6s filter;
-                    overflow: hidden;
+                    transition:          0.6s filter;
                 }
             `}</style>
 

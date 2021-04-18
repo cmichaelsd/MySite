@@ -48,46 +48,46 @@ export function SideDrawer() {
 
             <style jsx>{`
                 #side-drawer {
-                    height: 100%;
-                    background: var(--toneTwo);
-                    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5px);
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 60%;
-                    max-width: 400px;
-                    z-index: 2;
-                    transform: translateX(-100%);
-                    transition: transform 0.3s ease-out;
+                    height:          100%;
+                    background:      var(--toneTwo);
+                    box-shadow:      1px 0px 7px rgba(0, 0, 0, 0.5px);
+                    position:        fixed;
+                    top:             0;
+                    left:            0;
+                    width:           60%;
+                    max-width:       400px;
+                    z-index:         2;
+                    transform:       translateX(-100%);
+                    transition:      transform 0.3s ease-out;
                 }
 
                 #side-drawer.open {
-                    transform: translateX(0);
+                    transform:       translateX(0);
                 }
 
                 #side-drawer ul {
-                    height: 100%;
-                    list-style: none;
-                    padding: 0;
-                    display: flex;
-                    flex-direction: column;
+                    height:          100%;
+                    list-style:      none;
+                    padding:         0;
+                    display:         flex;
+                    flex-direction:  column;
                     justify-content: center;
-                    align-items: center;
+                    align-items:     center;
                 }
 
                 #side-drawer li {
-                    margin: 0.5rem 0;
+                    margin:          0.5rem 0;
                 }
 
                 #side-drawer a {
-                    color: var(--textColor);
+                    color:           var(--textColor);
                     text-decoration: none;
-                    font-size: 1.2rem;
+                    font-size:       1.2rem;
                 }
 
                 @media (min-width: ${Dimens.sidedrawer_mobile_width}px) {
                     #side-drawer {
-                        display: none;
+                        display:     none;
                     }
                 }
             `}</style>

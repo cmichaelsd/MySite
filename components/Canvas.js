@@ -104,38 +104,31 @@ export function Canvas(props) {
 
             <style jsx>{`
                 #hover-text-container {
-                    position: relavtive;
+                    position:       relavtive;
                 }
 
                 #hover-text {
-                    position: absolute;
-                    left: 50%;
-                    top: 49%;
-                    transform: translate(-50%, -50%);
-                    margin: 0;
-                    white-space: nowrap;
-                    color: ${theme.toneTwo}80;
+                    position:       absolute;
+                    left:           50%;
+                    top:            49%;
+                    transform:      translate(-50%, -50%);
+                    margin:         0;
+                    white-space:    nowrap;
+                    color:          ${theme.toneTwo}80;
                     pointer-events: none;
-                    font-size: 10rem;
+                    font-size:      10rem;
                 }
 
                 #canvas {
-                    height: 100%;
-                    margin: 0 ${Dimens.size_of_toolbar}px 0 0;
+                    height:         100%;
+                    margin:         0 ${Dimens.size_of_toolbar}px 0 0;
                 }
 
                 @media (max-width: ${Dimens.canvas_mobile_width}px) {
                     #hover-text {
-                        font-size: 3rem;
-                        top: 50%;
+                        font-size:  3rem;
+                        top:        50%;
                     }
-                }
-            `}</style>
-
-            <style global jsx>{`
-                html,
-                body {
-                    overflow-y: hidden;
                 }
             `}</style>
         </>
