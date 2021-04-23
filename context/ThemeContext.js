@@ -3,16 +3,18 @@ import { Colors }        from '../res/colors'
 
 export const themes = {
     dark: {
-        toneOne: Colors.dark_tone_one,
-        toneTwo: Colors.dark_tone_two,
-        textColor: Colors.dark_text_color,
-        highlight: Colors.highlight
+        toneOne:       Colors.dark_tone_one,
+        toneTwo:       Colors.dark_tone_two,
+        textColor:     Colors.dark_text_color,
+        highlight:     Colors.highlight,
+        darkHighlight: Colors.darkHighlight
     },
     light: {
-        toneOne: Colors.light_tone_one,
-        toneTwo: Colors.light_tone_two,
-        textColor: Colors.light_text_color,
-        highlight: Colors.highlight
+        toneOne:       Colors.light_tone_one,
+        toneTwo:       Colors.light_tone_two,
+        textColor:     Colors.light_text_color,
+        highlight:     Colors.highlight,
+        darkHighlight: Colors.darkHighlight
     },
     setTheme: () => { }
 }

@@ -1,8 +1,8 @@
 import { createContext } from 'react'
 
 export const statuses = {
-    INITIAL_LOADING: 'initial_loading',
-    READY: 'ready',
+    INITIAL_LOADING:        'initial_loading',
+    READY:                  'ready',
     NAVIGATION_DRAWER_OPEN: 'navigation_drawer_open',
 
     setStatus: () => { }

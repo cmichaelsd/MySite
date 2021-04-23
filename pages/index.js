@@ -65,6 +65,7 @@ function Home() {
                     --toneTwo:           ${theme.toneTwo};
                     --textColor:         ${theme.textColor};
                     --highlight:         ${theme.highlight};
+                    --darkHighlight:     ${theme.darkHighlight};
                 }
 
                 html,

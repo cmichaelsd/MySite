@@ -8,6 +8,8 @@ export const Colors = {
 
     highlight:                  "#fa923f",
 
+    darkHighlight:              "#f8750d",
+
     light_tone_one:             "#fff",
 
     light_tone_two:             "#fafafa",

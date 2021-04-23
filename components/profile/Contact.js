@@ -1,4 +1,5 @@
 import { SquareImage } from '../SquareImage'
+import { LinkButton }  from '../LinkButton'
 import { Strings }     from '../../res/strings'
 import { Dimens }      from '../../res/dimens'
 
@@ -12,22 +13,38 @@ export function Contact({background}) {
                 </p>
             </div>
             <div className="links-container">
-                <SquareImage 
-                    parentBackground={background} 
-                    href={Strings.square_image_github_href} 
-                    src={Strings.square_image_github_src} 
-                    alt={Strings.square_image_github_alt_tag} 
-                    height={Dimens.square_image_length} 
-                    width={Dimens.square_image_length} 
-                />
-                <SquareImage 
-                    parentBackground={background} 
-                    href={Strings.square_image_linkedin_href} 
-                    src={Strings.square_image_linkedin_src} 
-                    alt={Strings.square_image_linkedin_alt_tag} 
-                    height={Dimens.square_image_length} 
-                    width={Dimens.square_image_length}
-                />
+                <div>
+                    <SquareImage 
+                        parentBackground={background} 
+                        href={Strings.square_image_github_href} 
+                        src={Strings.square_image_github_src} 
+                        alt={Strings.square_image_github_alt_tag} 
+                        height={Dimens.square_image_length} 
+                        width={Dimens.square_image_length} 
+                    />
+                    <LinkButton 
+                        background={background}
+                        href={Strings.square_image_github_href}
+                    >
+                        Github
+                    </LinkButton>
+                </div>
+                <div>
+                    <SquareImage 
+                        parentBackground={background} 
+                        href={Strings.square_image_linkedin_href} 
+                        src={Strings.square_image_linkedin_src} 
+                        alt={Strings.square_image_linkedin_alt_tag} 
+                        height={Dimens.square_image_length} 
+                        width={Dimens.square_image_length}
+                    />
+                    <LinkButton 
+                        background={background}
+                        href={Strings.square_image_linkedin_href}
+                    >
+                        LinkedIn
+                    </LinkButton>
+                </div>
             </div>
 
             <style jsx>{`

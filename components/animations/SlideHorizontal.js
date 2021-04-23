@@ -12,7 +12,7 @@ export function SlideHorizontal({ setAnimateEnd, toStart = true, time = 1, child
     const handleScroll = () => {
         const topPosition = slideHorizontalRef.current.getBoundingClientRect().top;
 
-        if (topPosition < window.innerHeight / 2) {
+        if (topPosition < window.innerHeight / 1.5) {
             setAnimation(`${direction} ${animationString}`);
         }
     }

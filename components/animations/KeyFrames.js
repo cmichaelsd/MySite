@@ -45,13 +45,13 @@ export function KeyFrames() {
                     transform:        translateY(0);
                 }
                 100% {
-                    transform:        translateY(-5px);
+                    transform:        translateY(-2px);
                 }
             }
 
             @keyframes slideDown {
                 0% {
-                    transform:        translateY(-5px);
+                    transform:        translateY(-2px);
                 }
                 100% {
                     transform:        translateY(0);
