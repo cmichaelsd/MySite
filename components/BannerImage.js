@@ -23,11 +23,11 @@ export function BannerImage(props) {
                     width:           100%;
                 }
 
-                @media (max-width: ${Dimens.mobile_image_width}px) {
-                    .banner-image-container {
-                        height:      ${props.altHeight ? props.altHeight : props.height}px;
-                    }
-                }
+                // @media (max-width: ${Dimens.mobile_image_width}px) {
+                //     .banner-image-container {
+                //         height:      ${props.height}px;
+                //     }
+                // }
             `}</style>
         </>
     )

@@ -62,6 +62,7 @@ export function Contact({background}) {
                     display:               flex;
                     justify-content:       center;
                     padding-top:           1em;
+                    gap:                   5em;
                 }
 
                 @media (max-width: ${Dimens.mobile_media_width}px) {

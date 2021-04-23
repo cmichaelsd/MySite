@@ -13,7 +13,6 @@ export function Education({background, animate}) {
                         src={Strings.banner_image_hackreactor_src}
                         alt={Strings.banner_image_hackreactor_alt_tag} 
                         height={Dimens.banner_image_hackreactor_height}
-                        altHeight={Dimens.banner_image_mobile_hackreactor_height}
                     />
                 </SwingIn>
                 <h1 className="headline">{Strings.education_headline}</h1>
