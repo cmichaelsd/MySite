@@ -16,18 +16,12 @@ export function BannerImage(props) {
                     justify-content: center;
                     align-content:   center;
                     height:          ${props.height}px;
-                }
+                } 
 
                 .banner-image {
                     background:      ${Colors.light_tone_one};
                     width:           100%;
                 }
-
-                // @media (max-width: ${Dimens.mobile_image_width}px) {
-                //     .banner-image-container {
-                //         height:      ${props.height}px;
-                //     }
-                // }
             `}</style>
         </>
     )

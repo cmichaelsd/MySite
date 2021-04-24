@@ -76,6 +76,7 @@ export function Contact({background}) {
                         flex-direction:    column;
                         align-items:       center;
                         padding-top:       0;
+                        gap:               1em;
                     }
                 }
             `}</style>

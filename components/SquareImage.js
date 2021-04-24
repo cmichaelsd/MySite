@@ -16,35 +16,22 @@ export function SquareImage(props) {
 
                 <style jsx>{`
                     .square-image__container {
-                        height:      ${Dimens.square_image_size}px;
-                        width:       ${Dimens.square_image_size}px;
-                        background:  ${background};
+                        height:     ${Dimens.square_image_length}px;
+                        width:      ${Dimens.square_image_length}px;
+                        transform:  rotate(45deg);
+                        overflow:   hidden;
+                        margin:     50px 50px;
                     }
 
                     .square-image__container--corners {
-                        width:       ${Dimens.square_image_size}px;
-                        margin:      0 auto;
-                        position:    relative;
-                    }
-
-                    .square-image__container--corners:after {
-                        content:     "";
-                        position:    absolute;
-                        top:         0;
-                        left:        0;
-                        width:       ${Dimens.square_image_size}px;
-                        height:      ${Dimens.square_image_size}px;
-                        background:
-                                     linear-gradient(45deg,  ${props.parentBackground} 75px, transparent 75px),
-                                     linear-gradient(135deg, ${props.parentBackground} 75px, transparent 75px),
-                                     linear-gradient(225deg, ${props.parentBackground} 75px, transparent 75px),
-                                     linear-gradient(315deg, ${props.parentBackground} 75px, transparent 75px);
+                        background: ${background};
                     }
 
                     .square-image {
-                        margin-top:  40px;
-                        margin-left: 25px;
-                        width:       75%;
+                        max-width:  100%;
+                        transform:  rotate(-45deg) scale(1);
+                        position:   relative;
+                        margin:     10px 0 0 10px;
                     }
                 `}</style>
             </>

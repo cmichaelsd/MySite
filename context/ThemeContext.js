@@ -6,15 +6,15 @@ export const themes = {
         toneOne:       Colors.dark_tone_one,
         toneTwo:       Colors.dark_tone_two,
         textColor:     Colors.dark_text_color,
-        highlight:     Colors.highlight,
-        darkHighlight: Colors.darkHighlight
+        highlight:     Colors.dark_highlight,
+        darkHighlight: Colors.dark_darkHighlight
     },
     light: {
         toneOne:       Colors.light_tone_one,
         toneTwo:       Colors.light_tone_two,
         textColor:     Colors.light_text_color,
-        highlight:     Colors.highlight,
-        darkHighlight: Colors.darkHighlight
+        highlight:     Colors.light_highlight,
+        darkHighlight: Colors.light_darkHighlight
     },
     setTheme: () => { }
 }
