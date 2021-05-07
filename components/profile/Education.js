@@ -1,6 +1,6 @@
 import { BannerImage } from '@/components/BannerImage'
-import { Checkmark }   from '@/components/svgs/Checkmark'
-import { SwingIn }     from '@/components/animations/SwingIn'
+import { Checkmark }   from '@/svgs/Checkmark'
+import { SwingIn }     from '@/animations/SwingIn'
 import { Strings }     from '@/res/strings'
 import { Dimens }      from '@/res/dimens'
 

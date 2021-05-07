@@ -7,7 +7,7 @@ import { Contact }              from '@/components/profile/Contact'
 import { VShred }               from '@/components/profile/experience/VShred'
 import { Jijenge }              from '@/components/profile/experience/Jijenge'
 import { TrilogyEducation }     from '@/components/profile/experience/TrilogyEducation'
-import { SlideHorizontal }      from '@/components/animations/SlideHorizontal'
+import { SlideHorizontal }      from '@/animations/SlideHorizontal'
 import { Strings }              from '@/res/strings'
 import { Dimens }               from '@/res/dimens'
 

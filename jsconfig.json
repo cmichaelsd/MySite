@@ -3,6 +3,8 @@
         "baseUrl": ".",
         "paths": {
             "@/components/*": ["components/*"],
+            "@/animations/*": ["animations/*"],
+            "@/svgs/*": ["svgs/*"],
             "@/context/*": ["context/*"],
             "@/res/*": ["res/*"],
             "@/events": ["events.js"],

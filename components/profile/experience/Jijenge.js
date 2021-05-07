@@ -1,6 +1,6 @@
 import { SquareImage } from '@/components/SquareImage'
-import { Checkmark }   from '@/components/svgs/Checkmark'
-import { TiltIn }      from '@/components/animations/TiltIn'
+import { Checkmark }   from '@/svgs/Checkmark'
+import { TiltIn }      from '@/animations/TiltIn'
 import { Strings }     from '@/res/strings'
 import { Dimens }      from '@/res/dimens'
 import { Colors }      from '@/res/colors'

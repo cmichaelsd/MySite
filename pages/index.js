@@ -7,8 +7,8 @@ import { Profile }                                 from '@/components/profile/Pr
 import { Footer }                                  from '@/components/Footer'
 import { SideDrawer }                              from '@/components/sidedrawer/SideDrawer'
 import { Backdrop }                                from '@/components/sidedrawer/Backdrop'
-import { Fade }                                    from '@/components/animations/Fade'
-import { KeyFrames }                               from '@/components/animations/KeyFrames'
+import { Fade }                                    from '@/animations/Fade'
+import { KeyFrames }                               from '@/animations/KeyFrames'
 
 function Home() {
     const { theme } = useContext(ThemeContext);

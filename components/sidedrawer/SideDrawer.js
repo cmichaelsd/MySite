@@ -1,7 +1,7 @@
 import { useContext }                         from 'react'
 import { statuses, ApplicationStatusContext } from '@/context/ApplicationStatusContext'
 import { Events }                             from '@/events'
-import { PaintRoller }                        from '@/components/svgs/PaintRoller'
+import { PaintRoller }                        from '@/svgs/PaintRoller'
 import { Strings }                            from '@/res/strings'
 import { Dimens }                             from '@/res/dimens'
 

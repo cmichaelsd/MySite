@@ -1,5 +1,5 @@
 import { useContext }   from 'react'
-import { SVGButton }    from '@/components/svgs/SVGButton'
+import { SVGButton }    from '@/svgs/SVGButton'
 import { ThemeContext } from '@/context/ThemeContext'
 
 export function PaintRoller({enableHover}) {

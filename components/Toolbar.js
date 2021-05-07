@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Hamburger }           from '@/components/svgs/Hamburger'
-import { PaintRoller }         from '@/components/svgs/PaintRoller'
-import { SlideVertical }       from '@/components/animations/SlideVertical'
+import { Hamburger }           from '@/svgs/Hamburger'
+import { PaintRoller }         from '@/svgs/PaintRoller'
+import { SlideVertical }       from '@/animations/SlideVertical'
 import { Strings }             from '@/res/strings'
 import { Dimens }              from '@/res/dimens'
 

@@ -1,4 +1,4 @@
-import { Plus }    from '../svgs/Plus'
+import { Plus }    from '@/svgs/Plus'
 import { Strings } from '@/res/strings'
 import { Dimens }  from '@/res/dimens'
 
