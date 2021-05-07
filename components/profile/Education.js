@@ -1,8 +1,8 @@
-import { BannerImage } from '../BannerImage'
-import { Checkmark }   from '../svgs/Checkmark'
-import { SwingIn }     from '../animations/SwingIn'
-import { Strings }     from '../../res/strings'
-import { Dimens }      from '../../res/dimens'
+import { BannerImage } from '@/components/BannerImage'
+import { Checkmark }   from '@/components/svgs/Checkmark'
+import { SwingIn }     from '@/components/animations/SwingIn'
+import { Strings }     from '@/res/strings'
+import { Dimens }      from '@/res/dimens'
 
 export function Education({background, animate}) {
     return (

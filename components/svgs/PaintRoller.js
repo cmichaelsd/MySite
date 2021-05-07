@@ -1,6 +1,6 @@
-import { SVGButton }    from './SVGButton'
 import { useContext }   from 'react'
-import { ThemeContext } from '../../context/ThemeContext'
+import { SVGButton }    from '@/components/svgs/SVGButton'
+import { ThemeContext } from '@/context/ThemeContext'
 
 export function PaintRoller({enableHover}) {
     const { changeTheme } = useContext(ThemeContext);

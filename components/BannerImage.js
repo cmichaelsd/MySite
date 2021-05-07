@@ -1,5 +1,4 @@
-import { Dimens } from "../res/dimens";
-import { Colors } from "../res/colors"
+import { Colors } from "@/res/colors"
 
 export function BannerImage(props) {
     return (

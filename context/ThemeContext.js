@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { Colors }        from '../res/colors'
+import { Colors }        from '@/res/colors'
 
 export const themes = {
     dark: {

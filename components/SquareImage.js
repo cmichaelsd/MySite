@@ -1,5 +1,5 @@
-import { Colors } from '../res/colors';
-import { Dimens } from '../res/dimens'
+import { Colors } from '@/res/colors'
+import { Dimens } from '@/res/dimens'
 
 export function SquareImage(props) {
     // Background may need to be set for custom colors, else always white.

@@ -1,4 +1,4 @@
-import { Dimens } from '../../res/dimens'
+import { Dimens } from '@/res/dimens'
 
 export function ProfileSegment(props) {
     return (

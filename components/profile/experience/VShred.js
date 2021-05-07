@@ -1,8 +1,8 @@
-import { SquareImage } from '../../SquareImage'
-import { Checkmark }   from '../../svgs/Checkmark'
-import { TiltIn }      from '../../animations/TiltIn'
-import { Strings }     from '../../../res/strings'
-import { Dimens }      from '../../../res/dimens'
+import { SquareImage } from '@/components/SquareImage'
+import { Checkmark }   from '@/components/svgs/Checkmark'
+import { TiltIn }      from '@/components/animations/TiltIn'
+import { Strings }     from '@/res/strings'
+import { Dimens }      from '@/res/dimens'
 
 export function VShred({background, animate}) {
     return (

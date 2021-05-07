@@ -1,9 +1,9 @@
-import { SquareImage } from '../../SquareImage'
-import { Checkmark }   from '../../svgs/Checkmark'
-import { TiltIn }      from '../../animations/TiltIn'
-import { Strings }     from '../../../res/strings'
-import { Dimens }      from '../../../res/dimens'
-import { Colors }      from '../../../res/colors'
+import { SquareImage } from '@/components/SquareImage'
+import { Checkmark }   from '@/components/svgs/Checkmark'
+import { TiltIn }      from '@/components/animations/TiltIn'
+import { Strings }     from '@/res/strings'
+import { Dimens }      from '@/res/dimens'
+import { Colors }      from '@/res/colors'
 
 export function Jijenge({background, animate}) {
     return (

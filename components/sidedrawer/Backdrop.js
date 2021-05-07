@@ -1,6 +1,6 @@
 import { useContext }               from 'react'
-import { ApplicationStatusContext } from '../../context/ApplicationStatusContext'
-import { Events }                   from '../../events'
+import { ApplicationStatusContext } from '@/context/ApplicationStatusContext'
+import { Events }                   from '@/events'
 
 export function Backdrop() {
     const { changeStatus } = useContext(ApplicationStatusContext);

@@ -1,7 +1,7 @@
-import { SquareImage } from '../SquareImage'
-import { LinkButton }  from '../LinkButton'
-import { Strings }     from '../../res/strings'
-import { Dimens }      from '../../res/dimens'
+import { SquareImage } from '@/components/SquareImage'
+import { LinkButton }  from '@/components/LinkButton'
+import { Strings }     from '@/res/strings'
+import { Dimens }      from '@/res/dimens'
 
 export function Contact({background}) {
     return (

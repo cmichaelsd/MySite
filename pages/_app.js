@@ -1,7 +1,7 @@
 import Head                                   from 'next/head'
 import { useState }                           from 'react'
-import { themes, ThemeContext }               from '../context/ThemeContext'
-import { statuses, ApplicationStatusContext } from '../context/ApplicationStatusContext'
+import { themes, ThemeContext }               from '@/context/ThemeContext'
+import { statuses, ApplicationStatusContext } from '@/context/ApplicationStatusContext'
 import { Events }                             from '../events'
 
 function MyApp({ Component, pageProps }) {
@@ -38,7 +38,8 @@ function MyApp({ Component, pageProps }) {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#fff" />
-                <meta name="description" content="Cole Michaels' Personal Website" />
+                <meta name="robots" content="NOODP" />
+                <meta name="description" content="Cole Michaels' portfolio website, developing applications since 2018 and currently based in Seoul, KR. Fullstack Web Development, Android Development, Micro Service Architecture." />
                 <link rel="icon" href="https://d3p2ju5slp2tm7.cloudfront.net/head/favicon-16x16.png" sizes="16x16" type="image/png" />
                 <link rel="icon" href="https://d3p2ju5slp2tm7.cloudfront.net/head/favicon-32x32.png" sizes="32x32" type="image/png" />
                 <link rel="apple-touch-icon" href="https://d3p2ju5slp2tm7.cloudfront.net/head/apple-touch-icon.png" />

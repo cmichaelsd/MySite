@@ -1,8 +1,8 @@
 import { useEffect, useRef, useContext } from 'react'
-import { ThemeContext }                  from '../context/ThemeContext'
-import { hexToRgb }                      from '../helpers'
-import { Dimens }                        from '../res/dimens';
-import { Strings }                       from '../res/strings' 
+import { ThemeContext }                  from '@/context/ThemeContext'
+import { hexToRgb }                      from '@/helpers'
+import { Dimens }                        from '@/res/dimens'
+import { Strings }                       from '@/res/strings' 
 
 export function Canvas(props) {
     const { theme } = useContext(ThemeContext);
