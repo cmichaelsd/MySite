@@ -4,6 +4,7 @@ import { ProfileSegment }       from '@/components/profile/ProfileSegment'
 import { About }                from '@/components/profile/About'
 import { Education }            from '@/components/profile/Education'
 import { Contact }              from '@/components/profile/Contact'
+import { Oracle }               from '@/components/profile/experience/Oracle'
 import { VShred }               from '@/components/profile/experience/VShred'
 import { Jijenge }              from '@/components/profile/experience/Jijenge'
 import { TrilogyEducation }     from '@/components/profile/experience/TrilogyEducation'
@@ -14,13 +15,15 @@ import { Dimens }               from '@/res/dimens'
 export function Profile() {
     const { theme } = useContext(ThemeContext);
 
-    const [animateCompleteOne, setAnimateCompleteOne] = useState(false);
+    const [animateCompleteOne, setAnimateCompleteOne]     = useState(false);
 
-    const [animateCompleteTwo, setAnimateCompleteTwo] = useState(false);
+    const [animateCompleteTwo, setAnimateCompleteTwo]     = useState(false);
     
     const [animateCompleteThree, setAnimateCompleteThree] = useState(false);
 
-    const [animateCompleteFour, setAnimateCompleteFour] = useState(false);
+    const [animateCompleteFour, setAnimateCompleteFour]   = useState(false);
+
+    const [animateCompleteFive, setAnimateCompleteFive]   = useState(false);
 
     return (
         <>
@@ -31,30 +34,36 @@ export function Profile() {
 
                 <ProfileSegment id={`${Strings.experience_headline.toLowerCase()}`} background={theme.toneTwo}>
                     <SlideHorizontal toStart={false} setAnimateEnd={setAnimateCompleteOne}>
-                            <VShred background={theme.toneTwo} animate={animateCompleteOne}/>
+                            <Oracle background={theme.toneTwo} animate={animateCompleteOne}/>
                     </SlideHorizontal>
                 </ProfileSegment>
 
                 <ProfileSegment background={theme.toneOne}>
-                    <SlideHorizontal setAnimateEnd={setAnimateCompleteTwo}>
-                        <TrilogyEducation background={theme.toneOne} animate={animateCompleteTwo} />
+                    <SlideHorizontal toStart={false} setAnimateEnd={setAnimateCompleteTwo}>
+                            <VShred background={theme.toneOne} animate={animateCompleteTwo}/>
                     </SlideHorizontal>
                 </ProfileSegment>
 
                 <ProfileSegment background={theme.toneTwo}>
-                    <SlideHorizontal toStart={false} setAnimateEnd={setAnimateCompleteThree}>
-                        <Jijenge background={theme.toneTwo} animate={animateCompleteThree}/>
+                    <SlideHorizontal setAnimateEnd={setAnimateCompleteThree}>
+                        <TrilogyEducation background={theme.toneTwo} animate={animateCompleteThree} />
                     </SlideHorizontal>
                 </ProfileSegment>
 
-                <ProfileSegment id={`${Strings.education_headline.toLowerCase()}`} background={theme.toneOne}>
-                    <SlideHorizontal setAnimateEnd={setAnimateCompleteFour}>
-                        <Education background={theme.toneOne} animate={animateCompleteFour} />
+                <ProfileSegment background={theme.toneOne}>
+                    <SlideHorizontal toStart={false} setAnimateEnd={setAnimateCompleteFour}>
+                        <Jijenge background={theme.toneOne} animate={animateCompleteFour}/>
                     </SlideHorizontal>
                 </ProfileSegment>
 
-                <ProfileSegment id={`${Strings.contact_headline.toLowerCase()}`} background={theme.toneTwo}>
-                    <Contact background={theme.toneTwo} />
+                <ProfileSegment id={`${Strings.education_headline.toLowerCase()}`} background={theme.toneTwo}>
+                    <SlideHorizontal setAnimateEnd={setAnimateCompleteFive}>
+                        <Education background={theme.toneTwo} animate={animateCompleteFive} />
+                    </SlideHorizontal>
+                </ProfileSegment>
+
+                <ProfileSegment id={`${Strings.contact_headline.toLowerCase()}`} background={theme.toneOne}>
+                    <Contact background={theme.toneOne} />
                 </ProfileSegment>
             </div>
 

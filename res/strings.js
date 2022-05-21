@@ -1,3 +1,5 @@
+const cloudfront_distribution = "https://d3p2ju5slp2tm7.cloudfront.net/";
+
 export const Strings = {
 
     name:                                      "Cole Michaels",
@@ -41,7 +43,11 @@ export const Strings = {
 
     about_paragraph_three:                     "I orchestrate estimation, planning, and execution of projects, features, and integrations coupled with quality code, new technologies, and architectural design. Well-organized and quality-minded with planning strategies and a true team player who thrives in a fast-paced environment.",
 
+    experience_oracle:                         "Oracle",
+
     experience_vshred:                         "V Shred",
+
+    experience_senior_software_engineer:       "Senior Software Engineer",
 
     experience_android:                        "Android Developer",
 
@@ -98,31 +104,35 @@ export const Strings = {
 
     square_image_vshred_alt_tag:               "V Shred Logo",
 
+    square_image_oracle_alt_tag:               "Oracle Logo",
+
     square_image_github_alt_tag:               "Github Logo",
 
     square_image_linkedin_alt_tag:             "LinkedIn Logo",
 
     banner_image_hackreactor_alt_tag:          "Hack Reactor Logo",
 
-    banner_image_hackreactor_src:              "https://d3p2ju5slp2tm7.cloudfront.net/HackReactor.png",
+    banner_image_hackreactor_src:              `${cloudfront_distribution}HackReactor.png`,
 
-    square_image_jijenge_src:                  "https://d3p2ju5slp2tm7.cloudfront.net/Jijenge-Web.png",
+    square_image_jijenge_src:                  `${cloudfront_distribution}Jijenge-Web.png`,
 
-    square_image_trilogy_src:                  "https://d3p2ju5slp2tm7.cloudfront.net/Trilogy-Web.png",
+    square_image_trilogy_src:                  `${cloudfront_distribution}Trilogy-Web.png`,
 
-    square_image_vshred_src:                   "https://d3p2ju5slp2tm7.cloudfront.net/VShred-Web.png",
+    square_image_vshred_src:                   `${cloudfront_distribution}VShred-Web.png`,
+
+    square_image_oracle_src:                   `${cloudfront_distribution}Oracle-Web.png`,
 
     square_image_github_href:                  "https://github.com/cmichaelsd",
 
-    square_image_github_src:                   "https://d3p2ju5slp2tm7.cloudfront.net/Github-Web.png",
+    square_image_github_src:                   "Github-Web.png",
 
     square_image_linkedin_href:                "https://linkedin.com/in/cole-daniel-michaels/",
 
-    square_image_linkedin_src:                 "https://d3p2ju5slp2tm7.cloudfront.net/LinkedIn-Web.png",
+    square_image_linkedin_src:                 `${cloudfront_distribution}LinkedIn-Web.png`,
 
-    profile_image_mobile_src:                  "https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaelsMobile3.png",
+    profile_image_mobile_src:                  `${cloudfront_distribution}ColeMichaelsMobile3.png`,
 
-    profile_image_src:                         "https://d3p2ju5slp2tm7.cloudfront.net/ColeMichaels3.png",
+    profile_image_src:                         `${cloudfront_distribution}ColeMichaels3.png`,
 
 
     
