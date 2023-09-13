@@ -18,11 +18,10 @@ export function TrilogyEducation({background, animate}) {
             </TiltIn>
             <div className="project__content">
                 <h1 className="headline">{Strings.experience_trilogy}</h1>
+                <h2>{Strings.summary}</h2>
+                <p>{Strings.experience_trilogy_summary}</p>
                 <h2>{Strings.experience_software_tutor}</h2>
-                <p>{Strings.experience_trilogy_software_tutor}</p>
                 <h4>{Strings.role_focus}</h4>
-                <p>{Strings.experience_trilogy_software_tutor_focus}</p>
-                <h4>{Strings.key_outcomes}</h4>
                 <ul>
                     {Strings.experience_trilogy_software_tutor_bullets.map((bullet, index) => (
                         <li key={index}><Checkmark /><div>{bullet}</div></li>

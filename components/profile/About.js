@@ -18,8 +18,6 @@ export function About({background}) {
                     <li key={index}><Plus /><div>{bullet}</div></li>
                 ))}
             </ul>
-            <p>{Strings.about_paragraph_two}</p>
-            <p>{Strings.about_paragraph_three}</p>
 
             <style jsx>{`
                 .profile-image {

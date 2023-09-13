@@ -33,7 +33,7 @@ export function Profile() {
                 </ProfileSegment>
 
                 <ProfileSegment id={`${Strings.experience_headline.toLowerCase()}`} background={theme.toneTwo}>
-                    <SlideHorizontal toStart={false} setAnimateEnd={setAnimateCompleteOne}>
+                    <SlideHorizontal setAnimateEnd={setAnimateCompleteOne}>
                             <Oracle background={theme.toneTwo} animate={animateCompleteOne}/>
                     </SlideHorizontal>
                 </ProfileSegment>
